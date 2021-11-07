@@ -16,12 +16,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- FontGoldman -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <script src="./js/nav.js"></script>
 </head>
 
 <body>
+    <header>
+        <svg class="header-svg"xmlns="http://www.w3.org/2000/svg" width="1920" height="160" viewBox="0 0 1920 160">
+            <path id="Path_18" data-name="Path 18" d="M0,962.463V841.023s488.623,70.127,982.994-8.552S1920,854.707,1920,854.707V962.463Z" transform="translate(1920 962.463) rotate(180)" fill="#a3e0ff" />
+        </svg>
+        <div class="container">
+            <nav class='nav'>
+                <div class="logo">
+                    <a href="./index.php">
+                        <img src="./images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="snip1476">
+                    <li class="current"><a href="#home" class="active">Home</a></li>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Phu kiện</a></li>
+                    <li><a href="#">Sự kiện</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+                <div class="icon">
+                    <a href=""><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+                    <a href=""><i class="fa-solid fa-bell fa-xl"></i></a>
+                    <a href="" class="nav-user-parent">
+                        <i class="fa-solid fa-user fa-xl">
+                            <i class="fa-solid fa-caret-down">
+                            </i>
+                        </i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="slogan">
+                <h1>Chào mừng bạn đến với website của ATLAPTOP</h1>
+            </div>
+        </div>
+    </section>
+</body>
 
 </html>
