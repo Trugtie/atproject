@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 </head>
 
 <body>
@@ -65,7 +67,7 @@
             <div class="slogan">
                 <h1 class="hero_header">Chào mừng bạn đến với website của ATLAPTOP</h1>
                 <h4 class="hero_sub">Chúng tôi là cửa hàng chuyên cung cấp các loại laptop chính hãng, đáp ứng mọi cấu hình và nhu cầu sử dụng của bạn.</h4>
-                <a href="#" class="btnHero">
+                <a href="#categories" class="btnHero">
                     Xem Ngay
                 </a>
             </div>
@@ -81,92 +83,118 @@
     <!-- Cagories -->
     <section class="categories">
         <div class="container">
-            <h1 class="cateHeader text-center">DANH MỤC SẢN PHẨM</h1>
+            <h1 class="cateHeader text-center" id="categories">DANH MỤC SẢN PHẨM</h1>
             <div class="row">
-            <div class="col-4">
-                <div class="cateImage">
-                    <div class="cateImage_overlay">
-                        <h2 class="cateImage_title">HỌC TẬP <br> VĂN PHÒNG</h2>
-                        <a href="#"class="cateImage_subtitle">
-                            <i class="fa-solid fa-laptop-code"></i>
-                            <h3 class="cateImage_subtitle_content">Xem ngay</h3>
-                        </a>
+                <div class="col-4">
+                    <div class="cateImage">
+                        <div class="cateImage_overlay">
+                            <h2 class="cateImage_title">HỌC TẬP <br> VĂN PHÒNG</h2>
+                            <a href="#" class="cateImage_subtitle">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <h3 class="cateImage_subtitle_content">Xem ngay</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cateContent">
+                        <h2 class="cateContent_header">Phù hợp cho:</h2>
+                        <p class="cateContent_header_description">
+                            Học sinh, sinh viên
+                            Nhân viên văn phòng
+                        </p>
+                        <h2 class="cateContent_header">Ưu điểm:</h2>
+                        <p class="cateContent_header_description">
+                            Đáp ứng nhu cầu làm việc và học tập, giải trí đơn giản
+                            Video, audio, word, excel, power point, game nhẹ,....
+                            Giá nhẹ
+                        </p>
+                        <button class="btnUp">
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="cateContent">
-                    <h2 class="cateContent_header">Phù hợp cho:</h2>
-                    <p class="cateContent_header_description">
-                        Học sinh, sinh viên
-                        Nhân viên văn phòng
-                    </p>
-                    <h2 class="cateContent_header">Ưu điểm:</h2>
-                    <p class="cateContent_header_description">
-                        Đáp ứng nhu cầu làm việc và học tập, giải trí đơn giản
-                        Video, audio, word, excel, power point, game nhẹ,....
-                        Giá nhẹ
-                    </p>
-                    <button class="btnUp">
-                    <i class="fa-solid fa-chevron-up"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="cateImage">
-                    <div class="cateImage_overlay">
-                        <h2 class="cateImage_title">HỌC TẬP <br> VĂN PHÒNG</h2>
-                        <a href="#"class="cateImage_subtitle">
-                            <i class="fa-solid fa-laptop-code"></i>
-                            <h3 class="cateImage_subtitle_content">Xem ngay</h3>
-                        </a>
+                <div class="col-4">
+                    <div class="cateImage cateImage--2">
+                        <div class="cateImage_overlay">
+                            <h2 class="cateImage_title cateImage_title--2">ĐỒ HỌA <br> GAMING</h2>
+                            <a href="#" class="cateImage_subtitle">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <h3 class="cateImage_subtitle_content">Xem ngay</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cateContent cateContent--2">
+                        <h2 class="cateContent_header">Phù hợp cho:</h2>
+                        <p class="cateContent_header_description">
+                            Game thủ
+                            Anh chị em thiết kế đồ họa
+
+                        </p>
+                        <h2 class="cateContent_header">Ưu điểm:</h2>
+                        <p class="cateContent_header_description">
+                            Đáp ứng nhu cầu làm việc và học tập, giải trí cao
+                            Ps, Ai, Pr, Xd, Id, Blender, 3DMax, game cấu hình cao,....
+                            Hỗ trợ card đồ họa
+                        </p>
+                        <button class="btnUp btnUp2">
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="cateContent">
-                    <h2 class="cateContent_header">Phù hợp cho:</h2>
-                    <p class="cateContent_header_description">
-                        Học sinh, sinh viên
-                        Nhân viên văn phòng
-                    </p>
-                    <h2 class="cateContent_header">Ưu điểm:</h2>
-                    <p class="cateContent_header_description">
-                        Đáp ứng nhu cầu làm việc và học tập, giải trí đơn giản
-                        Video, audio, word, excel, power point, game nhẹ,....
-                        Giá nhẹ
-                    </p>
-                    <button class="btnUp">
-                    <i class="fa-solid fa-chevron-up"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="cateImage">
-                    <div class="cateImage_overlay">
-                        <h2 class="cateImage_title">HỌC TẬP <br> VĂN PHÒNG</h2>
-                        <a href="#"class="cateImage_subtitle">
-                            <i class="fa-solid fa-laptop-code"></i>
-                            <h3 class="cateImage_subtitle_content">Xem ngay</h3>
-                        </a>
+                <div class="col-4">
+                    <div class="cateImage cateImage--3">
+                        <div class="cateImage_overlay">
+                            <h2 class="cateImage_title cateImage_title--3">MỎNG NHẸ <br> CAO CẤP</h2>
+                            <a href="#" class="cateImage_subtitle">
+                                <i class="fa-brands fa-apple"></i>
+                                <h3 class="cateImage_subtitle_content">Xem ngay</h3>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="cateContent">
-                    <h2 class="cateContent_header">Phù hợp cho:</h2>
-                    <p class="cateContent_header_description">
-                        Học sinh, sinh viên
-                        Nhân viên văn phòng
-                    </p>
-                    <h2 class="cateContent_header">Ưu điểm:</h2>
-                    <p class="cateContent_header_description">
-                        Đáp ứng nhu cầu làm việc và học tập, giải trí đơn giản
-                        Video, audio, word, excel, power point, game nhẹ,....
-                        Giá nhẹ
-                    </p>
-                    <button class="btnUp">
-                    <i class="fa-solid fa-chevron-up"></i>
-                    </button>
+                    <div class="cateContent cateContent--3">
+                        <h2 class="cateContent_header">Phù hợp cho:</h2>
+                        <p class="cateContent_header_description">
+                            Doanh nhân
+                            Người đam mê công nghệ
+                        </p>
+                        <h2 class="cateContent_header">Ưu điểm:</h2>
+                        <p class="cateContent_header_description">
+                            Đáp ứng nhu cầu làm việc và học tập, giải trí, nghiên cứu
+                            Đẳng cấp, sang trọng
+                            Cấu hình khủng đáp ứng nhiều nhu cầu nghiên cứu công nghệ
+
+
+
+
+                        </p>
+                        <button class="btnUp btnUp3">
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Label -->
+    <section class="label">
+        <div class="container">
+            <div class="customer-logos">
+                <div class="slide"><img src="./images/AsusLogo.png"></div>
+                <div class="slide"><img src="./images/hplogo.png"></div>
+                <div class="slide"><img src="./images/macbooklogo.png"></div>
+                <div class="slide"><img src="./images/delllogo.png"></div>
+                <div class="slide"><img src="./images/acerlogo.png"></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Sale -->
+    <section class="sale">
+        <div class="container">
+
         </div>
     </section>
 </body>
 <script src="./js/home.js"></script>
+
 </html>
