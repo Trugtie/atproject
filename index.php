@@ -18,6 +18,8 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -63,7 +65,7 @@
     </header>
     <!-- Hero -->
     <section class="hero">
-        <div class="container d-flex justify-content-center">
+        <div class="container d-flex align-items-center justify-content-center hero__container">
             <div class="slogan">
                 <h1 class="hero_header">Chào mừng bạn đến với website của ATLAPTOP</h1>
                 <h4 class="hero_sub">Chúng tôi là cửa hàng chuyên cung cấp các loại laptop chính hãng, đáp ứng mọi cấu hình và nhu cầu sử dụng của bạn.</h4>
@@ -191,9 +193,39 @@
     <!-- Sale -->
     <section class="sale">
         <div class="container">
-
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/newsale.PNG" class="d-block w-100" alt=".newsale">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/schoolsale.PNG" class="d-block w-100" alt="schooclsale">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/christmassale.PNG" class="d-block w-100" alt="chrimassale">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
     </section>
+    <!-- Subsection 1 -->
+    <section class="sub1">
+        <div class="container container__subsection d-flex justify-content-center align-items-center text-center ">
+            <h1 class="subsection__title"> HỌC TẬP <br> VĂN PHÒNG</h1>
+        </div>
+    </section>
+    <!-- Showcase work-->
+    <div class="container">
+        
+    </div>
 </body>
 <script src="./js/home.js"></script>
 

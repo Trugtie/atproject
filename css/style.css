@@ -243,8 +243,13 @@ nav {
 
 /* Hero */
 .hero{
-  height:62vh;
+  height:65vh;
 }
+
+.hero__container{
+height:100%;
+}
+
 .hero_header {
   width: 62.8rem;
   height: 29.1rem;
@@ -416,7 +421,9 @@ font-size: 2rem;
 }
 
 /* Label */
-
+.label{
+  background-color:rgba(0,0,0,.7);
+}
 .customer-logos {
   background-image: linear-gradient(to bottom,var(--second-color),white,var(--third-color));
 }
@@ -545,6 +552,29 @@ font-size: 2rem;
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+/* Sale */
+.sale{
+  background-color:var(--second-color);
+}
+
+/* Subsection 1 */
+.subsection__title{
+  font-family: var(--secondary-font);
+  font-size:6rem;
+  color:var(--first-color);
+}
+.sub1{
+  background: url(../images/workspace.jpg) center no-repeat;
+  background-size: cover;
+  height:41.6rem;
+}
+
+.container__subsection{
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.8);
+}
+/* Showcase work*/
 
 /* Animation */
 @keyframes up{
