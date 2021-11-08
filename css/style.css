@@ -18,6 +18,7 @@
   --first-color: #fffb8a;
   --second-color: #ffbdc3;
   --third-color: #a3e0ff;
+  --showcase-color:#F0FAFF;
   --btn-color: #5c7e90;
   --nav-color: #527080;
 }
@@ -575,6 +576,9 @@ svg {
   background-color: rgba(0, 0, 0, 0.8);
 }
 /* Showcase work*/
+.showcase{
+  background-color: var(--showcase-color);
+}
 .swiper {
   width: 100%;
   height: 94.7rem;
