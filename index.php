@@ -17,9 +17,12 @@
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- SlickCarousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -223,10 +226,1980 @@
         </div>
     </section>
     <!-- Showcase work-->
+    <section class="showcase">
     <div class="container">
-        
+        <h1 class="cateHeader text-center" id="categories">LAPTOP HỌC TẬP VĂN PHÒNG</h1>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <a href="#" class="btnAll">Xem tất cả</a>
+        </div>
     </div>
+    </section>
+    <!-- Subsection 2 -->
+    <section class="sub1 sub2">
+        <div class="container container__subsection d-flex justify-content-center align-items-center text-center ">
+            <h1 class="subsection__title subsection__title2"> ĐỒ HỌA <br> GAMING</h1>
+        </div>
+    </section>
+    <!-- Showcase gaming -->
+    <section class="showcase">
+    <div class="container">
+        <h1 class="cateHeader text-center" id="categories">LAPTOP ĐỒ HỌA - GAMING</h1>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <a href="#" class="btnAll">Xem tất cả</a>
+        </div>
+    </div>
+    </section>
+    <!-- Subsection 3 -->
+    <section class="sub1 sub3">
+        <div class="container container__subsection d-flex justify-content-center align-items-center text-center ">
+            <h1 class="subsection__title subsection__title3"> CAO CẤP <br> SANG CHẢNH</h1>
+        </div>
+    </section>
+    <!-- Showcase high price -->
+    <section class="showcase">
+    <div class="container">
+        <h1 class="cateHeader text-center" id="categories">LAPTOP CAO CẤP</h1>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/lap1.jpg" alt="">
+                            <a href="#" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>CPU:</td>
+                                    <td>Intel Core i5-10300H</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM:</td>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>VGA</td>
+                                    <td>NVIDIA GeForce GTX 1650 4GB GDDR6</td>
+                                </tr>
+                                <tr>
+                                    <th>Ổ cứng:</td>
+                                    <td>512GB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Màn hình:</td>
+                                    <td>15.6 inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <a href="#" class="btnAll">Xem tất cả</a>
+        </div>
+    </div>
+    </section>
+    <!-- Contact -->
 </body>
 <script src="./js/home.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
 
 </html>
