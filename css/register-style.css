@@ -38,6 +38,12 @@ a{
     width: 500px;
     margin-right: 80px;
 }
+
+.width-resetpass{
+ 
+  width: 650px;
+  margin-right: 40px;
+}
 :root {
     --input-padding-x: 1.5rem;
     --input-padding-y: .75rem;
