@@ -68,7 +68,7 @@
         </div>
     </header>
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container d-flex align-items-center justify-content-center hero__container">
             <div class="slogan">
                 <h1 class="hero_header">Chào mừng bạn đến với website của ATLAPTOP</h1>
@@ -91,7 +91,7 @@
         <div class="container">
             <h1 class="cateHeader text-center" id="categories">DANH MỤC SẢN PHẨM</h1>
             <div class="row">
-                <div class="col-4">
+                <div class="col-xl-4 col-sm-12 col-12">
                     <div class="cateImage">
                         <div class="cateImage_overlay">
                             <h2 class="cateImage_title">HỌC TẬP <br> VĂN PHÒNG</h2>
@@ -118,7 +118,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-xl-4 col-sm-12 col-12 col-sm-12">
                     <div class="cateImage cateImage--2">
                         <div class="cateImage_overlay">
                             <h2 class="cateImage_title cateImage_title--2">ĐỒ HỌA <br> GAMING</h2>
@@ -146,7 +146,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-xl-4 col-sm-12 col-12">
                     <div class="cateImage cateImage--3">
                         <div class="cateImage_overlay">
                             <h2 class="cateImage_title cateImage_title--3">MỎNG NHẸ <br> CAO CẤP</h2>
@@ -2217,7 +2217,7 @@
                     <input type="text" placeholder="Type your email...">
                     <input type="text" placeholder="Type title...">
                     <textarea name="" id="" cols="30" rows="10" placeholder="Type description...."></textarea>
-                   <button class="contact__button">Submit</button>
+                    <button class="contact__button">Submit</button>
                 </div>
             </div>
         </div>
@@ -2225,7 +2225,26 @@
     <!-- Map -->
     <section class="map">
         <div class="container">
-        <div class="mapouter"><div class="gmap_canvas"><iframe class="map__ifr" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=300%20%C4%90%C6%B0%E1%BB%9Dng%203/2,%20Ph%C6%B0%E1%BB%9Dng%2012,%20Qu%E1%BA%ADn%2010,%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:1255px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:1255px;}</style></div></div>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe class="map__ifr" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=300%20%C4%90%C6%B0%E1%BB%9Dng%203/2,%20Ph%C6%B0%E1%BB%9Dng%2012,%20Qu%E1%BA%ADn%2010,%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a><br>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 500px;
+                            width: 1255px;
+                        }
+                    </style><a href="https://www.embedgooglemap.net"></a>
+                    <style>
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 500px;
+                            width: 1255px;
+                        }
+                    </style>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Footer -->
@@ -2238,14 +2257,14 @@
             </div>
             <div class="footer-content">
                 <div class="footer-content-about animate-top">
-                    <h4>About Rosa</h4>
+                    <h4>ABOUT ATLAPTOP
+                    </h4>
                     <div class="asterisk">
-                        <i class="fas fa-asterisk"></i>
+                    <i class="fa-solid fa-laptop fa-2xl"></i>
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat animi quis ab ducimus
-                        reiciendis error, magni alias aliquam quos nostrum aliquid inventore optio repellendus commodi
-                        eum adipisci quam. Accusamus, veniam!
+                        Cửa hàng laptop uy tín - thân thiện - nhiệt tình tại Hồ Chí Minh
+                        Đến với chúng tôi bạn sẽ tìm được những sản phẩm chất lượng và dịch vụ tốt nhất
                     </p>
                 </div>
                 <div class="footer-content-divider animate-bottom">
