@@ -33,6 +33,7 @@
             <path id="Path_18" data-name="Path 18" d="M0,962.463V841.023s488.623,70.127,982.994-8.552S1920,854.707,1920,854.707V962.463Z" transform="translate(1920 962.463) rotate(180)" fill="#a3e0ff" />
         </svg>
         <div class="container">
+        <i class="fa-solid fa-bars" id="navBtn"></i>
             <nav class='nav'>
                 <div class="logo">
                     <a href="./index.php">
@@ -70,14 +71,14 @@
     <!-- Hero -->
     <section class="hero" id="hero">
         <div class="container d-flex align-items-center justify-content-center hero__container">
-            <div class="slogan">
+            <div class="slogan animate-left">
                 <h1 class="hero_header">Chào mừng bạn đến với website của ATLAPTOP</h1>
                 <h4 class="hero_sub">Chúng tôi là cửa hàng chuyên cung cấp các loại laptop chính hãng, đáp ứng mọi cấu hình và nhu cầu sử dụng của bạn.</h4>
                 <a href="#categories" class="btnHero">
                     Xem Ngay
                 </a>
             </div>
-            <div class="image">
+            <div class="image animate-right">
                 <img src="./images/laptop-mong-nhe-gia-re-1-removebg-preview.png" alt="">
             </div>
         </div>
@@ -89,9 +90,9 @@
     <!-- Cagories -->
     <section class="categories">
         <div class="container">
-            <h1 class="cateHeader text-center" id="categories">DANH MỤC SẢN PHẨM</h1>
+            <h1 class="cateHeader text-center animate-left" id="categories">DANH MỤC SẢN PHẨM</h1>
             <div class="row">
-                <div class="col-xl-4 col-sm-12 col-12">
+                <div class="col-xl-4 col-sm-12 col-12 animate-top">
                     <div class="cateImage">
                         <div class="cateImage_overlay">
                             <h2 class="cateImage_title">HỌC TẬP <br> VĂN PHÒNG</h2>
@@ -118,7 +119,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-xl-4 col-sm-12 col-12 col-sm-12">
+                <div class="col-xl-4 col-sm-12 col-12 col-sm-12 animate-bottom">
                     <div class="cateImage cateImage--2">
                         <div class="cateImage_overlay">
                             <h2 class="cateImage_title cateImage_title--2">ĐỒ HỌA <br> GAMING</h2>
@@ -146,7 +147,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-xl-4 col-sm-12 col-12">
+                <div class="col-xl-4 col-sm-12 col-12 animate-top">
                     <div class="cateImage cateImage--3">
                         <div class="cateImage_overlay">
                             <h2 class="cateImage_title cateImage_title--3">MỎNG NHẸ <br> CAO CẤP</h2>
@@ -223,15 +224,15 @@
     <!-- Subsection 1 -->
     <section class="sub1">
         <div class="container container__subsection d-flex justify-content-center align-items-center text-center ">
-            <h1 class="subsection__title"> HỌC TẬP <br> VĂN PHÒNG</h1>
+            <h1 class="subsection__title animate-left"> HỌC TẬP <br> VĂN PHÒNG</h1>
         </div>
     </section>
     <!-- Showcase work-->
     <section class="showcase">
         <div class="container">
-            <h1 class="cateHeader text-center" id="categories__work">LAPTOP HỌC TẬP VĂN PHÒNG</h1>
+            <h1 class="cateHeader text-center animate-top" id="categories__work">LAPTOP HỌC TẬP VĂN PHÒNG</h1>
             <!-- Swiper -->
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper animate-left">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="item">
@@ -879,15 +880,15 @@
     <!-- Subsection 2 -->
     <section class="sub1 sub2">
         <div class="container container__subsection d-flex justify-content-center align-items-center text-center ">
-            <h1 class="subsection__title subsection__title2"> ĐỒ HỌA <br> GAMING</h1>
+            <h1 class="subsection__title subsection__title2 animate-left"> ĐỒ HỌA <br> GAMING</h1>
         </div>
     </section>
     <!-- Showcase gaming -->
     <section class="showcase">
         <div class="container">
-            <h1 class="cateHeader text-center" id="categories__gaming">LAPTOP ĐỒ HỌA - GAMING</h1>
+            <h1 class="cateHeader text-center animate-top" id="categories__gaming ">LAPTOP ĐỒ HỌA - GAMING</h1>
             <!-- Swiper -->
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper animate-right">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="item">
@@ -1535,15 +1536,15 @@
     <!-- Subsection 3 -->
     <section class="sub1 sub3">
         <div class="container container__subsection d-flex justify-content-center align-items-center text-center ">
-            <h1 class="subsection__title subsection__title3"> CAO CẤP <br> SANG CHẢNH</h1>
+            <h1 class="subsection__title subsection__title3 animate-left"> CAO CẤP <br> SANG CHẢNH</h1>
         </div>
     </section>
     <!-- Showcase high price -->
     <section class="showcase">
         <div class="container">
-            <h1 class="cateHeader text-center" id="categories__high">LAPTOP CAO CẤP</h1>
+            <h1 class="cateHeader text-center animate-top" id="categories__high">LAPTOP CAO CẤP</h1>
             <!-- Swiper -->
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper animate-left">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="item">
@@ -2191,8 +2192,8 @@
     <!-- Contact -->
     <section class="contact">
         <div class="container container__contact">
-            <h1 class="contact__content__header">Contact us</h1>
-            <div class="contact__content">
+            <h1 class="contact__content__header animate-top">Contact us</h1>
+            <div class="contact__content animate-left">
                 <div class="content__info">
                     <h2 class="content__header">
                         Chúng tôi rất hân hạnh được lắng nghe các bạn
@@ -2213,7 +2214,7 @@
                         </i>atlaptop@gmail.com
                     </p>
                 </div>
-                <div class="content__form">
+                <div class="content__form animate-right">
                     <input type="text" placeholder="Type your email...">
                     <input type="text" placeholder="Type title...">
                     <textarea name="" id="" cols="30" rows="10" placeholder="Type description...."></textarea>
@@ -2225,7 +2226,7 @@
     <!-- Map -->
     <section class="map">
         <div class="container">
-            <div class="mapouter">
+            <div class="mapouter animate-bottom">
                 <div class="gmap_canvas"><iframe class="map__ifr" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=300%20%C4%90%C6%B0%E1%BB%9Dng%203/2,%20Ph%C6%B0%E1%BB%9Dng%2012,%20Qu%E1%BA%ADn%2010,%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a><br>
                     <style>
                         .mapouter {
@@ -2260,7 +2261,7 @@
                     <h4>ABOUT ATLAPTOP
                     </h4>
                     <div class="asterisk">
-                    <i class="fa-solid fa-laptop fa-2xl"></i>
+                        <i class="fa-solid fa-laptop fa-2xl"></i>
                     </div>
                     <p>
                         Cửa hàng laptop uy tín - thân thiện - nhiệt tình tại Hồ Chí Minh
