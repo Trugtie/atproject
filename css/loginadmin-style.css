@@ -28,17 +28,12 @@ a{
 
 #content{
     height: 100%;
-    background-image: url("../images/login.jpg");
-    background-size: cover;
-    vertical-align: center;
-}
-
-#admin{
-    height: 100%;
     background-image: url("../images/adminlogin.jpg");
     background-size: cover;
     vertical-align: center;
 }
+
+
 
 .width-register{
     
@@ -56,10 +51,15 @@ a{
     --input-padding-y: .75rem;
   }
   
-  
+  .text-ds{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: -10px;
+  }
   
   .card-signin {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(27, 22, 22, 0.6);
     border: 0;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
     overflow: hidden;

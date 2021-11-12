@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - ATLAPTOP</title>
+    <title>Login Admin - ATLAPTOP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/register-style.css">
+    <link rel="stylesheet" href="css/loginadmin-style.css">
 </head>
 <body >
     <header class="banner">
@@ -41,35 +41,32 @@
     </header>
 
     <!-- content  -->
-    <section id="content" >
+    <section id="content">
         <div class="container width-register">
             <div class="row">
               <div class="col-lg-10 col-xl-9 mx-auto">
                 <div class="card card-signin flex-row my-5">
                   
                   <div class="card-body">
-                    <h5 class="card-title text-center" style="color: #fff;">Welcome to ATLAPTOP</h5>
+                    <h5 class="card-title text-center" style="color: #fff;">ADMIN LOGIN</h5>
                     <form class="form-signin">
-                        <div class="form-label-group">
+                      <div class="text-ds"><p>Username:</p></div>
+                        <div class="form-label-group">                            
                             <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-                            <label for="inputEmail">Username or email:</label>
+                            
                           </div>
                           <br>
+                          <div class="text-ds"><p>Password:</p></div>
                       <div class="form-label-group">
                         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <label for="inputPassword">Password</label>
+                        
                       </div>                      
-                      <div class="form-label-group text-link-login">
-                        <a href="#">Forgot password ?</a>
-                      </div>
-                      <br>
                       
+                      <br>
+                      <br>
+                      <br>
                         <button class="btn btn-sm  btn-block"  type="submit">LOGIN</button>
                       
-                        <div class="create-acc text-link-login">
-                          <br>
-                          <p>New Ater? <a href="register.html">Create Account</a></p>
-                        </div>
                     </form>
                   </div>
                 </div>
