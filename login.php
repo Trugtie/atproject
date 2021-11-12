@@ -17,7 +17,7 @@
                     <img src="images/logo.png" style="width: 166px; height:47px; margin-right: 70px;">
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">HOME</a>
+                    <a href="./index.php" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link">LAPTOP</a> 
@@ -60,7 +60,7 @@
                         <label for="inputPassword">Password</label>
                       </div>                      
                       <div class="form-label-group text-link-login">
-                        <a href="#">Forgot password ?</a>
+                        <a href="./resetpass.php">Forgot password ?</a>
                       </div>
                       <br>
                       

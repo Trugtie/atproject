@@ -17,7 +17,7 @@
                     <img src="images/logo.png" style="width: 166px; height:47px; margin-right: 70px;">
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">HOME</a>
+                    <a href="./index.php" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link">LAPTOP</a> 
