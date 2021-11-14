@@ -59,8 +59,8 @@
                             </i>
                         </a>
                         <ul class="user_dropdown_content">
-                            <li><a href="./login.php">Đăng nhập</a></li>
-                            <li><a href="./register.php">Đăng ký</a></li>
+                            <li><a href="./view/login.php">Đăng nhập</a></li>
+                            <li><a href="./view/register.php">Đăng ký</a></li>
                             <li><a href="">Thoát</a></li>
                         </ul>
                     </div>
