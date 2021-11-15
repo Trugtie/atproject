@@ -1,73 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website to sell laptop">
-    <meta name="keywords" content="laptop, atlaptop">
-    <meta name="author" content="Trugtie, NguyetTrann">
-    <title>ATLAPTOP</title>
-    <link rel="icon" href="./images/icon.PNG">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- ScrollReveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- SlickCarousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-</head>
-
-<body>
-    <!-- Header -->
-    <header>
-        <svg class="header-svg" xmlns="http://www.w3.org/2000/svg" width="1920" height="160" viewBox="0 0 1920 160">
-            <path id="Path_18" data-name="Path 18" d="M0,962.463V841.023s488.623,70.127,982.994-8.552S1920,854.707,1920,854.707V962.463Z" transform="translate(1920 962.463) rotate(180)" fill="#a3e0ff" />
-        </svg>
-        <div class="container">
-        <i class="fa-solid fa-bars" id="navBtn"></i>
-            <nav class='nav'>
-                <div class="logo">
-                    <a href="./index.php">
-                        <img src="./images/logo.png" alt="logo">
-                    </a>
-                </div>
-                <ul class="snip1476">
-                    <li class="current"><a href="#home" class="active">Home</a></li>
-                    <li><a href="#">Laptop</a>
-                    </li>
-                    <li><a href="#">Phu kiện</a></li>
-                    <li><a href="#">Sự kiện</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About us</a></li>
-                </ul>
-                <div class="icon">
-                    <div><a href=""><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div>
-                    <div> <a href=""><i class="fa-solid fa-bell fa-xl"></i></a></div>
-                    <div class="user_dropdown"> <a href="#">
-                            <i class="fa-solid fa-user fa-xl">
-                                <i class="fa-solid fa-caret-down">
-                                </i>
-                            </i>
-                        </a>
-                        <ul class="user_dropdown_content">
-                            <li><a href="./view/login.php">Đăng nhập</a></li>
-                            <li><a href="./view/register.php">Đăng ký</a></li>
-                            <li><a href="">Thoát</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+<?php include "./view/header.php"?>
     <!-- Hero -->
     <section class="hero" id="hero">
         <div class="container d-flex align-items-center justify-content-center hero__container">
@@ -123,7 +54,7 @@
                     <div class="cateImage cateImage--2">
                         <div class="cateImage_overlay">
                             <h2 class="cateImage_title cateImage_title--2">ĐỒ HỌA <br> GAMING</h2>
-                            <a href="#categories__gaming" class="cateImage_subtitle">
+                            <a href="#categories_gaming" class="cateImage_subtitle">
                                 <i class="fa-solid fa-gamepad"></i>
                                 <h3 class="cateImage_subtitle_content">Xem ngay</h3>
                             </a>
@@ -886,7 +817,7 @@
     <!-- Showcase gaming -->
     <section class="showcase">
         <div class="container">
-            <h1 class="cateHeader text-center animate-top" id="categories__gaming ">LAPTOP ĐỒ HỌA - GAMING</h1>
+            <h1 class="cateHeader text-center animate-top" id="categories_gaming">LAPTOP ĐỒ HỌA - GAMING</h1>
             <!-- Swiper -->
             <div class="swiper mySwiper animate-right">
                 <div class="swiper-wrapper">
@@ -2248,82 +2179,4 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="back-to-top">
-                <a href="#hero">
-                    <i class="fas fa-chevron-up"></i>
-                </a>
-            </div>
-            <div class="footer-content">
-                <div class="footer-content-about animate-top">
-                    <h4>ABOUT ATLAPTOP
-                    </h4>
-                    <div class="asterisk">
-                        <i class="fa-solid fa-laptop fa-2xl"></i>
-                    </div>
-                    <p>
-                        Cửa hàng laptop uy tín - thân thiện - nhiệt tình tại Hồ Chí Minh
-                        Đến với chúng tôi bạn sẽ tìm được những sản phẩm chất lượng và dịch vụ tốt nhất
-                    </p>
-                </div>
-                <div class="footer-content-divider animate-bottom">
-                    <div class="social-media">
-                        <h4>Follow along</h4>
-                        <ul class="social-icons">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-square"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-pinterest"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-tripadvisor"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="newsletter-container">
-                        <h4>Newsletter</h4>
-                        <form action="" class="newsletter-form">
-                            <input type="text" class="newsletter-input" placeholder="Your email address...">
-                            <button class="newsletter-btn" type="submit">
-                                <i class="fas fa-envelope"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-<script src="./js/home.js"></script>
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
-
-</html>
+    <?php include "./view/footer.php" ?>

@@ -7,14 +7,14 @@
     <title>Login - ATLAPTOP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/register-style.css">
+    <link rel="stylesheet" href="../css/register-style.css">
 </head>
 <body >
     <header class="banner">
         <div class="container text-banner" style="margin-top:15px; margin-bottom: 10px;">
             <ul class="nav justify-content-center align-items-center">
                 <li>
-                    <img src="images/logo.png" style="width: 166px; height:47px; margin-right: 70px;">
+                    <img src="../images/logo.png" style="width: 166px; height:47px; margin-right: 70px;">
                 </li>
                 <li class="nav-item">
                     <a href="./index.php" class="nav-link">HOME</a>
