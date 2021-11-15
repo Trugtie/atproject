@@ -1,3 +1,31 @@
+<?php
+session_start();
+$user = "";
+$userDropdown = "";
+if (empty($_SESSION["username"])) {
+    $user .= "
+   <a href='#'>
+    <i class='fa-solid fa-user fa-xl'>
+    <i class='fa-solid fa-caret-down'>
+    </i>
+    </i>
+   </a>
+   ";
+   $userDropdown.="
+   <li><a href='./view/login.php'>Đăng nhập</a></li>
+   <li><a href='./view/register.php'>Đăng ký</a></li>
+   ";
+}
+else{
+    $username=$_SESSION["username"];
+    $user.="<a href='#' class='user'> $username</a>";
+    $userDropdown.="
+    <li><a href='#'>Thông tin tài khoản</a></li>
+    <li><a href='#'>Lịch sử mua hàng</a></li>
+    <li><a href='./controller/logoutController.php'>Thoát</a></li>
+    ";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +39,7 @@
     <title>ATLAPTOP</title>
     <link rel="icon" href="./images/icon.PNG">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/aboutus.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->
@@ -27,43 +56,40 @@
 </head>
 <!-- Header -->
 <header>
-        <svg class="header-svg" xmlns="http://www.w3.org/2000/svg" width="1920" height="160" viewBox="0 0 1920 160">
-            <path id="Path_18" data-name="Path 18" d="M0,962.463V841.023s488.623,70.127,982.994-8.552S1920,854.707,1920,854.707V962.463Z" transform="translate(1920 962.463) rotate(180)" fill="#a3e0ff" />
-        </svg>
-        <div class="container">
+    <svg class="header-svg" xmlns="http://www.w3.org/2000/svg" width="1920" height="160" viewBox="0 0 1920 160">
+        <path id="Path_18" data-name="Path 18" d="M0,962.463V841.023s488.623,70.127,982.994-8.552S1920,854.707,1920,854.707V962.463Z" transform="translate(1920 962.463) rotate(180)" fill="#a3e0ff" />
+    </svg>
+    <div class="container">
         <i class="fa-solid fa-bars" id="navBtn"></i>
-            <nav class='nav' id="nav">
-                <div class="logo">
-                    <a href="./index.php">
-                        <img src="./images/logo.png" alt="logo">
-                    </a>
+        <nav class='nav' id="nav">
+            <div class="logo">
+                <a href="./index.php">
+                    <img src="./images/logo.png" alt="logo">
+                </a>
+            </div>
+            <ul class="snip1476">
+                <li class="current"><a href="./index.php" class="active">Home</a></li>
+                <li><a href="#">Laptop</a>
+                </li>
+                <li><a href="#">Phu kiện</a></li>
+                <li><a href="#">Sự kiện</a></li>
+                <li><a href="./contact.php">Contact</a></li>
+                <li><a href="./aboutus.php">About us</a></li>
+            </ul>
+            <div class="icon">
+                <div><a href=""><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div>
+                <div> <a href=""><i class="fa-solid fa-bell fa-xl"></i></a></div>
+                <div class="user_dropdown">
+                    <?php echo $user?>
+                    <ul class="user_dropdown_content">
+                        <?php
+                        echo $userDropdown;
+                        ?>
+                    </ul>
                 </div>
-                <ul class="snip1476">
-                    <li class="current"><a href="./index.php" class="active">Home</a></li>
-                    <li><a href="#">Laptop</a>
-                    </li>
-                    <li><a href="#">Phu kiện</a></li>
-                    <li><a href="#">Sự kiện</a></li>
-                    <li><a href="./contact.php">Contact</a></li>
-                    <li><a href="#">About us</a></li>
-                </ul>
-                <div class="icon">
-                    <div><a href=""><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div>
-                    <div> <a href=""><i class="fa-solid fa-bell fa-xl"></i></a></div>
-                    <div class="user_dropdown"> <a href="#">
-                            <i class="fa-solid fa-user fa-xl">
-                                <i class="fa-solid fa-caret-down">
-                                </i>
-                            </i>
-                        </a>
-                        <ul class="user_dropdown_content">
-                            <li><a href="./view/login.php">Đăng nhập</a></li>
-                            <li><a href="./view/register.php">Đăng ký</a></li>
-                            <li><a href="">Thoát</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+            </div>
+        </nav>
+    </div>
+</header>
+
 <body>

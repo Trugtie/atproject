@@ -49,14 +49,14 @@
                   
                   <div class="card-body">
                     <h5 class="card-title text-center" style="color: #fff;">Welcome to ATLAPTOP</h5>
-                    <form class="form-signin">
+                    <form class="form-signin" method="post" action="../controller/loginController.php">
                         <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                            <input name="username" classtype="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                             <label for="inputEmail">Username or email:</label>
                           </div>
                           <br>
                       <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                         <label for="inputPassword">Password</label>
                       </div>                      
                       <div class="form-label-group text-link-login">
