@@ -9,8 +9,8 @@
     <meta name="keywords" content="laptop, atlaptop">
     <meta name="author" content="Trugtie, NguyetTrann">
     <title>ATLAPTOP</title>
-    <link rel="icon" href="./images/icon.PNG">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="../images/icon.PNG">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->
@@ -23,8 +23,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/detailproduct-style.css">
-    <link rel="stylesheet" href="js/detailproduct.js">
+    <link rel="stylesheet" href="../css/detailproduct-style.css">
+    <link rel="stylesheet" href="../js/detailproduct.js">
 
 </head>
 <body>
@@ -37,8 +37,8 @@
         <i class="fa-solid fa-bars" id="navBtn"></i>
             <nav class='nav'>
                 <div class="logo">
-                    <a href="./index.php">
-                        <img src="./images/logo.png" alt="logo">
+                    <a href="../index.php">
+                        <img src="../images/logo.png" alt="logo">
                     </a>
                 </div>
                 <ul class="snip1476">
@@ -60,8 +60,8 @@
                             </i>
                         </a>
                         <ul class="user_dropdown_content">
-                            <li><a href="./login.php">Đăng nhập</a></li>
-                            <li><a href="./register.php">Đăng ký</a></li>
+                            <li><a href="login.php">Đăng nhập</a></li>
+                            <li><a href="register.php">Đăng ký</a></li>
                             <li><a href="">Thoát</a></li>
                         </ul>
                     </div>
@@ -74,7 +74,7 @@
             <ul class="breadcrumb" id="J_breadcrumb" >
                 <li class="breadcrumb_item">
                     <span class="breadcrumb_item_text"style="margin-left: 140px;">
-                        <a title="Sản phẩm" href="index.php" class="breadcrumb_item_anchor" data-spm-anchor-id="a2o4n.pdp_revamp.breadcrumb.1">
+                        <a title="Sản phẩm" href="../index.php" class="breadcrumb_item_anchor" data-spm-anchor-id="a2o4n.pdp_revamp.breadcrumb.1">
                             <span>Sản phẩm &emsp;> </span>
                             <div class="breadcrumb_right_arrow"></div>
                         </a>
@@ -100,7 +100,7 @@
       <div class="row">
           <div class="col-sm-6">
               <div class="pro-img-details">
-                  <img src="images/lap1.jpg" alt="">
+                  <img src="../images/lap1.jpg" alt="">
               </div>
               <div class="pro-img-list">
                   <a href="#">
@@ -223,7 +223,7 @@
         </div>
     </footer>
 </body>
-<script src="./js/home.js"></script>
+<script src="../js/home.js"></script>
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Initialize Swiper -->
