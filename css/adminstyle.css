@@ -39,12 +39,15 @@ header {
   float: left;
   width: 20%;
   height: 100vh;
+  transition: all .3s;
 }
 section {
   padding: 3.9rem;
   overflow: hidden;
   float: left;
   width: 60%;
+  position: relative;
+  transition: all .3s;
 }
 
 img {
@@ -58,6 +61,27 @@ a {
 
 p {
   font-size: 1.6rem;
+}
+
+/* nav */
+.btnNav{
+  font-size:3rem;
+  color:white;
+  position:absolute;
+  top:0;
+  left:0;
+  padding:1rem 2rem;
+  background-color: black;
+  cursor: pointer;
+  transition: all .3s;
+}
+.btnNav:hover{
+  background-color: red;
+  color:black;
+}
+.time{
+ display: flex;
+ justify-content: center;
 }
 /* Tong quan */
 .music {
@@ -80,6 +104,7 @@ p {
   background-color: var(--third-color);
   position: fixed;
   left: 0;
+  transition: all .3s;
 }
 .nav-list {
   list-style: none;
@@ -95,6 +120,7 @@ p {
   width: 100%;
   padding: 1rem 5rem;
 }
+
 .clock {
   align-self: center;
   font-size: 3rem;
