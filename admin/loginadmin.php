@@ -49,23 +49,23 @@
                   
                   <div class="card-body">
                     <h5 class="card-title text-center" style="color: #fff;">ADMIN LOGIN</h5>
-                    <form class="form-signin">
+                    <form class="form-signin" method="POST" action="../controller/loginAdminController.php">
                       <div class="text-ds"><p>Username:</p></div>
                         <div class="form-label-group">                            
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                            <input type="email" name="username" id="inputEmail" class="form-control" placeholder="Email address" required>
                             
                           </div>
                           <br>
                           <div class="text-ds"><p>Password:</p></div>
                       <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
                         
                       </div>                      
                       
                       <br>
                       <br>
                       <br>
-                        <button class="btn btn-sm  btn-block"  type="submit">LOGIN</button>
+                        <button class="btn btn-sm  btn-block" name="btn_Login"  type="submit">LOGIN</button>
                       
                     </form>
                   </div>
