@@ -40,6 +40,7 @@ else{
     <link rel="icon" href="./images/icon.PNG">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/aboutus.css">
+    <link rel="stylesheet" href="./css/showcase.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->
@@ -69,9 +70,9 @@ else{
             </div>
             <ul class="snip1476">
                 <li class="current"><a href="./index.php" class="active">Home</a></li>
-                <li><a href="#">Laptop</a>
+                <li><a href="./laptop.php">Laptop</a>
                 </li>
-                <li><a href="#">Phu kiện</a></li>
+                <li><a href="./phukien.php">Phu kiện</a></li>
                 <li><a href="#">Sự kiện</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./aboutus.php">About us</a></li>

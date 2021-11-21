@@ -13,5 +13,5 @@ if($username != $user['username']){
 else{
     session_start();
     $_SESSION["username"] = $user['username'];
-    header("Location: admin.php");
+    header("Location: ../admin/admin.php");
 }

@@ -52,7 +52,7 @@
                     <form class="form-signin" method="POST" action="../controller/loginAdminController.php">
                       <div class="text-ds"><p>Username:</p></div>
                         <div class="form-label-group">                            
-                            <input type="email" name="username" id="inputEmail" class="form-control" placeholder="Email address" required>
+                            <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Email address" required>
                             
                           </div>
                           <br>

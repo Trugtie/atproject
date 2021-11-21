@@ -76,6 +76,7 @@ nav {
   transform: translate(-50%);
   width: 100%;
 }
+
 .user{
   text-decoration: none;
   font-size: 2rem;
@@ -556,6 +557,9 @@ svg {
 /* Sale */
 .sale {
   background-color: var(--second-color);
+}
+.sale--nonebackground {
+  background-color: none;
 }
 
 /* Subsection 1 */
@@ -1063,13 +1067,14 @@ footer p {
     height: 100vh;
     background-color:rgba(0, 0, 0, .5);
     position:fixed;
+    animation:fade .5s;
     z-index: 2;
     transition: all .3s;
-    animation: scale .3s;
   }
   .open nav{
     transform: translateX(-50%);
   }
+
   .open header .container .fa-bars:before, .fa-navicon:before{
     color:white;
   }
@@ -1145,11 +1150,12 @@ footer p {
     transform: translateY(-0.5rem);
   }
 }
-@keyframes scale{
+
+@keyframes fade {
   0%{
-    transform:scale(2);
+    opacity: 0;
   }
   100%{
-    transform:scale(1);
+    opacity: 1;
   }
 }
