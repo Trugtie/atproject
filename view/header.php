@@ -41,6 +41,8 @@ else{
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/aboutus.css">
     <link rel="stylesheet" href="./css/showcase.css">
+    <link rel="stylesheet" href="./css/sukien.css">
+    <link rel="stylesheet" href="./css/giohang.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->
@@ -73,12 +75,12 @@ else{
                 <li><a href="./laptop.php">Laptop</a>
                 </li>
                 <li><a href="./phukien.php">Phu kiện</a></li>
-                <li><a href="#">Sự kiện</a></li>
+                <li><a href="./sukien.php">Sự kiện</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./aboutus.php">About us</a></li>
             </ul>
             <div class="icon">
-                <div><a href=""><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div>
+                <div><a href="./giohang.php"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div>
                 <div> <a href=""><i class="fa-solid fa-bell fa-xl"></i></a></div>
                 <div class="user_dropdown">
                     <?php echo $user?>

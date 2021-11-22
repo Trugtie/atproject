@@ -72,7 +72,7 @@
                     <td>20.000.000 </td>
                     <td>10</td>
                     <td>Còn hàng</td>
-                    <td class="action">
+                    <td class="action action d-flex justify-content-around align-items-center">
                         <a href="#" class="sua">Sửa</a>
                         <a href="" class="xoa">Xóa</a>
                     </td>

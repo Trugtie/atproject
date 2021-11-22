@@ -256,7 +256,7 @@ h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 .table td {
-  height: 16.9rem;
+  height: 22.4rem;
   vertical-align: middle;
   text-align: center;
   border-left: 1px solid rgba(0, 0, 0, 0.3);
@@ -281,11 +281,6 @@ h2 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   font-family: var(--secondary-font);
-}
-.action {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 .xoa {
   background-color: var(--second-color);

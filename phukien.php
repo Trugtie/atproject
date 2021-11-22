@@ -25,6 +25,7 @@
         </div>
     </div>
 </section>
+<!-- Showcase -->
 <section class="showcase">
     <div class="container">
         <h1 class="cateHeader text-center animate-top" id="categories__work">PHỤ KIỆN</h1>
@@ -63,7 +64,7 @@
             </div>
         </div>
         <!-- Swiper -->
-        <div class="swiper mySwiper animate-left">
+        <div class="swiper mySwiper swiper--long animate-left">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="item">

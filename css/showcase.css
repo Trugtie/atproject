@@ -83,7 +83,7 @@ body {
   margin: 0 auto;
 }
 
-.swiper {
+.swiper--long {
   height: 143.3rem;
 }
 .item {

@@ -25,6 +25,7 @@
         </div>
     </div>
 </section>
+<!-- Showcase -->
 <section class="showcase">
     <div class="container">
         <h1 class="cateHeader text-center animate-top" id="categories__work">LAPTOP</h1>
@@ -65,7 +66,7 @@
                         <option value="dell">DELL</option>
                     </select>
                     <select name="cboDisk" id="" class="cboSanPham">
-                    <option value="Disk">Ổ cững</option>
+                    <option value="Disk">Ổ cứng</option>
                         <option value="hdd">HDD</option>
                         <option value="ssd">SSD</option>
                     </select>
@@ -84,7 +85,7 @@
             </div>
         </div>
         <!-- Swiper -->
-        <div class="swiper mySwiper animate-left">
+        <div class="swiper swiper--long mySwiper animate-left">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="item">
