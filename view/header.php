@@ -20,7 +20,7 @@ else{
     $username=$_SESSION["username"];
     $user.="<a href='#' class='user'> $username</a>";
     $userDropdown.="
-    <li><a href='#'>Thông tin tài khoản</a></li>
+    <li><a href='./view/accountinformation.php'>Thông tin tài khoản</a></li>
     <li><a href='#'>Lịch sử mua hàng</a></li>
     <li><a href='./controller/logoutController.php'>Thoát</a></li>
     ";

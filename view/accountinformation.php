@@ -1,4 +1,31 @@
-
+<?php
+session_start();
+$user = "";
+$userDropdown = "";
+if (empty($_SESSION["username"])) {
+    $user .= "
+   <a href='#'>
+    <i class='fa-solid fa-user fa-xl'>
+    <i class='fa-solid fa-caret-down'>
+    </i>
+    </i>
+   </a>
+   ";
+   $userDropdown.="
+   <li><a href='./view/login.php'>Đăng nhập</a></li>
+   <li><a href='./view/register.php'>Đăng ký</a></li>
+   ";
+}
+else{
+    $username=$_SESSION["username"];
+    $user.="<a href='#' class='user'> $username</a>";
+    $userDropdown.="
+    <li><a href='./view/accountinformation.php'>Thông tin tài khoản</a></li>
+    <li><a href='#'>Lịch sử mua hàng</a></li>
+    <li><a href='./controller/logoutController.php'>Thoát</a></li>
+    ";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,9 +101,8 @@
     <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <?php
-        session_start();
         echo '<div class="col-md-3 border-right">';
-          echo  '<div class="d-flex flex-column align-items-center text-center p-5 py-5"><img class="rounded-circle mt-5" src="../images//3bf97c640b8732a64ab73b653f622582.jpg"><span class="font-weight-bold">'.$_SESSION["username"].'</span><span class="text-black-50">thanh124@gmail.com</span><span> </span></div>';
+          echo  '<div class="d-flex flex-column align-items-center text-center p-5 py-5"><img class="rounded-circle mt-5" src="../images//3bf97c640b8732a64ab73b653f622582.jpg"><span class="font-weight-bold">'.$_SESSION["username"].'</span><span class="text-black-50"></span><span> </span></div>';
           echo  '</div>'
         ?>
         <div class="col-md-8 border-right">
