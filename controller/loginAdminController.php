@@ -3,15 +3,15 @@ $err="";
 $username = $_POST['username'];
 $password = $_POST['password'];
 include '../model/loginAdminValidation.php';
-if($username != $user['username']){
+if($username != $user["username"]){
     $err.="Sai tên tài khoản";
     echo $err;
-}else if(sha1($password)!==$user['password']){
+}else if(($password)!=$user["password"]){
     $err.="Sai mật khẩu";
     echo $err;
 }
 else{
     session_start();
-    $_SESSION["username"] = $user['username'];
+$_SESSION["username"] = $user["username"];
     header("Location: ../admin/admin.php");
 }

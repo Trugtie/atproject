@@ -1,3 +1,4 @@
 <?php
-$pdo = new PDO('mysql:host=localhost;port=3306;dbname=atproject','root','');
+
+$pdo = new PDO('mysql:host=localhost;port=3306;dbname=atproject','root', '');
 $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
