@@ -6,7 +6,7 @@
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="text-center mb-5">
-            <h1 class="title">THÊM SẢN PHẨM LAPTOP</h1>
+            <h1 class="title">THÊM SẢN PHẨM PHỤ KIỆN</h1>
         </div>
         <div class="table .table-striped">
             <div class="col-md-8 border-right" >  
@@ -18,32 +18,23 @@
                             <input style="margin-top: 10px; font-size:16px" name="loadfileimg" type="file" id="myFile" name="filename">
                             <br>
                             <label style="font-size:20px;margin-top: 7px">Hãng</label><br>
-                            <select  style="font-size:16px; width: 220px" class="form-select" aria-label="Default select example">
+                            <select  style="font-size:16px; width: 290px" class="form-select" aria-label="Default select example">
                             <option selected></option>
                             <option value="1">Dell</option>
                             <option value="2">Asus</option>
                             <option value="3">HP</option>
                             </select>
-                            <label style="margin-top: 7px">Trọng lượng</label><br>
-                            <input type="text" name="trongluong" class="inputSp" name="trongluong"><br>
-                            <label style="font-size:20px;margin-top: 7px">Màn hình</label><br>
-                            <input type="text" class="inputSp" name="manhinh"><br>
-                            <label style="font-size:20px;margin-top: 7px">Ổ cứng</label><br>
-                            <input type="text" class="inputSp" name="ocung"><br>
-                            <label style="font-size:20px;margin-top: 7px">CPU</label><br>
-                            <input type="text" class="inputSp" name="cpu"><br>
-                            <label style="font-size:20px;margin-top: 15px">RAM</label><br>
-                            <input type="text" class="inputSp" name="ram"><br>
+                           
                         </div>
                         <div class="col-sm-9 right-row" style="float:left">
                             <label style="font-size:20px;margin-top: 15px;margin-bottom: 7px">Mã sản phẩm</label>
                             <input type="text" style="margin-top: 10px; font-size:20px; width: 200px; float:right" name="masp"><br>
                             <label style="font-size:20px;margin-top: 15px">Loại sản phẩm</label>
-                            <input type="text" style="margin-top: 10px; font-size:20px; width: 200px; float:right" name="loaisp" value="Laptop">
+                            <input type="text" style="margin-top: 10px; font-size:20px; width: 200px; float:right" name="loaisp" value="Phụ kiện">
                             <label style="font-size:20px;margin-top: 15px">Tên sản phẩm</label><br>
                             <input type="text" style="margin-top: 10px; font-size:20px; width: 345px" name="tensp"><br>
                             <label style="font-size:20px;margin-top: 15px">Mô tả</label><br>
-                            <textarea style="margin-top: 10px; font-size:20px; width: 345px; height:130px" name="mota"></textarea><br>
+                            <textarea style="margin-top: 10px; font-size:20px; width: 345px; height:135px" name="mota"></textarea><br>
                             <div class="subsub0" style="margin-bottom:-10px">
                                 <div class="subsub1">
                                 <label style="font-size:20px;margin-top: 7px">Số lượng</label><br>
@@ -54,14 +45,6 @@
                                 <input type="text" style="margin-top: 10px; font-size:20px; width: 200px" name="gia">                        
                                 </div>
                             </div>
-                            <label style="margin-top: -25px">Màu</label><br>
-                            <input type="text" class="inputSp" name="mau"><br>
-                            <label style="font-size:20px;margin-top: 7px">Loại máy</label><br>
-                            <input type="text" class="inputSp" name="loaimay"><br>
-                            <label style="font-size:20px;margin-top: 10px">VGA</label><br>
-                            <input type="text" class="inputSp" name="vga"><br>
-                            <label style="font-size:20px;margin-top: 15px">PIN</label><br>
-                            <input type="text" class="inputSp" name="pin"><br>
                             
                         </div>
                         

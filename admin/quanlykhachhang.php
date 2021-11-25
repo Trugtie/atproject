@@ -26,7 +26,7 @@
                     <th scope="col" class="ho">Họ</th>
                     <th scope="col" class="ten">Tên</th>
                     <th scope="col" class="diachi">Địa chỉ</th>
-                    <th scope="col" class=email">Email</th>
+                    <th scope="col" class="email">Email</th>
                     <th scope="col" class="username">Username</th>
                     <th scope="col" class="password">Password</th>
                     <th scope="col" class="action">Hành động</th>

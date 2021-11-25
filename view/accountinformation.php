@@ -71,7 +71,7 @@ else{
                 </a>
             </div>
             <ul class="snip1476">
-                <li class="current"><a href="index.php" class="active">Home</a></li>
+                <li class="current"><a href="../index.php" class="active">Home</a></li>
                 <li><a href="#">Laptop</a>
                 </li>
                 <li><a href="#">Phu kiện</a></li>
