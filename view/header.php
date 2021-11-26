@@ -11,15 +11,14 @@ if (empty($_SESSION["username"])) {
     </i>
    </a>
    ";
-   $userDropdown.="
+    $userDropdown .= "
    <li><a href='./view/login.php'>Đăng nhập</a></li>
    <li><a href='./view/register.php'>Đăng ký</a></li>
    ";
-}
-else{
-    $username=$_SESSION["username"];
-    $user.="<a href='#' class='user'> $username</a>";
-    $userDropdown.="
+} else {
+    $username = $_SESSION["username"];
+    $user .= "<a href='#' class='user'> $username</a>";
+    $userDropdown .= "
     <li><a href='./view/accountinformation.php'>Thông tin tài khoản</a></li>
     <li><a href='#'>Lịch sử mua hàng</a></li>
     <li><a href='./controller/logoutController.php'>Thoát</a></li>
@@ -43,6 +42,7 @@ else{
     <link rel="stylesheet" href="./css/showcase.css">
     <link rel="stylesheet" href="./css/sukien.css">
     <link rel="stylesheet" href="./css/giohang.css">
+    <link rel="stylesheet" href="./css/thanhtoan.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->
@@ -80,10 +80,15 @@ else{
                 <li><a href="./aboutus.php">About us</a></li>
             </ul>
             <div class="icon">
-                <div><a href="./giohang.php"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div>
+                <div>
+                    <a href="./giohang.php" class="giohangcount"><i class="fa-solid fa-cart-shopping fa-xl">
+                    </i>
+                    <div class="count">1</div>
+                    </a>
+                </div>
                 <div> <a href=""><i class="fa-solid fa-bell fa-xl"></i></a></div>
                 <div class="user_dropdown">
-                    <?php echo $user?>
+                    <?php echo $user ?>
                     <ul class="user_dropdown_content">
                         <?php
                         echo $userDropdown;

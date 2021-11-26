@@ -86,7 +86,7 @@
         </table>
         <div class="d-flex justify-content-end">
         <a href="./laptop.php" class="chontiep">Chọn tiếp</a>
-        <a href="" class="thanhtoan">Thanh toán</a>
+        <a href="./thanhtoan.php" class="thanhtoan">Thanh toán</a>
         </div>
     </div>
 </section>
