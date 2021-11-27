@@ -83,7 +83,7 @@ if (empty($_SESSION["username"])) {
                 <div>
                     <a href="./giohang.php" class="giohangcount"><i class="fa-solid fa-cart-shopping fa-xl">
                     </i>
-                    <div class="count">1</div>
+                    <div class="count">0</div>
                     </a>
                 </div>
                 <div> <a href=""><i class="fa-solid fa-bell fa-xl"></i></a></div>
