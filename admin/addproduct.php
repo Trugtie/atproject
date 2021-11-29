@@ -10,21 +10,21 @@
         </div>
         <div class="table .table-striped">
             <div class="col-md-8 border-right" >  
-                <form action="addproductController.php" method="POST">                    
+                <form action="../controller/addproductController.php" method="POST" enctype="multipart/form-data">                    
                     <div class="row1">
                         <div class="col-sm-9 left-row" >
                             <label style="font-size:20px;">Hình</label>
-                            <div class="pic" style="width: 290px; height: 237px; border: 1px solid;"> <img name="image" src="" alt> </div>
-                            <input style="margin-top: 10px; font-size:16px" name="loadfileimg" type="file" id="myFile" name="filename">
+                            <div class="pic" style="width: 290px; height: 237px; border: 1px solid;"> <img name="hinh" src="" alt> </div>
+                            <input style="margin-top: 10px; font-size:16px" name="hinh" type="file" id="myFile" name="filename">
                             <br>
                             <label style="font-size:20px;margin-top: 7px">Hãng</label><br>
-                            <select  style="font-size:16px; width: 220px" class="form-select" aria-label="Default select example">
+                            <select name="mahang" style="font-size:16px; width: 220px" class="form-select" aria-label="Default select example">
                             <option selected></option>
                             <option value="1">Dell</option>
                             <option value="2">Asus</option>
                             <option value="3">HP</option>
                             </select>
-                            <label style="margin-top: 7px">Trọng lượng</label><br>
+                            <label style="margin-top: 7px; font-size: 20px">Trọng lượng</label><br>
                             <input type="text" name="trongluong" class="inputSp" name="trongluong"><br>
                             <label style="font-size:20px;margin-top: 7px">Màn hình</label><br>
                             <input type="text" class="inputSp" name="manhinh"><br>
@@ -54,10 +54,10 @@
                                 <input type="text" style="margin-top: 10px; font-size:20px; width: 200px" name="gia">                        
                                 </div>
                             </div>
-                            <label style="margin-top: -25px">Màu</label><br>
-                            <input type="text" class="inputSp" name="mau"><br>
+                            <label style="margin-top: -25px; font-size: 20px">Màu</label><br>
+                            <input type="text" class="inputSp" name="mausac"><br>
                             <label style="font-size:20px;margin-top: 7px">Loại máy</label><br>
-                            <input type="text" class="inputSp" name="loaimay"><br>
+                            <input type="text" class="inputSp" name="maloaimay"><br>
                             <label style="font-size:20px;margin-top: 10px">VGA</label><br>
                             <input type="text" class="inputSp" name="vga"><br>
                             <label style="font-size:20px;margin-top: 15px">PIN</label><br>
@@ -67,7 +67,7 @@
                         
                     </div>
                     <div class="btn-add">
-                        <button  id="btn-add" type="button" name="btnsaveadd" id="">ADD</button>
+                        <button  id="btn-add" type="submit" id="">ADD</button>
                     </div>
                 </form>
             </div>
