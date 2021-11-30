@@ -17,9 +17,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">01</th>
                     <td>12/7/2021</td>
-                    <td>Say your name?</td>
+                    <td>Lê Ngọc</td>
                     <td>0984962514 </td>
                     <td>
                         Đang giao
@@ -29,7 +29,7 @@
                         SPPTELCO11
                     </td>
                     <td>
-                        <a href="" class="xem">Xem</a>
+                        <a href="chitietdonhang.php" class="xem">Xem</a>
                     </td>
                 </tr>
                 
