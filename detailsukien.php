@@ -25,11 +25,20 @@
     <div class="container">
         <h1 class="cateHeader text-center event__header animate-top" id="categories__work" style="font-size: 42px;">CHI TIẾT SỰ KIỆN</h1>
         <div class="flex" style="margin-bottom:10px; background-color: black">
-        <div class="event d-flex">
-            <div class="event__img" style=" margin-left:30%">
-                <img src="./images/schoolsale.PNG" alt="">
+       
+    <section class="sale">
+        <div class="container">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    
+                    <div class="carousel-item active">
+                        <img src="./images/schoolsale.PNG" class="d-block w-100" alt="schooclsale">
+                    </div>
+                   
+                </div>
             </div>
         </div>
+    </section>
         </div>
         <div class="event d-flex">
             <div class="event__content flex-grow-1  flex-column justify-content-between" style="background-color: black; color:white; ">
