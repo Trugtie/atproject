@@ -35,7 +35,7 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td><img src="../images/schoolsale.PNG" alt=""></td>
+                    <td><img src="../../images/schoolsale.PNG" alt=""></td>
                     <td>Back to School</td>
                     <td>Big sale for student</td>
                     <td>20%</td>

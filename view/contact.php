@@ -1,4 +1,4 @@
-<?php include "./view/header.php"?>
+<?php include "./header.php"?>
     <!-- Contact -->
     <section class="contact contact--page">
         <div class="container container__contact">
@@ -58,4 +58,4 @@
         </div>
     </section>
     </section>
-    <?php include "./view/footer.php"?>
+    <?php include "./footer.php"?>

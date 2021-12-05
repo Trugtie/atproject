@@ -1,7 +1,7 @@
 <header>
     <nav class="nav" id="nav">
         <a href="#" class="logo">
-            <img src="../images/logo.png" alt="">
+            <img src="../../images/logo.png" alt="">
         </a>
         <div class="clock">
             <div class="name">TRUGTIE</div>
@@ -48,7 +48,6 @@
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <div class="info"><a href="./quanlykhachhang.php"><i class="fa-solid fa-pen-to-square"></i>XEM THÔNG TIN</a></div>
-                                    <div class="info"><a href="#"><i class="fa-solid fa-plus"></i>THÊM KHÁCH HÀNG</a></div>
                                 </div>
                             </div>
                         </div>
@@ -105,6 +104,25 @@
                             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <div class="info"><a href="./quanlyfeedback.php"><i class="fa-solid fa-pen-to-square"></i>XEM THÔNG TIN</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingSix">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <i class="fa-solid fa-address-card"></i>QUẢN LÝ NHÂN VIÊN<i class="fa-solid fa-angle-down"></i>
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="info"><a href="./quanlynhanvien.php"><i class="fa-solid fa-pen-to-square"></i>XEM THÔNG TIN</a></div>
                                 </div>
                             </div>
                         </div>

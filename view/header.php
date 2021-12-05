@@ -12,16 +12,16 @@ if (empty($_SESSION["username"])) {
    </a>
    ";
     $userDropdown .= "
-   <li><a href='./view/login.php'>Đăng nhập</a></li>
-   <li><a href='./view/register.php'>Đăng ký</a></li>
+   <li><a href='./login.php'>Đăng nhập</a></li>
+   <li><a href='./register.php'>Đăng ký</a></li>
    ";
 } else {
     $username = $_SESSION["username"];
     $user .= "<a href='#' class='user'> $username</a>";
     $userDropdown .= "
-    <li><a href='./view/accountinformation.php'>Thông tin tài khoản</a></li>
-    <li><a href='#'>Lịch sử mua hàng</a></li>
-    <li><a href='./controller/logoutController.php'>Thoát</a></li>
+    <li><a href='./accountinformation.php'>Thông tin tài khoản</a></li>
+    <li><a href='./lichsumuahang.php'>Lịch sử mua hàng</a></li>
+    <li><a href='../controller/logoutController.php'>Thoát</a></li>
     ";
 }
 ?>
@@ -36,15 +36,16 @@ if (empty($_SESSION["username"])) {
     <meta name="keywords" content="laptop, atlaptop">
     <meta name="author" content="Trugtie, NguyetTrann">
     <title>ATLAPTOP</title>
-    <link rel="icon" href="./images/icon.PNG">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/aboutus.css">
-    <link rel="stylesheet" href="./css/showcase.css">
-    <link rel="stylesheet" href="./css/sukien.css">
-    <link rel="stylesheet" href="./css/giohang.css">
-    <link rel="stylesheet" href="./css/lsmh.css">
-    <link rel="stylesheet" href="./css/thanhtoan.css">
-    <link rel="stylesheet" href="./css/detailproduct-style.css">
+    <link rel="icon" href="../images/icon.PNG">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aboutus.css">
+    <link rel="stylesheet" href="../css/showcase.css">
+    <link rel="stylesheet" href="../css/sukien.css">
+    <link rel="stylesheet" href="../css/giohang.css">
+    <link rel="stylesheet" href="../css/lsmh.css">
+    <link rel="stylesheet" href="../css/thanhtoan.css">
+    <link rel="stylesheet" href="../css/detailproduct-style.css">
+    <link rel="stylesheet" href="../css/accountinfo.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->
@@ -68,12 +69,12 @@ if (empty($_SESSION["username"])) {
         <i class="fa-solid fa-bars" id="navBtn"></i>
         <nav class='nav' id="nav">
             <div class="logo">
-                <a href="./index.php">
-                    <img src="./images/logo.png" alt="logo">
+                <a href="./home.php">
+                    <img src="../images/logo.png" alt="logo">
                 </a>
             </div>
             <ul class="snip1476">
-                <li class="current"><a href="./index.php" class="active">Home</a></li>
+                <li class="current"><a href="./home.php" class="active">Home</a></li>
                 <li><a href="./laptop.php">Laptop</a>
                 </li>
                 <li><a href="./phukien.php">Phu kiện</a></li>

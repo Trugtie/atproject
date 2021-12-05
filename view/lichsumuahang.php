@@ -1,4 +1,4 @@
-<?php include "./view/header.php" ?>
+<?php include "./header.php" ?>
 <section class="giohang">
     <div class="container">
         <h1 class="cateHeader text-center event__header animate-top" id="categories__work">LỊCH SỬ MUA HÀNG</h1>
@@ -38,4 +38,4 @@
         
     </div>
 </section>
-<?php include "./view/footer.php" ?>
+<?php include "./footer.php" ?>

@@ -17,7 +17,7 @@
                     <img src="../images/logo.png" style="width: 166px; height:47px; margin-right: 70px;">
                 </li>
                 <li class="nav-item">
-                    <a href="./index.php" class="nav-link">HOME</a>
+                    <a href="./home.php" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link">LAPTOP</a> 
@@ -49,7 +49,7 @@
                   
                   <div class="card-body">
                     <h5 class="card-title text-center" style="color: #fff;">Welcome to ATLAPTOP</h5>
-                    <form class="form-signin" method="post" action="../controller/loginController.php">
+                    <form class="form-signin" method="post" action="../controller/userController.php">
                         <div class="form-label-group">
                             <input name="username" classtype="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                             <label for="inputEmail">Username or email:</label>
@@ -64,7 +64,7 @@
                       </div>
                       <br>
                       
-                        <button class="btn btn-sm  btn-block"  type="submit">LOGIN</button>
+                        <button class="btn btn-sm  btn-block"  type="submit" name="action" value="login">LOGIN</button>
                       
                         <div class="create-acc text-link-login">
                           <br>

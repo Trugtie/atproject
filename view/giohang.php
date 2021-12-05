@@ -1,4 +1,4 @@
-<?php include "./view/header.php" ?>
+<?php include "./header.php" ?>
 <section class="giohang">
     <div class="container">
         <h1 class="cateHeader text-center event__header animate-top" id="categories__work">GIỎ HÀNG CỦA BẠN</h1>
@@ -17,7 +17,7 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td><img src="./images/lap1.jpg" alt=""></td>
+                    <td><img src="../images/lap1.jpg" alt=""></td>
                     <td>Laptop Lenovo
                         Ideapad Gaming 3
                         15IMH05
@@ -38,7 +38,7 @@
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><img src="./images/lap1.jpg" alt=""></td>
+                    <td><img src="../images/lap1.jpg" alt=""></td>
                     <td>Laptop Lenovo
                         Ideapad Gaming 3
                         15IMH05
@@ -59,7 +59,7 @@
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><img src="./images/lap1.jpg" alt=""></td>
+                    <td><img src="../images/lap1.jpg" alt=""></td>
                     <td>Laptop Lenovo
                         Ideapad Gaming 3
                         15IMH05
@@ -90,4 +90,4 @@
         </div>
     </div>
 </section>
-<?php include "./view/footer.php" ?>
+<?php include "./footer.php" ?>
