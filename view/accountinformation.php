@@ -26,7 +26,6 @@ else{
     ";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
@@ -97,8 +96,8 @@ else{
 </header>
 
 <body>
-    <div class="well">
-        <session class="profile">
+    <div >
+        <session >
             <div class="container rounded bg-white mt-5 mb-5">
                 <div class="row">
                     <?php
