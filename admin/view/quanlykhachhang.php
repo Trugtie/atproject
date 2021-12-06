@@ -1,3 +1,9 @@
+<?php
+include "../../controller/autoload.php";
+include "../../dao/UserDao.php";
+$users = UserDao::getAllUser($conn);
+?>
+
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
 <section>
@@ -9,7 +15,6 @@
             <h1 class="title">QUẢN LÝ KHÁCH HÀNG</h1>
         </div>
         <div class="controller d-flex">
-            <input type="submit" value="Thêm" class="btnThem">
             <select name="cboSanPham" id="" class="cboSanPham">
                 <option value="tangdan">Tăng dần</option>
                 <option value="giamdan">Giảm dần</option>
@@ -29,67 +34,25 @@
                     <th scope="col" class="diachi">Địa chỉ</th>
                     <th scope="col" class="email">Email</th>
                     <th scope="col" class="username">Username</th>
-                    <th scope="col" class="password">Password</th>
                     <th scope="col" class="action">Hành động</th>
                 </tr>
             </thead>
             <tbody>
+                <?php foreach ($users as $user): ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Nguyễn</td>
-                    <td>Văn A</td>
-                    <td>0123456987</td>
-                    <td>19 Đồng khởi </td>
-                    <td>vana@gmail.com</td>
-                    <td>nguyenvana</td>
-                    <td>sajkiqwjdaskmzxp</td>
+                    <th scope="row"><?php echo $user['makh'] ?></th>
+                    <td><?php echo $user['ho'] ?></td>
+                    <td><?php echo $user['ten'] ?></td>
+                    <td><?php echo $user['sdt'] ?></td>
+                    <td><?php echo $user['diachi'] ?> </td>
+                    <td><?php echo $user['email'] ?></td>
+                    <td><?php echo $user['username'] ?></td>
                     <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
+                        <a href="./editthongtinkhachhang.php?makh=<?php echo $user['makh']?>" class="sua">Sửa</a>
+                        <a href="../controller/customerController.php?action=delete&makh=<?php echo $user['makh'] ?>" class="xoa">Xóa</a>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Nguyễn</td>
-                    <td>Văn A</td>
-                    <td>0123456987</td>
-                    <td>19 Đồng khởi </td>
-                    <td>vana@gmail.com</td>
-                    <td>nguyenvana</td>
-                    <td>sajkiqwjdaskmzxp</td>
-                    <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Nguyễn</td>
-                    <td>Văn A</td>
-                    <td>0123456987</td>
-                    <td>19 Đồng khởi </td>
-                    <td>vana@gmail.com</td>
-                    <td>nguyenvana</td>
-                    <td>sajkiqwjdaskmzxp</td>
-                    <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Nguyễn</td>
-                    <td>Văn A</td>
-                    <td>0123456987</td>
-                    <td>19 Đồng khởi </td>
-                    <td>vana@gmail.com</td>
-                    <td>nguyenvana</td>
-                    <td>sajkiqwjdaskmzxp</td>
-                    <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
-                    </td>
-                </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>

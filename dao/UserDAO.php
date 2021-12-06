@@ -1,10 +1,18 @@
 <?php
-include "../util/connectDB.php";
+include dirname(__DIR__)."/util/connectDB.php";
 class UserDAO
 {
     public static function getUser($username, $pass, $conn)
     {
         $statement = $conn->prepare("select * from khachhang where (username='$username' or email='$username')  and password='$pass'");
+        $statement->execute();
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+        return $user;
+    }
+
+    public static function getUserWithID($id,$conn)
+    {
+        $statement = $conn->prepare("select * from khachhang where makh='$id'");
         $statement->execute();
         $user = $statement->fetch(PDO::FETCH_ASSOC);
         return $user;
@@ -50,6 +58,11 @@ class UserDAO
         $statement->bindValue(':diachi',$diachi);
         $statement->bindValue(':sdt',$sdt);
         $statement->bindValue(':ma',$ma);
+        $statement->execute();
+    }
+
+    public static function deleteUser($ma,$conn){
+        $statement = $conn->prepare("delete from khachhang where makh = $ma");
         $statement->execute();
     }
 }
