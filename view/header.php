@@ -27,6 +27,7 @@ if (empty($_SESSION["user"])) {
     ";
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +80,7 @@ if (empty($_SESSION["user"])) {
                 <li class="current"><a href="./home.php" class="active">Home</a></li>
                 <li><a href="./laptop.php">Laptop</a>
                 </li>
-                <li><a href="./phukien.php">Phu kiện</a></li>
+                <li><a href="./phukien.php">Phụ kiện</a></li>
                 <li><a href="./sukien.php">Sự kiện</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./aboutus.php">About us</a></li>

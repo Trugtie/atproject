@@ -25,6 +25,7 @@
                     <th scope="col" class="ma">Mã KH</th>
                     <th scope="col" class="ho">Họ</th>
                     <th scope="col" class="ten">Tên</th>
+                    <th scope="col" class="diachi">Sđt</th>
                     <th scope="col" class="diachi">Địa chỉ</th>
                     <th scope="col" class="email">Email</th>
                     <th scope="col" class="username">Username</th>
@@ -37,6 +38,7 @@
                     <th scope="row">1</th>
                     <td>Nguyễn</td>
                     <td>Văn A</td>
+                    <td>0123456987</td>
                     <td>19 Đồng khởi </td>
                     <td>vana@gmail.com</td>
                     <td>nguyenvana</td>
@@ -50,6 +52,7 @@
                     <th scope="row">1</th>
                     <td>Nguyễn</td>
                     <td>Văn A</td>
+                    <td>0123456987</td>
                     <td>19 Đồng khởi </td>
                     <td>vana@gmail.com</td>
                     <td>nguyenvana</td>
@@ -63,6 +66,7 @@
                     <th scope="row">1</th>
                     <td>Nguyễn</td>
                     <td>Văn A</td>
+                    <td>0123456987</td>
                     <td>19 Đồng khởi </td>
                     <td>vana@gmail.com</td>
                     <td>nguyenvana</td>
@@ -76,6 +80,7 @@
                     <th scope="row">1</th>
                     <td>Nguyễn</td>
                     <td>Văn A</td>
+                    <td>0123456987</td>
                     <td>19 Đồng khởi </td>
                     <td>vana@gmail.com</td>
                     <td>nguyenvana</td>
