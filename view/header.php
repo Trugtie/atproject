@@ -25,6 +25,7 @@ if (empty($_SESSION["username"])) {
     ";
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,7 +77,7 @@ if (empty($_SESSION["username"])) {
                 <li class="current"><a href="./index.php" class="active">Home</a></li>
                 <li><a href="./laptop.php">Laptop</a>
                 </li>
-                <li><a href="./phukien.php">Phu kiện</a></li>
+                <li><a href="./phukien.php">Phụ kiện</a></li>
                 <li><a href="./sukien.php">Sự kiện</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./aboutus.php">About us</a></li>
