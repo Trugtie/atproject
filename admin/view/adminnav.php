@@ -109,6 +109,25 @@
                         </div>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingSix">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <i class="fa-solid fa-address-card"></i>QUẢN LÝ NHÂN VIÊN<i class="fa-solid fa-angle-down"></i>
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="info"><a href="./quanlynhanvien.php"><i class="fa-solid fa-pen-to-square"></i>XEM THÔNG TIN</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="Exit"><button class="btnExit"> ĐĂNG XUẤT</button></div>

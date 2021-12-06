@@ -44,6 +44,12 @@ class UserDAO
     }
 
     public static function updateUser($ma,$ho,$ten,$diachi,$sdt,$conn){
-        $statement = $conn->prepare("update khachhang set ho=:ho,ten=:ten,diachi:diachi,sdt=:sdt");
+        $statement = $conn->prepare("update khachhang set ho=:ho,ten=:ten,diachi=:diachi,sdt=:sdt where makh=:ma");
+        $statement->bindValue(':ho',$ho);
+        $statement->bindValue(':ten',$ten);
+        $statement->bindValue(':diachi',$diachi);
+        $statement->bindValue(':sdt',$sdt);
+        $statement->bindValue(':ma',$ma);
+        $statement->execute();
     }
 }

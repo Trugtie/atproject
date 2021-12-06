@@ -135,9 +135,6 @@ p {
   font-size: 2rem;
   text-align: center;
 }
-.nav-item {
-  min-height: 6rem;
-}
 .nav-item i {
   margin: 0 0.6rem;
 }
@@ -149,6 +146,7 @@ p {
   color: white;
   font-family: var(--main-font);
   font-size: 2rem;
+  padding: 0.8rem;
   font-weight: bold;
 }
 .nav-item:first-child a {
@@ -161,7 +159,7 @@ p {
 }
 .card-header {
   background-color: #459eac !important;
-  height: 6rem;
+  max-height: 6rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -192,7 +190,7 @@ h2 {
   text-decoration: none !important;
   color: white !important;
   font-family: var(--main-font);
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   font-weight: bold;
 }
 .ul {
@@ -342,4 +340,33 @@ transition: all .3s;
 }
 .search:hover .fa-solid, .fas{
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 1234px) {
+  .card-header {
+    background-color: #459eac !important;
+    max-height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .btn-link {
+    text-decoration: none !important;
+    color: white !important;
+    font-family: var(--main-font);
+    font-size: 1.3rem !important;
+    font-weight: bold;
+  }
+
+  .nav-item:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #459eac;
+    color: white;
+    font-family: var(--main-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }
