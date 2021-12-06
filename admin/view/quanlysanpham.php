@@ -34,7 +34,7 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td><img src="../../images/lap1.jpg" alt=""></td>
+                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
                     <td>Laptop Lenovo
                         Ideapad Gaming 3
                         15IMH05
@@ -49,7 +49,7 @@
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><img src="../../images/lap1.jpg" alt=""></td>
+                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
                     <td>Laptop Lenovo
                         Ideapad Gaming 3
                         15IMH05
@@ -64,7 +64,7 @@
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><img src="../../images/lap1.jpg" alt=""></td>
+                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
                     <td>Laptop Lenovo
                         Ideapad Gaming 3
                         15IMH05
@@ -79,7 +79,7 @@
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><img src="../../images/lap1.jpg" alt=""></td>
+                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
                     <td>Laptop Lenovo
                         Ideapad Gaming 3
                         15IMH05
@@ -94,7 +94,7 @@
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><img src="../../images/lap1.jpg" alt=""></td>
+                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
                     <td>Laptop Lenovo
                         Ideapad Gaming 3
                         15IMH05

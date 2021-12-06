@@ -9,7 +9,7 @@
     <meta name="keywords" content="laptop, atlaptop">
     <meta name="author" content="Trugtie, NguyetTrann">
     <title>ATLAPTOP</title>
-    <link rel="icon" href="../images/icon.PNG">
+    <link rel="icon" href="./images/icon.PNG">
     <link rel="stylesheet" href="../css/style.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -38,7 +38,7 @@
             <nav class='nav'>
                 <div class="logo">
                     <a href="../index.php">
-                        <img src="../images/logo.png" alt="logo">
+                        <img src="./images/logo.png" alt="logo">
                     </a>
                 </div>
                 <ul class="snip1476">
@@ -100,7 +100,7 @@
       <div class="row">
           <div class="col-sm-6">
               <div class="pro-img-details">
-                  <img src="../images/lap1.jpg" alt="">
+                  <img src="./images/lap1.jpg" alt="">
               </div>
               <div class="pro-img-list">
                   <a href="#">

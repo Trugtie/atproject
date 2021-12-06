@@ -4,7 +4,7 @@
         <h1 class="cateHeader text-center event__header animate-top" id="categories__work">SỰ KIỆN</h1>
         <div class="event d-flex">
             <div class="event__img">
-                <img src="../images/schoolsale.PNG" alt="">
+                <img src="./images/schoolsale.PNG" alt="">
             </div>
             <div class="event__content flex-grow-1 d-flex flex-column justify-content-between">
                 <h2 class="content__header2">BACK TO SCHOOL</h2>
@@ -19,7 +19,7 @@
         </div>
         <div class="event d-flex">
             <div class="event__img">
-                <img src="../images/schoolsale.PNG" alt="">
+                <img src="./images/schoolsale.PNG" alt="">
             </div>
             <div class="event__content flex-grow-1 d-flex flex-column justify-content-between">
                 <h2 class="content__header2">BACK TO SCHOOL</h2>
@@ -34,7 +34,7 @@
         </div>
         <div class="event d-flex">
             <div class="event__img">
-                <img src="../images/schoolsale.PNG" alt="">
+                <img src="./images/schoolsale.PNG" alt="">
             </div>
             <div class="event__content flex-grow-1 d-flex flex-column justify-content-between">
                 <h2 class="content__header2">BACK TO SCHOOL</h2>
@@ -49,7 +49,7 @@
         </div>
         <div class="event d-flex">
             <div class="event__img">
-                <img src="../images/schoolsale.PNG" alt="">
+                <img src="./images/schoolsale.PNG" alt="">
             </div>
             <div class="event__content flex-grow-1 d-flex flex-column justify-content-between">
                 <h2 class="content__header2">BACK TO SCHOOL</h2>
@@ -64,7 +64,7 @@
         </div>
         <div class="event d-flex">
             <div class="event__img">
-                <img src="../images/schoolsale.PNG" alt="">
+                <img src="./images/schoolsale.PNG" alt="">
             </div>
             <div class="event__content flex-grow-1 d-flex flex-column justify-content-between">
                 <h2 class="content__header2">BACK TO SCHOOL</h2>

@@ -12,25 +12,24 @@ if (empty($_SESSION["username"])) {
    </a>
    ";
    $userDropdown.="
-   <li><a href='./view/login.php'>Đăng nhập</a></li>
-   <li><a href='./view/register.php'>Đăng ký</a></li>
+   <li><a href='./login.php'>Đăng nhập</a></li>
+   <li><a href='./register.php'>Đăng ký</a></li>
    ";
 }
 else{
     $username=$_SESSION["username"];
     $user.="<a href='#' class='user'> $username</a>";
     $userDropdown.="
-    <li><a href='./view/accountinformation.php'>Thông tin tài khoản</a></li>
-    <li><a href='#'>Lịch sử mua hàng</a></li>
-    <li><a href='./controller/logoutController.php'>Thoát</a></li>
+    <li><a href='./accountinformation.php'>Thông tin tài khoản</a></li>
+    <li><a href='../lichsumuahang.php'>Lịch sử mua hàng</a></li>
+    <li><a href='../controller/logoutController.php'>Thoát</a></li>
     ";
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Website to sell laptop">
@@ -39,7 +38,7 @@ else{
     <title>ATLAPTOP</title>
     <link rel="icon" href="./images/icon.PNG">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/aboutus.css">
+    <link rel="stylesheet" href="../css/accountinfo.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->
@@ -53,9 +52,6 @@ else{
     <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <!-- Header -->
 <header>
@@ -67,23 +63,28 @@ else{
         <nav class='nav' id="nav">
             <div class="logo">
                 <a href="../index.php">
-                    <img src="../images/logo.png" alt="logo">
+                    <img src="./images/logo.png" alt="logo">
                 </a>
             </div>
             <ul class="snip1476">
                 <li class="current"><a href="../index.php" class="active">Home</a></li>
-                <li><a href="#">Laptop</a>
+                <li><a href="../laptop.php">Laptop</a>
                 </li>
-                <li><a href="#">Phu kiện</a></li>
-                <li><a href="#">Sự kiện</a></li>
+                <li><a href="../phukien.php">Phu kiện</a></li>
+                <li><a href="../sukien.php">Sự kiện</a></li>
                 <li><a href="../contact.php">Contact</a></li>
                 <li><a href="../aboutus.php">About us</a></li>
             </ul>
             <div class="icon">
-                <div><a href=""><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div>
+                <div>
+                    <a href="../giohang.php" class="giohangcount"><i class="fa-solid fa-cart-shopping fa-xl">
+                    </i>
+                    <div class="count">0</div>
+                    </a>
+                </div>
                 <div> <a href=""><i class="fa-solid fa-bell fa-xl"></i></a></div>
                 <div class="user_dropdown">
-                    <?php echo $user?>
+                    <?php echo $user ?>
                     <ul class="user_dropdown_content">
                         <?php
                         echo $userDropdown;
@@ -96,39 +97,44 @@ else{
 </header>
 
 <body>
-<div class="well">
-    <session class="profile">
-    <div class="container rounded bg-white mt-5 mb-5">
-    <div class="row">
-        <?php
-        echo '<div class="col-md-3 border-right">';
-          echo  '<div class="d-flex flex-column align-items-center text-center p-5 py-5"><img class="rounded-circle mt-5" src="../images//3bf97c640b8732a64ab73b653f622582.jpg"><span class="font-weight-bold">'.$_SESSION["username"].'</span><span class="text-black-50"></span><span> </span></div>';
-          echo  '</div>'
-        ?>
-        <div class="col-md-8 border-right">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Thông Tin Tài Khoản</h4>
-                </div>                
-                <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Tên</label><input type="text" class="form-control" style="height: 30px;" placeholder="Nhập tên" value=""></div>
-                    <div class="col-md-6"><label class="labels">Họ</label><input type="text" class="form-control" style="height: 30px;" placeholder="Nhập họ" value=""></div>
+    <div class="well">
+        <session class="profile">
+            <div class="container rounded bg-white mt-5 mb-5">
+                <div class="row">
+                    <?php
+                    echo '<div class="col-md-3 border-right">';
+                    echo  '<div class="d-flex flex-column align-items-center text-center p-5 py-5"><img class="rounded-circle mt-5" src="./images//3bf97c640b8732a64ab73b653f622582.jpg"><span class="font-weight-bold" style=" font-size: 20px;">' .$_SESSION["username"]. '</span><span class="text-black-50"></span><span> </span></div>';
+                    echo  '</div>'
+                    ?>
+                    <div class="col-md-8 border-right">
+                        <div class="p-3 py-5" >
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right" style="font-size: 25px;">Thông Tin Tài Khoản</h4>
+                            </div>
+                            <form action="../controller/profileController.php" method="POST">
+                                <?php
+                                include '../model/loadProfileKH.php';
+                                echo '<div class="row mt-3">
+                                    <div class="col-md-6" ><label class="labels" style="font-size: 20px;">Tên</label><input name="ten" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập tên" value="'.$user["ten"].'"></div>
+                                    <div class="col-md-6"><label class="labels" style="font-size: 20px;">Họ</label><input name="ho" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập họ" value="'.$user["ho"].'"></div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12"><label class="labels" style="font-size: 20px;"> Số điện thoại</label><input name="sdt" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập số điện thoại" value="'.$user["sdt"].'"></div>
+                                    <div class="col-md-12"><label class="labels" style="font-size: 20px;">Địa chỉ</label><input name="diachi" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập địa chỉ" value="'.$user["diachi"].'"></div>
+                                </div>
+                                <div class="mt-5 text-center"><button name="upProfile" class="btn btn-primary profile-button" style="font-size: 20px; margin-bottom:30px" type="submit">Cập nhật</button></div>';
+                                ?>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Số điện thoại</label><input type="text" class="form-control" style="height: 30px;" placeholder="Nhập số điện thoại" value=""></div>
-                    <div class="col-md-12"><label class="labels">Địa chỉ</label><input type="text" class="form-control" style="height: 30px;" placeholder="Nhập địa chỉ" value=""></div>
-                </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Cập nhật</button></div>
             </div>
-        </div>
-        
     </div>
-</div>
-</div>
-</div>
+    </div>
     </session>
-<!-- Footer -->
-<footer>
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <div class="back-to-top">
                 <a href="#nav">

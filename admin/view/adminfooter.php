@@ -1,3 +1,3 @@
 </body>
-<script src="../../js/adminnav.js"></script>
+<script src="../../view/js/adminnav.js"></script>
 </html>

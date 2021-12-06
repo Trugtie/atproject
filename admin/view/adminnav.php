@@ -1,7 +1,7 @@
 <header>
     <nav class="nav" id="nav">
         <a href="#" class="logo">
-            <img src="../../images/logo.png" alt="">
+            <img src="../../view/images/logo.png" alt="">
         </a>
         <div class="clock">
             <div class="name">TRUGTIE</div>

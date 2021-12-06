@@ -1,8 +1,9 @@
 <?php
+include "../controller/autoload.php";
 session_start();
 $user = "";
 $userDropdown = "";
-if (empty($_SESSION["username"])) {
+if (empty($_SESSION["user"])) {
     $user .= "
    <a href='#'>
     <i class='fa-solid fa-user fa-xl'>
@@ -16,12 +17,13 @@ if (empty($_SESSION["username"])) {
    <li><a href='./register.php'>Đăng ký</a></li>
    ";
 } else {
-    $username = $_SESSION["username"];
+    $userget=$_SESSION["user"];
+    $username = $userget->get_username();
     $user .= "<a href='#' class='user'> $username</a>";
     $userDropdown .= "
     <li><a href='./accountinformation.php'>Thông tin tài khoản</a></li>
     <li><a href='./lichsumuahang.php'>Lịch sử mua hàng</a></li>
-    <li><a href='../controller/logoutController.php'>Thoát</a></li>
+    <li><a href='../controller/userController.php?action=logout'>Thoát</a></li>
     ";
 }
 ?>
@@ -36,16 +38,16 @@ if (empty($_SESSION["username"])) {
     <meta name="keywords" content="laptop, atlaptop">
     <meta name="author" content="Trugtie, NguyetTrann">
     <title>ATLAPTOP</title>
-    <link rel="icon" href="../images/icon.PNG">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/aboutus.css">
-    <link rel="stylesheet" href="../css/showcase.css">
-    <link rel="stylesheet" href="../css/sukien.css">
-    <link rel="stylesheet" href="../css/giohang.css">
-    <link rel="stylesheet" href="../css/lsmh.css">
-    <link rel="stylesheet" href="../css/thanhtoan.css">
-    <link rel="stylesheet" href="../css/detailproduct-style.css">
-    <link rel="stylesheet" href="../css/accountinfo.css">
+    <link rel="icon" href="./images/icon.PNG">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/aboutus.css">
+    <link rel="stylesheet" href="./css/showcase.css">
+    <link rel="stylesheet" href="./css/sukien.css">
+    <link rel="stylesheet" href="./css/giohang.css">
+    <link rel="stylesheet" href="./css/lsmh.css">
+    <link rel="stylesheet" href="./css/thanhtoan.css">
+    <link rel="stylesheet" href="./css/detailproduct-style.css">
+    <link rel="stylesheet" href="./css/accountinfo.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->
@@ -70,7 +72,7 @@ if (empty($_SESSION["username"])) {
         <nav class='nav' id="nav">
             <div class="logo">
                 <a href="./home.php">
-                    <img src="../images/logo.png" alt="logo">
+                    <img src="./images/logo.png" alt="logo">
                 </a>
             </div>
             <ul class="snip1476">

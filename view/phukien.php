@@ -5,13 +5,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../images/newsale.PNG" class="d-block w-100" alt=".newsale">
+                    <img src="./images/newsale.PNG" class="d-block w-100" alt=".newsale">
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/schoolsale.PNG" class="d-block w-100" alt="schooclsale">
+                    <img src="./images/schoolsale.PNG" class="d-block w-100" alt="schooclsale">
                 </div>
                 <div class="carousel-item">
-                    <img src="../images/christmassale.PNG" class="d-block w-100" alt="chrimassale">
+                    <img src="./images/christmassale.PNG" class="d-block w-100" alt="chrimassale">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -69,7 +69,7 @@
                 <div class="swiper-slide">
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -123,7 +123,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -150,7 +150,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -177,7 +177,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -204,7 +204,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -231,7 +231,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -258,7 +258,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -285,252 +285,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
-                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
-                        </div>
-                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
-                        <div class="item__detail">
-                            <table>
-                                <tr>
-                                    <th>Hãng:</td>
-                                    <td>Logitech</td>
-                                </tr>
-                                <tr>
-                                    <th>Mô tả:</th>
-                                </tr>
-                                <tr>
-                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
-                                        Bảo Hành : 24 tháng
-                                        Led : RGB</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item__button">
-                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            <div class="price">20.000.000 VND</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="item">
-                        <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
-                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
-                        </div>
-                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
-                        <div class="item__detail">
-                            <table>
-                                <tr>
-                                    <th>Hãng:</td>
-                                    <td>Logitech</td>
-                                </tr>
-                                <tr>
-                                    <th>Mô tả:</th>
-                                </tr>
-                                <tr>
-                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
-                                        Bảo Hành : 24 tháng
-                                        Led : RGB</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item__button">
-                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            <div class="price">20.000.000 VND</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
-                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
-                        </div>
-                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
-                        <div class="item__detail">
-                            <table>
-                                <tr>
-                                    <th>Hãng:</td>
-                                    <td>Logitech</td>
-                                </tr>
-                                <tr>
-                                    <th>Mô tả:</th>
-                                </tr>
-                                <tr>
-                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
-                                        Bảo Hành : 24 tháng
-                                        Led : RGB</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item__button">
-                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            <div class="price">20.000.000 VND</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
-                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
-                        </div>
-                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
-                        <div class="item__detail">
-                            <table>
-                                <tr>
-                                    <th>Hãng:</td>
-                                    <td>Logitech</td>
-                                </tr>
-                                <tr>
-                                    <th>Mô tả:</th>
-                                </tr>
-                                <tr>
-                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
-                                        Bảo Hành : 24 tháng
-                                        Led : RGB</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item__button">
-                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            <div class="price">20.000.000 VND</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
-                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
-                        </div>
-                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
-                        <div class="item__detail">
-                            <table>
-                                <tr>
-                                    <th>Hãng:</td>
-                                    <td>Logitech</td>
-                                </tr>
-                                <tr>
-                                    <th>Mô tả:</th>
-                                </tr>
-                                <tr>
-                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
-                                        Bảo Hành : 24 tháng
-                                        Led : RGB</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item__button">
-                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            <div class="price">20.000.000 VND</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
-                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
-                        </div>
-                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
-                        <div class="item__detail">
-                            <table>
-                                <tr>
-                                    <th>Hãng:</td>
-                                    <td>Logitech</td>
-                                </tr>
-                                <tr>
-                                    <th>Mô tả:</th>
-                                </tr>
-                                <tr>
-                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
-                                        Bảo Hành : 24 tháng
-                                        Led : RGB</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item__button">
-                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            <div class="price">20.000.000 VND</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
-                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
-                        </div>
-                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
-                        <div class="item__detail">
-                            <table>
-                                <tr>
-                                    <th>Hãng:</td>
-                                    <td>Logitech</td>
-                                </tr>
-                                <tr>
-                                    <th>Mô tả:</th>
-                                </tr>
-                                <tr>
-                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
-                                        Bảo Hành : 24 tháng
-                                        Led : RGB</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item__button">
-                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            <div class="price">20.000.000 VND</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
-                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
-                        </div>
-                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
-                        <div class="item__detail">
-                            <table>
-                                <tr>
-                                    <th>Hãng:</td>
-                                    <td>Logitech</td>
-                                </tr>
-                                <tr>
-                                    <th>Mô tả:</th>
-                                </tr>
-                                <tr>
-                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
-                                        Bảo Hành : 24 tháng
-                                        Led : RGB</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item__button">
-                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            <div class="price">20.000.000 VND</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
-                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
-                        </div>
-                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
-                        <div class="item__detail">
-                            <table>
-                                <tr>
-                                    <th>Hãng:</td>
-                                    <td>Logitech</td>
-                                </tr>
-                                <tr>
-                                    <th>Mô tả:</th>
-                                </tr>
-                                <tr>
-                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
-                                        Bảo Hành : 24 tháng
-                                        Led : RGB</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="item__button">
-                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            <div class="price">20.000.000 VND</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -559,7 +314,7 @@
                 <div class="swiper-slide">
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -586,7 +341,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -613,7 +368,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -640,7 +395,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -667,7 +422,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -694,7 +449,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -721,7 +476,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -748,7 +503,7 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
@@ -775,7 +530,252 @@
                     </div>
                     <div class="item">
                         <div class="item__image">
-                            <img src="../images/mouse.png" alt="">
+                            <img src="./images/mouse.png" alt="">
+                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>Hãng:</td>
+                                    <td>Logitech</td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả:</th>
+                                </tr>
+                                <tr>
+                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
+                                        Bảo Hành : 24 tháng
+                                        Led : RGB</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/mouse.png" alt="">
+                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>Hãng:</td>
+                                    <td>Logitech</td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả:</th>
+                                </tr>
+                                <tr>
+                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
+                                        Bảo Hành : 24 tháng
+                                        Led : RGB</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/mouse.png" alt="">
+                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>Hãng:</td>
+                                    <td>Logitech</td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả:</th>
+                                </tr>
+                                <tr>
+                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
+                                        Bảo Hành : 24 tháng
+                                        Led : RGB</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/mouse.png" alt="">
+                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>Hãng:</td>
+                                    <td>Logitech</td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả:</th>
+                                </tr>
+                                <tr>
+                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
+                                        Bảo Hành : 24 tháng
+                                        Led : RGB</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/mouse.png" alt="">
+                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>Hãng:</td>
+                                    <td>Logitech</td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả:</th>
+                                </tr>
+                                <tr>
+                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
+                                        Bảo Hành : 24 tháng
+                                        Led : RGB</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/mouse.png" alt="">
+                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>Hãng:</td>
+                                    <td>Logitech</td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả:</th>
+                                </tr>
+                                <tr>
+                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
+                                        Bảo Hành : 24 tháng
+                                        Led : RGB</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/mouse.png" alt="">
+                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>Hãng:</td>
+                                    <td>Logitech</td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả:</th>
+                                </tr>
+                                <tr>
+                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
+                                        Bảo Hành : 24 tháng
+                                        Led : RGB</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/mouse.png" alt="">
+                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>Hãng:</td>
+                                    <td>Logitech</td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả:</th>
+                                </tr>
+                                <tr>
+                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
+                                        Bảo Hành : 24 tháng
+                                        Led : RGB</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/mouse.png" alt="">
+                            <a href="./detailproduct.php" class="image__more">Xem thêm</a>
+                        </div>
+                        <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>
+                        <div class="item__detail">
+                            <table>
+                                <tr>
+                                    <th>Hãng:</td>
+                                    <td>Logitech</td>
+                                </tr>
+                                <tr>
+                                    <th>Mô tả:</th>
+                                </tr>
+                                <tr>
+                                    <td class="decsr" colspan="2">Tình Trạng : Mới 100% - Fullbox
+                                        Bảo Hành : 24 tháng
+                                        Led : RGB</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="item__button">
+                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                            <div class="price">20.000.000 VND</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item__image">
+                            <img src="./images/mouse.png" alt="">
                             <a href="./detailproduct.php" class="image__more">Xem thêm</a>
                         </div>
                         <h3 class="item__name">Chuột Logitech G102 Lightsync RGB Black</h3>

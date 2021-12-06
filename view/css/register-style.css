@@ -173,7 +173,7 @@ a {
     padding-top: calc(var(--input-padding-y) / 3);
     padding-bottom: calc(var(--input-padding-y) / 3);
     font-size: 12px;
-    color: #fff;
+    color: #46484a;
   }
 
 
@@ -184,5 +184,49 @@ a {
   .create-acc{
     text-align: center;
   }
+
+  /* Modal */
+  .modal{
+    display: flex !important;
+    justify-content:center;
+    align-items: center;
+    background-color:rgba(0,0,0, 0.5);
+  }
+
+  .modal-content{
+    width: 450px;
+    height: 200px;
+  }
+
+  /* SendMail */
+  .btnSend{
+    top:50%;
+    transform: translateY(-50%);
+    right:0;
+    background:none;
+    border:none;
+    transition:all .3s;
+    z-index: 1;
+  }
   
+  .btnSend:hover{
+    color:rgb(104, 103, 103);
+  }
+
+  .btnReset{
+    font-size: 80%;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+    border-radius: 30px;
+    width: 140px;
+    margin-left: 70px;
+    background-color: #5C7E90;
+    color: #fff;;
+  }
   
+  .btn:hover{
+    color:rgb(31, 31, 31);
+    background-color: rgb(147, 217, 255)
+  }
