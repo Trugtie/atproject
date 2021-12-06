@@ -1,8 +1,9 @@
 <?php
+include "../controller/autoload.php";
 session_start();
 $user = "";
 $userDropdown = "";
-if (empty($_SESSION["username"])) {
+if (empty($_SESSION["user"])) {
     $user .= "
    <a href='#'>
     <i class='fa-solid fa-user fa-xl'>
@@ -11,18 +12,22 @@ if (empty($_SESSION["username"])) {
     </i>
    </a>
    ";
-   $userDropdown.="
+    $userDropdown .= "
    <li><a href='./login.php'>Đăng nhập</a></li>
    <li><a href='./register.php'>Đăng ký</a></li>
    ";
-}
-else{
-    $username=$_SESSION["username"];
-    $user.="<a href='#' class='user'> $username</a>";
-    $userDropdown.="
+} else {
+    $userget=$_SESSION["user"];
+    $username = $userget->get_username();
+    $ho = $userget->get_ho();
+    $ten = $userget->get_ten();
+    $sdt = $userget->get_sdt();
+    $diachi = $userget->get_diachi();
+    $user .= "<a href='#' class='user'> $username</a>";
+    $userDropdown .= "
     <li><a href='./accountinformation.php'>Thông tin tài khoản</a></li>
-    <li><a href='../lichsumuahang.php'>Lịch sử mua hàng</a></li>
-    <li><a href='../controller/logoutController.php'>Thoát</a></li>
+    <li><a href='./lichsumuahang.php'>Lịch sử mua hàng</a></li>
+    <li><a href='../controller/userController.php?action=logout'>Thoát</a></li>
     ";
 }
 ?>
@@ -36,8 +41,8 @@ else{
     <meta name="author" content="Trugtie, NguyetTrann">
     <title>ATLAPTOP</title>
     <link rel="icon" href="./images/icon.PNG">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/accountinfo.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/accountinfo.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->
@@ -61,22 +66,22 @@ else{
         <i class="fa-solid fa-bars" id="navBtn"></i>
         <nav class='nav' id="nav">
             <div class="logo">
-                <a href="../index.php">
+                <a href="./home.php">
                     <img src="./images/logo.png" alt="logo">
                 </a>
             </div>
             <ul class="snip1476">
                 <li class="current"><a href="../index.php" class="active">Home</a></li>
-                <li><a href="../laptop.php">Laptop</a>
+                <li><a href="./laptop.php">Laptop</a>
                 </li>
-                <li><a href="../phukien.php">Phu kiện</a></li>
-                <li><a href="../sukien.php">Sự kiện</a></li>
-                <li><a href="../contact.php">Contact</a></li>
-                <li><a href="../aboutus.php">About us</a></li>
+                <li><a href="./phukien.php">Phu kiện</a></li>
+                <li><a href="./sukien.php">Sự kiện</a></li>
+                <li><a href="./contact.php">Contact</a></li>
+                <li><a href="./aboutus.php">About us</a></li>
             </ul>
             <div class="icon">
                 <div>
-                    <a href="../giohang.php" class="giohangcount"><i class="fa-solid fa-cart-shopping fa-xl">
+                    <a href="./giohang.php" class="giohangcount"><i class="fa-solid fa-cart-shopping fa-xl">
                     </i>
                     <div class="count">0</div>
                     </a>
@@ -102,7 +107,7 @@ else{
                 <div class="row">
                     <?php
                     echo '<div class="col-md-3 border-right">';
-                    echo  '<div class="d-flex flex-column align-items-center text-center p-5 py-5"><img class="rounded-circle mt-5" src="./images//3bf97c640b8732a64ab73b653f622582.jpg"><span class="font-weight-bold" style=" font-size: 20px;">' .$_SESSION["username"]. '</span><span class="text-black-50"></span><span> </span></div>';
+                    echo  '<div class="d-flex flex-column align-items-center text-center p-5 py-5"><img class="rounded-circle mt-5" src="./images//3bf97c640b8732a64ab73b653f622582.jpg"><span class="font-weight-bold" style=" font-size: 20px;">' .$username. '</span><span class="text-black-50"></span><span> </span></div>';
                     echo  '</div>'
                     ?>
                     <div class="col-md-8 border-right">
@@ -110,18 +115,18 @@ else{
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h4 class="text-right" style="font-size: 25px;">Thông Tin Tài Khoản</h4>
                             </div>
-                            <form action="../controller/profileController.php" method="POST">
+                            <form action="" method="POST">
                                 <?php
-                                include '../model/loadProfileKH.php';
                                 echo '<div class="row mt-3">
-                                    <div class="col-md-6" ><label class="labels" style="font-size: 20px;">Tên</label><input name="ten" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập tên" value="'.$user["ten"].'"></div>
-                                    <div class="col-md-6"><label class="labels" style="font-size: 20px;">Họ</label><input name="ho" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập họ" value="'.$user["ho"].'"></div>
+                                    <div class="col-md-6" ><label class="labels" style="font-size: 20px;">Tên</label><input name="ten" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập tên" value="'.$ten.'"></div>
+                                    <div class="col-md-6"><label class="labels" style="font-size: 20px;">Họ</label><input name="ho" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập họ" value="'.
+                                    $ho.'"></div>
                                 </div>
                                 <div class="row mt-3">
-                                    <div class="col-md-12"><label class="labels" style="font-size: 20px;"> Số điện thoại</label><input name="sdt" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập số điện thoại" value="'.$user["sdt"].'"></div>
-                                    <div class="col-md-12"><label class="labels" style="font-size: 20px;">Địa chỉ</label><input name="diachi" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập địa chỉ" value="'.$user["diachi"].'"></div>
+                                    <div class="col-md-12"><label class="labels" style="font-size: 20px;"> Số điện thoại</label><input name="sdt" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập số điện thoại" value="'.$sdt.'"></div>
+                                    <div class="col-md-12"><label class="labels" style="font-size: 20px;">Địa chỉ</label><input name="diachi" type="text" class="form-control" style="height: 40px; font-size: 16px;" placeholder="Nhập địa chỉ" value="'.$diachi.'"></div>
                                 </div>
-                                <div class="mt-5 text-center"><button name="upProfile" class="btn btn-primary profile-button" style="font-size: 20px; margin-bottom:30px" type="submit">Cập nhật</button></div>';
+                                <div class="mt-5 text-center"><button name="upProfile" class="btn btn-primary profile-button" style="font-size: 20px; margin-bottom:30px" type="submit" name="update">Cập nhật</button></div>';
                                 ?>
                             </form>
                         </div>
@@ -197,9 +202,9 @@ else{
         </div>
     </footer>
 </body>
-<script src="../js/home.js"></script>
-<script src="../js/nav.js"></script>
-<script src="../js/scrollreveal.js"></script>
+<script src=".js/home.js"></script>
+<script src="./js/nav.js"></script>
+<script src="./js/scrollreveal.js"></script>
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Initialize Swiper -->

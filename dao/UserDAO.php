@@ -42,4 +42,8 @@ class UserDAO
         $statement->bindValue(':pass', $pass);
         $statement->execute();
     }
+
+    public static function updateUser($ma,$ho,$ten,$diachi,$sdt,$conn){
+        $statement = $conn->prepare("update khachhang set ho=:ho,ten=:ten,diachi:diachi,sdt=:sdt");
+    }
 }

@@ -112,5 +112,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
            }
 
             break;
+        case "update":
+            
+            break;
     }
 }
