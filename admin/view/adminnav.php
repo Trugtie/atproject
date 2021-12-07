@@ -4,7 +4,7 @@
             <img src="../../view/images/logo.png" alt="">
         </a>
         <div class="clock">
-            <div class="name">TRUGTIE</div>
+            <div class="name"><?php echo $username ?></div>
             <div class="time" id="runningTime"></div>
         </div>
         <div class="ul">
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <div class="accordion" id="accordionExample">
                         <div class="card">
                             <div class="card-header" id="headingSix">
@@ -127,10 +127,13 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
+                <?php echo $quanlynhanvien; ?>
             </ul>
         </div>
-        <div class="Exit"><button class="btnExit"> ĐĂNG XUẤT</button></div>
+        <form action="../controller/logoutController.php">
+        <div class="Exit"><button name="dangxuat" class="btnExit"> ĐĂNG XUẤT</button></div>
+        </form>
     </nav>
 
 </header>

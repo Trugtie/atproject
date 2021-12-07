@@ -9,6 +9,7 @@ class UserDAO
         $user = $statement->fetch(PDO::FETCH_ASSOC);
         return $user;
     }
+    
 
     public static function getUserWithID($id,$conn)
     {
