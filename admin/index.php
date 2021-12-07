@@ -5,7 +5,7 @@ if(!isset($_SESSION["username"])){
     header('Location: ./view/loginadmin.php');
 }
 else if(!isset($_SESSION["username"])=="master"){
-    header('Location: ./view/adminmaster.php');
+    header('Location: ./view/admin.php');
 }
 else{
     header('Location: ./view/admin.php');

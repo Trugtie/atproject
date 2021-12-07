@@ -158,3 +158,16 @@ a {
 .create-acc {
   text-align: center;
 }
+
+/* Modal */
+.modal{
+  display: flex !important;
+  justify-content:center;
+  align-items: center;
+  background-color:rgba(0,0,0, 0.5);
+}
+
+.modal-content{
+  width: 450px;
+  height: 200px;
+}

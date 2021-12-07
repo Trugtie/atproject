@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 } else {
     $action = $_POST['action'];
     switch ($action) {
+        
         case "update":
             var_dump($_POST);
             $ten = $_POST['ten'];
