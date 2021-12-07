@@ -351,6 +351,18 @@ transition: all .3s;
 }
 
 
+ /* Modal */
+ .modal{
+  display: flex !important;
+  justify-content:center;
+  align-items: center;
+  background-color:rgba(0,0,0, 0.5);
+}
+
+.modal-content{
+  width: 450px !important;
+  height: 450px;
+}
 
 @media screen and (max-width: 1366px) {
   .card-header {

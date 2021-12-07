@@ -16,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     switch ($action) {
         
         case "update":
-            var_dump($_POST);
             $ten = $_POST['ten'];
             $ho = $_POST['ho'];
             $ma = $_POST['ma'];

@@ -23,8 +23,7 @@ include "../../dao/AdminDAO.php";
             // var_dump($_POST);
             // exit();
             $error = "";
-            $adminDB = AdminDAO::getAdmin($username, $password, $conn);
-            
+            $adminDB = AdminDAO::getAdmin($username, sha1($password), $conn);
             if ($adminDB == false) {
                 session_start();
                 $error = "Sai tài khoản hoặc mật khẩu";

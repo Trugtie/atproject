@@ -1,5 +1,5 @@
 <?php
-include './sanpham.php';
+include  dirname(__DIR__).'/model/sanpham.php';
 class PhuKien extends SanPham
 {
     private $maLoaiPk;

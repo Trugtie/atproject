@@ -1,3 +1,8 @@
+<?php
+include "../../controller/autoload.php";
+include "../../dao/ProductDAO.php";
+$laptops = ProductDAO::getAllLaptop($conn);
+?>
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
 <section>
@@ -32,81 +37,20 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach($laptops as $laptop) :?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
-                    <td>Laptop Lenovo
-                        Ideapad Gaming 3
-                        15IMH05
-                        81Y400X0VN</td>
-                    <td>20.000.000 </td>
-                    <td>10</td>
-                    <td>Còn hàng</td>
+                    <th scope="row"><?php echo $laptop['masp']?></th>
+                    <td><img src="<?php echo "./".$laptop["hinh"] ?>" alt=""></td>
+                    <td><?php echo $laptop['tensp']?></td>
+                    <td><?php echo  number_format($laptop['gia'],0,",",".")." VND"?></td>
+                    <td><?php echo $laptop['soluong']?></td>
+                    <td><?php echo $laptop['tinhtrang']?></td>
                     <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
+                        <a href="./editlaptop.php?masp=<?php echo $laptop['masp']?>" class="sua">Sửa</a>
+                        <a href="../controller/productController.php?action=delete&masp=<?php echo $laptop['masp']?>" class="xoa">Xóa</a>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
-                    <td>Laptop Lenovo
-                        Ideapad Gaming 3
-                        15IMH05
-                        81Y400X0VN</td>
-                    <td>20.000.000 </td>
-                    <td>10</td>
-                    <td>Còn hàng</td>
-                    <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
-                    <td>Laptop Lenovo
-                        Ideapad Gaming 3
-                        15IMH05
-                        81Y400X0VN</td>
-                    <td>20.000.000 </td>
-                    <td>10</td>
-                    <td>Còn hàng</td>
-                    <td class="action action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
-                    <td>Laptop Lenovo
-                        Ideapad Gaming 3
-                        15IMH05
-                        81Y400X0VN</td>
-                    <td>20.000.000 </td>
-                    <td>10</td>
-                    <td>Còn hàng</td>
-                    <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="../../view/images/lap1.jpg" alt=""></td>
-                    <td>Laptop Lenovo
-                        Ideapad Gaming 3
-                        15IMH05
-                        81Y400X0VN</td>
-                    <td>20.000.000 </td>
-                    <td>10</td>
-                    <td>Còn hàng</td>
-                    <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
-                    </td>
-                </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>

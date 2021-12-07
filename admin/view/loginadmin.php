@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['error'])){
+if(!empty($_SESSION['error'])){
   $error = $_SESSION['error'];
   echo "
   <div class='modal' tabindex='-1'>

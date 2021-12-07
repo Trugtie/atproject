@@ -1,5 +1,5 @@
 <?php
-include './sanpham.php';
+include  dirname(__DIR__).'/model/sanpham.php';
 class Laptop extends SanPham
 {
     private $trongLuong;
