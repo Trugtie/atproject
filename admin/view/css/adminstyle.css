@@ -301,6 +301,14 @@ h2 {
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   margin-right: 2rem;
   text-align: center;
+  transition: all 0.3s;
+  color: black;
+  text-decoration: none;
+}
+
+.btnThem:hover{
+color:white;
+background-color:black;
 }
 .cboSanPham{
   cursor: pointer;

@@ -9,7 +9,7 @@
             <h1 class="title">QUẢN LÝ SẢN PHẨM</h1>
         </div>
         <div class="controller d-flex">
-            <input type="submit" value="Thêm" class="btnThem">
+            <a class="btnThem" href="./addproduct.php">Thêm</a>
             <select name="cboSanPham" id="" class="cboSanPham">
                 <option value="Laptop">LAPTOP</option>
                 <option value="Phukien">PHỤ KIỆN</option>

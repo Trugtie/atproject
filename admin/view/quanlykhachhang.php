@@ -1,7 +1,7 @@
 <?php
 include "../../controller/autoload.php";
-include "../../dao/UserDao.php";
-$users = UserDao::getAllUser($conn);
+include "../../dao/UserDAO.php";
+$users = UserDAO::getAllUser($conn);
 ?>
 
 <?php include "./adminheader.php" ?>

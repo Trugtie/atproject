@@ -1,3 +1,9 @@
+<?php
+include "../../controller/autoload.php";
+include "../../dao/ProductDAO.php";
+$hangs = ProductDAO::getAllHang($conn);
+?>
+
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
 <section>
@@ -9,20 +15,19 @@
             <h1 class="title">THÊM SẢN PHẨM LAPTOP</h1>
         </div>
         <div class="table .table-striped">
-            <div class="col-md-8 border-right" >  
-                <form action="../controller/addproductController.php" method="POST" enctype="multipart/form-data">                    
+            <div class="col-md-8 border-right">
+                <form action="../controller/productController.php" method="POST" enctype="multipart/form-data">
                     <div class="row1">
-                        <div class="col-sm-9 left-row" >
+                        <div class="col-sm-9 left-row">
                             <label style="font-size:20px;">Hình</label>
                             <div class="pic" style="width: 290px; height: 237px; border: 1px solid;"> <img name="hinh" src="" alt> </div>
                             <input style="margin-top: 10px; font-size:16px" name="hinh" type="file" id="myFile" name="filename">
                             <br>
                             <label style="font-size:20px;margin-top: 7px">Hãng</label><br>
                             <select name="mahang" style="font-size:16px; width: 220px" class="form-select" aria-label="Default select example">
-                            <option selected></option>
-                            <option value="1">Dell</option>
-                            <option value="2">Asus</option>
-                            <option value="3">HP</option>
+                                <?php foreach ($hangs as $hang) : ?>
+                                    <option value="<?php echo $hang['mahang'] ?>"><?php echo $hang['tenhang'] ?></option>
+                                <?php endforeach; ?>
                             </select>
                             <label style="margin-top: 7px; font-size: 20px">Trọng lượng</label><br>
                             <input type="text" name="trongluong" class="inputSp" name="trongluong"><br>
@@ -39,35 +44,46 @@
                             <label style="font-size:20px;margin-top: 15px;margin-bottom: 7px">Mã sản phẩm</label>
                             <input type="text" style="margin-top: 10px; font-size:20px; width: 200px; float:right" name="masp"><br>
                             <label style="font-size:20px;margin-top: 15px">Loại sản phẩm</label>
-                            <input type="text" style="margin-top: 10px; font-size:20px; width: 200px; float:right" name="loaisp" value="Laptop">
+                            <select name="loaisp" id="" style="margin-top: 10px; font-size:20px; width: 200px; float:right">
+                                <option value="laptop">Laptop</option>
+                                <option value="phukien">Phụ kiện</option>
+                            </select>
+
+                            <br>
                             <label style="font-size:20px;margin-top: 15px">Tên sản phẩm</label><br>
                             <input type="text" style="margin-top: 10px; font-size:20px; width: 345px" name="tensp"><br>
                             <label style="font-size:20px;margin-top: 15px">Mô tả</label><br>
                             <textarea style="margin-top: 10px; font-size:20px; width: 345px; height:130px" name="mota"></textarea><br>
                             <div class="subsub0" style="margin-bottom:-10px">
                                 <div class="subsub1">
-                                <label style="font-size:20px;margin-top: 7px">Số lượng</label><br>
-                                <input type="text" style="margin-top: 10px; font-size:20px; width: 125px" name="soluong">                        
+                                    <label style="font-size:20px;margin-top: 7px">Số lượng</label><br>
+                                    <input type="text" style="margin-top: 10px; font-size:20px; width: 125px" name="soluong">
                                 </div>
                                 <div class="subsub2">
-                                <label style="font-size:20px;margin-top: 7px">Giá</label><br>
-                                <input type="text" style="margin-top: 10px; font-size:20px; width: 200px" name="gia">                        
+                                    <label style="font-size:20px;margin-top: 7px">Giá</label><br>
+                                    <input type="text" style="margin-top: 10px; font-size:20px; width: 200px" name="gia">
                                 </div>
                             </div>
                             <label style="margin-top: -25px; font-size: 20px">Màu</label><br>
                             <input type="text" class="inputSp" name="mausac"><br>
                             <label style="font-size:20px;margin-top: 7px">Loại máy</label><br>
-                            <input type="text" class="inputSp" name="maloaimay"><br>
+                            <select name="maloaimay" id="" class="inputSp">
+                                <option value="1">Học tập - Văn phòng</option>
+                                <option value="2">Đồ họa - Gaming</option>
+                                <option value="3">Mỏng nhẹ cao cấp</option>
+                            </select>
+
+                            <br>
                             <label style="font-size:20px;margin-top: 10px">VGA</label><br>
                             <input type="text" class="inputSp" name="vga"><br>
                             <label style="font-size:20px;margin-top: 15px">PIN</label><br>
                             <input type="text" class="inputSp" name="pin"><br>
-                            
+
                         </div>
-                        
+
                     </div>
                     <div class="btn-add">
-                        <button  id="btn-add" type="submit" id="">ADD</button>
+                        <button id="btn-add" type="submit" name="action" value="addLaptop">ADD</button>
                     </div>
                 </form>
             </div>
