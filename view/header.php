@@ -1,5 +1,6 @@
 <?php
 include "../controller/autoload.php";
+include "../dao/ProductDAO.php";
 session_start();
 $user = "";
 $userDropdown = "";
@@ -26,6 +27,8 @@ if (empty($_SESSION["user"])) {
     <li><a href='../controller/userController.php?action=logout'>Thoát</a></li>
     ";
 }
+
+$lapTopWorks=ProductDAO::getAllLaptopWithType($conn,1);
 ?>
 
 <!DOCTYPE html>

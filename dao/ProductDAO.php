@@ -1,6 +1,5 @@
 <?php
 include dirname(__DIR__)."/util/connectDB.php";
-
 class ProductDAO{
     public static function getAllHang($conn){
         $statement = $conn->prepare("select * from hang");
@@ -81,6 +80,13 @@ class ProductDAO{
 
     public static function getAllLaptop($conn){
         $statement = $conn->prepare("select * from laptop");
+        $statement->execute();
+        $laptops=$statement->fetchAll(PDO::FETCH_ASSOC);
+        return $laptops;
+    }
+
+    public static function getAllLaptopWithType($conn,$type){
+        $statement = $conn->prepare("select * from laptop where maloaimay=$type");
         $statement->execute();
         $laptops=$statement->fetchAll(PDO::FETCH_ASSOC);
         return $laptops;
