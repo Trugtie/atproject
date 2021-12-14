@@ -172,11 +172,12 @@
                 for ($i = 0; $i < $slides; $i++) :
                 ?>
                     <div class="swiper-slide">
-                        <?php if ($flag == 0) : ?>
+                        <?php if ($flag == 0){ ?>
                             <?php for ($j = 0; $j < count($lapTopWorks); $j++) : ?>
                                 <?php if ($count == 6) {
                                     $temp = $j;
                                     $flag = 1;
+                                    $count= 0;
                                     break;
                                 } ?>
                                 <div class="item">
@@ -216,12 +217,52 @@
                                 </div>
                                 <?php $count +=1; ?>
                             <?php endfor; ?>
-                        <?php endif; ?>
-                        <?php if ($flag == 1): ?>
-                            <?php for ($j = $temp+1; $j < count($lapTopWorks); $j++) : ?>
-                                
+                        <?php }
+                        else if($flag == 1){ ?>
+                            <?php for ($j = $temp; $j < count($lapTopWorks); $j++) : ?>
+                                <?php if ($count == 6) {
+                                    $temp = $j;
+                                    $flag = 1;
+                                    $count= 0;
+                                    break;
+                                } ?>
+                                <div class="item">
+                                    <div class="item__image">
+                                        <img src="<?php echo "../admin/view/" . $lapTopWorks[$j]['hinh'] ?>" alt="">
+                                        <a href="#" class="image__more">Xem thêm</a>
+                                    </div>
+                                    <h3 class="item__name"><?php echo $lapTopWorks[$j]['tensp'] ?></h3>
+                                    <div class="item__detail">
+                                        <table>
+                                            <tr>
+                                                <th>CPU:</td>
+                                                <td><?php echo $lapTopWorks[$j]['cpu'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>RAM:</td>
+                                                <td><?php echo $lapTopWorks[$j]['ram'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>VGA</td>
+                                                <td><?php echo $lapTopWorks[$j]['vga'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Ổ cứng:</td>
+                                                <td><?php echo $lapTopWorks[$j]['ocung'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Màn hình:</td>
+                                                <td><?php echo $lapTopWorks[$j]['manhinh'] ?></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="item__button">
+                                        <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
+                                    </div>
+                                </div>
                             <?php endfor; ?>
-                        <?php endif; ?>
+                        <?php } ?>
                     </div>
                 <?php endfor; ?>
             </div>
