@@ -1,7 +1,9 @@
 <?php
 include "../../controller/autoload.php";
 include "../../dao/ProductDAO.php";
+include "../../dao/AccessoryDAO.php";
 $laptops = ProductDAO::getAllLaptop($conn);
+$phukiens = AccessoryDAO::getAllPhuKien($conn);
 ?>
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
@@ -48,6 +50,20 @@ $laptops = ProductDAO::getAllLaptop($conn);
                     <td class="action d-flex justify-content-around align-items-center">
                         <a href="./editlaptop.php?masp=<?php echo $laptop['masp']?>" class="sua">Sửa</a>
                         <a href="../controller/productController.php?action=delete&masp=<?php echo $laptop['masp']?>" class="xoa">Xóa</a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                <?php foreach($phukiens as $phukien) :?>
+                    <tr>
+                    <th scope="row"><?php echo $phukien['masp']?></th>
+                    <td><img src="<?php echo "./".$phukien["hinh"] ?>" alt=""></td>
+                    <td><?php echo $phukien['tensp']?></td>
+                    <td><?php echo  number_format($phukien['gia'],0,",",".")." VND"?></td>
+                    <td><?php echo $phukien['soluong']?></td>
+                    <td><?php echo $phukien['tinhtrang']?></td>
+                    <td class="action d-flex justify-content-around align-items-center">
+                        <a href="./editPhuKien.php?masp=<?php echo $phukien['masp']?>" class="sua">Sửa</a>
+                        <a href="../controller/AccessoryController.php?action=delete&masp=<?php echo $phukien['masp']?>" class="xoa">Xóa</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

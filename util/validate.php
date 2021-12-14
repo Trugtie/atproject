@@ -77,4 +77,41 @@ class validate{
         $error.="Chưa điền pin! <br>";
         return $error;
     }
+
+    public static function validatePhukien($hinh,$tensp,$mota,$soluong,$gia){
+        $imageType=array("image/png", "image/jpeg", "image/bmp");
+        $error="";
+        if(empty($hinh))
+        $error.="Chưa thêm hình! <br>";
+        else if($hinh["error"]!=0)
+        $error.="Lỗi file hình! <br>";
+        else if(!in_array($hinh["type"],$imageType))
+        $error.="Không phải file hình! <br>";
+        if(empty($tensp))
+        $error.="Chưa điền tên sản phẩm! <br>";
+        if(empty($mota))
+        $error.="Chưa điền mô tả! <br>";
+        if(empty($soluong) && $soluong != 0 )
+        $error.="Chưa điền số lượng! <br>";
+        else if($soluong < 1)
+        $error.="Số lượng < 1 <br>";
+        if(empty($gia))
+        $error.="Chưa điền giá! <br>";
+        return $error;
+    }
+
+    public static function validatePhukienWithoutImage($tensp,$mota,$soluong,$gia){
+        $error="";        
+        if(empty($tensp))
+        $error.="Chưa điền tên sản phẩm! <br>";
+        if(empty($mota))
+        $error.="Chưa điền mô tả! <br>";
+        if(empty($soluong) && $soluong != 0 )
+        $error.="Chưa điền số lượng! <br>";
+        else if($soluong < 1)
+        $error.="Số lượng < 1 <br>";
+        if(empty($gia))
+        $error.="Chưa điền giá! <br>";
+        return $error;
+    }
 }
