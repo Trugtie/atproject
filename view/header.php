@@ -28,6 +28,7 @@ if (empty($_SESSION["user"])) {
     ";
 }
 
+$lapTopAll=ProductDAO::getAllLaptop($conn);
 $lapTopWorks=ProductDAO::getAllLaptopWithType($conn,1);
 ?>
 

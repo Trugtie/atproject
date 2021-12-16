@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 move_uploaded_file($temp, dirname(__DIR__) . '/view/images/' . $name);
                 $imagePath = '/images/' . $name;
                 $phukien = new PhuKien($masp, $tensp, $mota, $soluong, $imagePath, $gia, $loaisp, $tinhtrang, $mahang, $maphukien);
+                AccessoryDAO::resetAI($conn);
                 AccessoryDAO::insertPhuKien($phukien, $conn);
                 header("Location: ../view/quanlysanpham.php");
             }

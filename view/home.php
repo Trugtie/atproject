@@ -183,7 +183,7 @@
                                 <div class="item">
                                     <div class="item__image">
                                         <img src="<?php echo "../admin/view/" . $lapTopWorks[$j]['hinh'] ?>" alt="">
-                                        <a href="#" class="image__more">Xem thêm</a>
+                                        <a href="./detailproduct.php?masp=<?php echo $lapTopWorks[$j]['masp'] ?>" class="image__more">Xem thêm</a>
                                     </div>
                                     <h3 class="item__name"><?php echo $lapTopWorks[$j]['tensp'] ?></h3>
                                     <div class="item__detail">
@@ -222,14 +222,13 @@
                             <?php for ($j = $temp; $j < count($lapTopWorks); $j++) : ?>
                                 <?php if ($count == 6) {
                                     $temp = $j;
-                                    $flag = 1;
                                     $count= 0;
                                     break;
                                 } ?>
                                 <div class="item">
                                     <div class="item__image">
                                         <img src="<?php echo "../admin/view/" . $lapTopWorks[$j]['hinh'] ?>" alt="">
-                                        <a href="#" class="image__more">Xem thêm</a>
+                                        <a href="./detailproduct.php?masp=<?php echo $lapTopWorks[$j]['masp'] ?>" class="image__more">Xem thêm</a>
                                     </div>
                                     <h3 class="item__name"><?php echo $lapTopWorks[$j]['tensp'] ?></h3>
                                     <div class="item__detail">
@@ -261,6 +260,7 @@
                                         <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
                                     </div>
                                 </div>
+                                <?php $count +=1; ?>
                             <?php endfor; ?>
                         <?php } ?>
                     </div>
@@ -268,7 +268,7 @@
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <a href="#" class="btnAll">Xem tất cả</a>
+            <a href="./laptop.php" class="btnAll">Xem tất cả</a>
         </div>
     </div>
 </section>

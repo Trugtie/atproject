@@ -2,8 +2,6 @@
 include "../../controller/autoload.php";
 include "../../dao/ProductDAO.php";
 include "../../dao/AccessoryDAO.php";
-$laptops = ProductDAO::getAllLaptop($conn);
-$phukiens = AccessoryDAO::getAllPhuKien($conn);
 ?>
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
@@ -17,16 +15,19 @@ $phukiens = AccessoryDAO::getAllPhuKien($conn);
         </div>
         <div class="controller d-flex">
             <a class="btnThem" href="./addproduct.php">Thêm</a>
-            <select name="cboSanPham" id="" class="cboSanPham">
+            <!-- <form id = "filterForm" action="../controller/productController.php" method="get"> -->
+            <input type="text" id = "productHidden" hidden>
+            <select name="action" id="filterCBO" class="cboSanPham" >
                 <option value="Laptop">LAPTOP</option>
                 <option value="Phukien">PHỤ KIỆN</option>
             </select>
+            <!-- </form> -->
             <div class="search">
                 <input type="text" placeholder="Search...">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
-        <table class="table .table-striped">
+        <table class="table .table-striped" id="showCase">
             <thead>
                 <tr>
                     <th scope="col" class="ma">Mã SP</th>
@@ -38,8 +39,8 @@ $phukiens = AccessoryDAO::getAllPhuKien($conn);
                     <th scope="col" class="hanhdong">Hành động</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php foreach($laptops as $laptop) :?>
+            <tbody id="products">
+                <!-- <?php foreach($laptops as $laptop) :?>
                 <tr>
                     <th scope="row"><?php echo $laptop['masp']?></th>
                     <td><img src="<?php echo "./".$laptop["hinh"] ?>" alt=""></td>
@@ -66,7 +67,7 @@ $phukiens = AccessoryDAO::getAllPhuKien($conn);
                         <a href="../controller/AccessoryController.php?action=delete&masp=<?php echo $phukien['masp']?>" class="xoa">Xóa</a>
                     </td>
                 </tr>
-                <?php endforeach; ?>
+                <?php endforeach; ?> -->
             </tbody>
         </table>
     </div>
