@@ -69,7 +69,7 @@ if (!empty($_SESSION['error'])) {
                         </div>
                         <div class="col-sm-9 right-row" style="float:left">
                             <label hidden style="font-size:20px;margin-top: 15px;margin-bottom: 7px">Mã sản phẩm</label>
-                            <input type="text" style="margin-top: 10px; font-size:20px; width: 200px; float:right" name="masp" hidden><br>
+                            <input type="text" style="margin-top: 10px; font-size:20px; width: 200px; float:right" name="masp" value="<?php echo $phukien['masp'] ?>" hidden><br>
                             <label style="font-size:20px;margin-top: 15px">Loại sản phẩm</label>
                             <select name="loaisp" id="" style="margin-top: 10px; font-size:20px; width: 200px; float:right">
                                 <option value="phukien">Phụ kiện</option>
@@ -77,7 +77,7 @@ if (!empty($_SESSION['error'])) {
                             <label style="font-size:20px;margin-top: 15px">Tên sản phẩm</label><br>
                             <input type="text" style="margin-top: 10px; font-size:20px; width: 345px" name="tensp" value="<?php echo $phukien['tensp'] ?>"><br>
                             <label style="font-size:20px;margin-top: 15px">Mô tả</label><br>
-                            <textarea style="margin-top: 10px; font-size:20px; width: 345px; height:135px" name="mota" value="<?php echo $phukien['mota'] ?>"></textarea><br>
+                            <textarea style="margin-top: 10px; font-size:20px; width: 345px; height:135px" name="mota"> <?php echo $phukien['mota'] ?></textarea><br>
                             <div class="subsub0" style="margin-bottom:-10px">
                                 <div class="subsub1">
                                     <label style="font-size:20px;margin-top: 7px">Số lượng</label><br>

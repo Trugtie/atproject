@@ -76,15 +76,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     unlink(dirname(__DIR__) . '/view' . $oldPhukien['hinh']);
                     move_uploaded_file($temp, dirname(__DIR__) . '/view/images/' . $name);
                     $imagePath = '/images/' . $name;
-                    $phukien = new PhuKien($masp, $tensp, $mota, $soluong, $imagePath, $gia, $loaisp, $tinhtrang, $mahang, $maloaimay);
+                    $phukien = new PhuKien($masp, $tensp, $mota, $soluong, $imagePath, $gia, $loaisp, $tinhtrang, $mahang, $maphukien);
+                    
                     AccessoryDAO::updatePhuKien($phukien, $masp, $conn);
                     header("Location: ../view/quanlysanpham.php");
                 } else {
-                    $phukien = new PhuKien($masp, $tensp, $mota, $soluong, $imagePath, $gia, $loaisp, $tinhtrang, $mahang, $maloaimay);
+                    $phukien = new PhuKien($masp, $tensp, $mota, $soluong, $imagePath, $gia, $loaisp, $tinhtrang, $mahang, $maphukien);
+                    
                     AccessoryDAO::updatePhuKienWithoutImage($phukien, $masp, $conn);
                     header("Location: ../view/quanlysanpham.php");
                 }
             }
             break;
-    }
+        }
 }
