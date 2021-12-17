@@ -172,12 +172,12 @@
                 for ($i = 0; $i < $slides; $i++) :
                 ?>
                     <div class="swiper-slide">
-                        <?php if ($flag == 0){ ?>
+                        <?php if ($flag == 0) { ?>
                             <?php for ($j = 0; $j < count($lapTopWorks); $j++) : ?>
                                 <?php if ($count == 6) {
                                     $temp = $j;
                                     $flag = 1;
-                                    $count= 0;
+                                    $count = 0;
                                     break;
                                 } ?>
                                 <div class="item">
@@ -211,18 +211,20 @@
                                         </table>
                                     </div>
                                     <div class="item__button">
-                                        <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        <form action="../controller/cart.php" method="post">
+                                            <input type="hidden" name="masp" value="<?php echo $lapTopWorks[$j]['masp'] ?>">
+                                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        </form>
                                         <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
                                     </div>
                                 </div>
-                                <?php $count +=1; ?>
+                                <?php $count += 1; ?>
                             <?php endfor; ?>
-                        <?php }
-                        else if($flag == 1){ ?>
+                        <?php } else if ($flag == 1) { ?>
                             <?php for ($j = $temp; $j < count($lapTopWorks); $j++) : ?>
                                 <?php if ($count == 6) {
                                     $temp = $j;
-                                    $count= 0;
+                                    $count = 0;
                                     break;
                                 } ?>
                                 <div class="item">
@@ -256,11 +258,14 @@
                                         </table>
                                     </div>
                                     <div class="item__button">
-                                        <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        <form action="../controller/cart.php" method="post">
+                                            <input type="hidden" name="masp" value="<?php echo $lapTopWorks[$j]['masp'] ?>">
+                                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        </form>
                                         <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
                                     </div>
                                 </div>
-                                <?php $count +=1; ?>
+                                <?php $count += 1; ?>
                             <?php endfor; ?>
                         <?php } ?>
                     </div>

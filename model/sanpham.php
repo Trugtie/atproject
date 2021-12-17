@@ -12,7 +12,7 @@ class SanPham{
 
     public function __construct($maSp, $tenSp, $moTa, $soLuong, $hinh, $gia, $loaiSp, $tinhTrang, $maHang)
 {
-        $this->masp =$maSp;
+        $this->maSp =$maSp;
         $this->tenSp = $tenSp;
         $this->moTa = $moTa;
         $this->soLuong = $soLuong;
@@ -24,7 +24,7 @@ class SanPham{
     }
 
     public function getMaSp(){
-        return $this->masp;
+        return $this->maSp;
     }
 
     public function setMaSp($maSp){

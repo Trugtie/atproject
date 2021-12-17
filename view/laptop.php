@@ -1,4 +1,28 @@
 <?php include "./header.php" ?>
+<?php
+if(isset($_SESSION['notify'])){
+    $notify = $_SESSION['notify'];
+      echo "
+    <div class='modal' tabindex='-1'>
+    <div class='modal-dialog'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <h5 class='modal-title'>Giỏ hàng</h5>
+          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+        </div>
+        <div class='modal-body'>
+          <p>$notify</p>
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    ";
+    unset($_SESSION['notify']);
+  }
+?>
 <!-- Sale -->
 <section class="sale--nonebackground">
     <div class="container">
@@ -66,7 +90,7 @@
                         <option value="dell">DELL</option>
                     </select>
                     <select name="cboDisk" id="" class="cboSanPham">
-                    <option value="Disk">Ổ cứng</option>
+                        <option value="Disk">Ổ cứng</option>
                         <option value="hdd">HDD</option>
                         <option value="ssd">SSD</option>
                     </select>
@@ -86,7 +110,7 @@
         </div>
         <!-- Swiper -->
         <div class="swiper swiper--long mySwiper animate-left">
-        <div class="swiper-wrapper">
+            <div class="swiper-wrapper">
                 <?php $slides = ceil(count($lapTopWorks) / 9);
                 $flag = 0;
                 $temp = 0;
@@ -94,12 +118,12 @@
                 for ($i = 0; $i < $slides; $i++) :
                 ?>
                     <div class="swiper-slide">
-                        <?php if ($flag == 0){ ?>
+                        <?php if ($flag == 0) { ?>
                             <?php for ($j = 0; $j < count($lapTopWorks); $j++) : ?>
                                 <?php if ($count == 9) {
                                     $temp = $j;
                                     $flag = 1;
-                                    $count= 0;
+                                    $count = 0;
                                     break;
                                 } ?>
                                 <div class="item">
@@ -133,18 +157,20 @@
                                         </table>
                                     </div>
                                     <div class="item__button">
-                                        <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        <form action="../controller/cart.php" method="post">
+                                            <input type="hidden" name="masp" value="<?php echo $lapTopWorks[$j]['masp'] ?>">
+                                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        </form>
                                         <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
                                     </div>
                                 </div>
-                                <?php $count +=1; ?>
+                                <?php $count += 1; ?>
                             <?php endfor; ?>
-                        <?php }
-                        else if($flag == 1){ ?>
+                        <?php } else if ($flag == 1) { ?>
                             <?php for ($j = $temp; $j < count($lapTopWorks); $j++) : ?>
                                 <?php if ($count == 9) {
                                     $temp = $j;
-                                    $count= 0;
+                                    $count = 0;
                                     break;
                                 } ?>
                                 <div class="item">
@@ -178,11 +204,14 @@
                                         </table>
                                     </div>
                                     <div class="item__button">
-                                        <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        <form action="../controller/cart.php" method="post">
+                                            <input type="hidden" name="masp" value="<?php echo $lapTopWorks[$j]['masp'] ?>">
+                                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        </form>
                                         <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
                                     </div>
                                 </div>
-                                <?php $count +=1; ?>
+                                <?php $count += 1; ?>
                             <?php endfor; ?>
                         <?php } ?>
                     </div>

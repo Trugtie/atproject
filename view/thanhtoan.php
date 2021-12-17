@@ -5,12 +5,12 @@
         <div class="row gx-5">
             <div class="col-5 animate-left">
                 <h3>Người nhận: </h3>
-                <input type="text">
+                <input type="text" value="<?php echo $_SESSION['user']->get_ho()." ".$_SESSION['user']->get_ten(); ?>">
                 <h3>SĐT: </h3>
-                <input type="text">
+                <input type="text" value="<?php echo $_SESSION['user']->get_sdt();?>" >
                 <h3>Địa chỉ:</h3>
-                <input type="text" class="input--diachi">
-                <div class="locate d-flex justify-content-between">
+                <input type="text" class="input--diachi" value="<?php echo $_SESSION['user']->get_diachi();?>">
+                <!-- <div class="locate d-flex justify-content-between">
                     <div class="phuong">
                         <h3>Phường</h3>
                         <select class="cboSanPham" name="phuong" id="">
@@ -33,7 +33,7 @@
                             </option>
                         </select>
                     </div>
-                </div>
+                </div> -->
                 <h3>Phương thức thanh toán</h3>
                 <select name="phuongthuc" class="cboSanPham" id="">
                     <option value="banking">Internet Banking</option>
@@ -64,46 +64,15 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $tong = 0?>
+                            <?php foreach ($_SESSION['cart'] as $product): ?>
                             <tr>
-                                <td>Laptop Lenovo
-                                    Ideapad Gaming 3
-                                    15IMH05
-                                    81Y400X0VN</td>
-                                <td>2</td>
-                                <td>20.000.000</td>
+                                <td><?php echo $product->getTenSp(); ?></td>
+                                <td><?php echo $product->getSoluong(); ?></td>
+                                <td><?php echo number_format($product->getGia(),0,",",".")." VND"; ?></td>
                             </tr>
-                            <tr>
-                                <td>Laptop Lenovo
-                                    Ideapad Gaming 3
-                                    15IMH05
-                                    81Y400X0VN</td>
-                                <td>2</td>
-                                <td>20.000.000</td>
-                            </tr>
-                            <tr>
-                                <td>Laptop Lenovo
-                                    Ideapad Gaming 3
-                                    15IMH05
-                                    81Y400X0VN</td>
-                                <td>2</td>
-                                <td>20.000.000</td>
-                            </tr>
-                            <tr>
-                                <td>Laptop Lenovo
-                                    Ideapad Gaming 3
-                                    15IMH05
-                                    81Y400X0VN</td>
-                                <td>2</td>
-                                <td>20.000.000</td>
-                            </tr>
-                            <tr>
-                                <td>Laptop Lenovo
-                                    Ideapad Gaming 3
-                                    15IMH05
-                                    81Y400X0VN</td>
-                                <td>2</td>
-                                <td>20.000.000</td>
-                            </tr>
+                            <?php $tong += $product->getSoluong()*$product->getGia(); ?>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -112,11 +81,11 @@
                 <div class="tongtien">
                     <div class="tong d-flex justify-content-around">
                         <h3>Tổng tiền</h3>
-                        <p>12.000.000</p>
+                        <p><?php echo number_format($tong,0,",",".")." VND";; ?></p>
                     </div>
                     <div class="giam d-flex justify-content-around">
                         <h3>Giảm</h3>
-                        <p>20.000</p>
+                        <p>0 VND</p>
                     </div>
                 </div>
                 <hr>

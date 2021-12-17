@@ -112,4 +112,12 @@ class ProductDAO{
         $statement2=$conn->prepare("alter table laptop AUTO_INCREMENT=$max");
         $statement2->execute();
     }
+
+    public static function getProduct($masp,$conn){
+        $statement=$conn->prepare("select masp,hinh,tensp,gia from sanpham where masp=$masp");
+        $statement->execute();
+        $product=$statement->fetch(PDO::FETCH_ASSOC);
+        return $product;
+    }
+    
 }
