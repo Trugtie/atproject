@@ -114,4 +114,56 @@ class validate{
         $error.="Chưa điền giá! <br>";
         return $error;
     }
+
+    public static function validateKhuyenmai($hinh,$tenfb,$mota,$giatrigiam,$ngaybd, $ngaykt){
+        $imageType=array("image/png", "image/jpeg", "image/bmp");
+        $error="";
+        if(empty($hinh))
+        $error.="Chưa thêm hình! <br>";
+        else if($hinh["error"]!=0)
+        $error.="Lỗi file hình! <br>";
+        else if(!in_array($hinh["type"],$imageType))
+        $error.="Không phải file hình! <br>";
+        if(empty($tenfb))
+        $error.="Chưa điền tên sản phẩm! <br>";
+        if(empty($mota))
+        $error.="Chưa điền mô tả! <br>";
+        if(empty($giatrigiam) && $giatrigiam != 0 )
+        $error.="Chưa điền số lượng! <br>";
+        else if($giatrigiam < 1)
+        $error.="Số lượng < 1 <br>";
+        if(empty($ngaybd))
+        $error.="Chưa chọn ngày bắt đầu! <br>";
+        if(empty($ngaykt))
+        $error.="Chưa chọn ngày kết thúc! <br>";
+        return $error;
+    }
+
+    public static function validateKhuyenmaiWithoutImage($tenfb,$mota,$giatrigiam,$ngaybd, $ngaykt){
+        $error="";        
+        if(empty($tenfb))
+        $error.="Chưa điền tên sản phẩm! <br>";
+        if(empty($mota))
+        $error.="Chưa điền mô tả! <br>";
+        if(empty($giatrigiam) && $giatrigiam != 0 )
+        $error.="Chưa điền số lượng! <br>";
+        else if($giatrigiam < 1)
+        $error.="Số lượng < 1 <br>";
+        if(empty($ngaybd))
+        $error.="Chưa chọn ngày bắt đầu! <br>";
+        if(empty($ngaykt))
+        $error.="Chưa chọn ngày kết thúc! <br>";
+        return $error;
+    }
+
+    public static function validateAdmin($email, $username, $password){
+        $error="";        
+        if(empty($email))
+        $error.="Chưa điền email! <br>";
+        if(empty($username))
+        $error.="Chưa điền username! <br>";
+        if(empty($password))
+        $error.="Chưa điền password! <br>";
+        return $error;
+    }
 }
