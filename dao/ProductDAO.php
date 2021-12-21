@@ -92,6 +92,20 @@ class ProductDAO{
         return $laptops;
     }
 
+    public static function getAllLaptopShowcase($conn){
+        $statement = $conn->prepare("select * from laptop where tinhtrang='Còn hàng'");
+        $statement->execute();
+        $laptops=$statement->fetchAll(PDO::FETCH_ASSOC);
+        return $laptops;
+    }
+
+    public static function getAllLaptopWithTypeShowcase($conn,$type){
+        $statement = $conn->prepare("select * from laptop where maloaimay=$type and tinhtrang='Còn hàng'");
+        $statement->execute();
+        $laptops=$statement->fetchAll(PDO::FETCH_ASSOC);
+        return $laptops;
+    }
+
     public static function getLaptop($masp,$conn){
         $statement=$conn->prepare("select * from laptop where masp=$masp");
         $statement->execute();
@@ -114,10 +128,37 @@ class ProductDAO{
     }
 
     public static function getProduct($masp,$conn){
-        $statement=$conn->prepare("select masp,hinh,tensp,gia from sanpham where masp=$masp");
+        $statement=$conn->prepare("select masp,hinh,tensp,gia,soluong from sanpham where masp=$masp");
         $statement->execute();
         $product=$statement->fetch(PDO::FETCH_ASSOC);
         return $product;
+    }
+
+    public static function updateSoLuongSP($masp,$soluong,$tinhtrang,$conn){
+        $statement = $conn->prepare("update sanpham
+        set soluong=:soluong,tinhtrang=:tinhtrang where masp=:masp");
+        $statement->bindValue(':soluong',$soluong);
+        $statement->bindValue(':tinhtrang',$tinhtrang);
+        $statement->bindValue(':masp',$masp);
+        $statement->execute();
+    }
+
+    public static function updateSoLuongLaptop($masp,$soluong,$tinhtrang,$conn){
+        $statement = $conn->prepare("update laptop
+        set soluong=:soluong,tinhtrang=:tinhtrang where masp=:masp");
+        $statement->bindValue(':soluong',$soluong);
+        $statement->bindValue(':tinhtrang',$tinhtrang);
+        $statement->bindValue(':masp',$masp);
+        $statement->execute();
+    }
+
+    public static function updateSoLuongPhukien($masp,$soluong,$tinhtrang,$conn){
+        $statement = $conn->prepare("update phukien
+        set soluong=:soluong,tinhtrang=:tinhtrang where masp=:masp");
+        $statement->bindValue(':soluong',$soluong);
+        $statement->bindValue(':tinhtrang',$tinhtrang);
+        $statement->bindValue(':masp',$masp);
+        $statement->execute();
     }
     
 }

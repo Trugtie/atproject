@@ -1,6 +1,6 @@
 $("#filterCBO").change(function () {
   $.ajax({
-    url: "http://localhost:81/atproject/admin/controller/productController.php",
+    url: "http://"+window.location.host+"/atproject/admin/controller/productController.php",
     type: "get",
     dataType: "json",
     cache: false,
@@ -41,7 +41,7 @@ $("#filterCBO").change(function () {
 
 $("#productHidden").load("quanlysanpham.php #productHidden", function () {
   $.ajax({
-    url: "http://localhost:81/atproject/admin/controller/productController.php?action=Laptop",
+    url: "http://"+window.location.host+"/atproject/admin/controller/productController.php?action=Laptop",
     type: "get",
     dataType: "json",
     cache: false,

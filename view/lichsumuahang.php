@@ -1,4 +1,32 @@
 <?php include "./header.php" ?>
+<?php include "../dao/UserDAO.php"?>
+<?php
+$histories = UserDAO::getHistoryOrder($_SESSION['user']->get_makh(),$conn);
+?>
+<?php
+if(isset($_SESSION['notify'])){
+    $notify = $_SESSION['notify'];
+      echo "
+    <div class='modal' tabindex='-1'>
+    <div class='modal-dialog'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <h5 class='modal-title'>Thanh toán</h5>
+          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+        </div>
+        <div class='modal-body'>
+          <p>$notify</p>
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    ";
+    unset($_SESSION['notify']);
+  }
+?>
 <section class="giohang">
     <div class="container">
         <h1 class="cateHeader text-center event__header animate-top" id="categories__work">LỊCH SỬ MUA HÀNG</h1>
@@ -16,23 +44,24 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach($histories as $history):?>
                 <tr>
-                    <th scope="row">01</th>
-                    <td>12/7/2021</td>
-                    <td>Lê Ngọc</td>
-                    <td>0984962514 </td>
+                    <th scope="row"><?php echo $history['madon']?></th>
+                    <td><?php echo $history['ngaytao']?></td>
+                    <td><?php echo $history['nguoinhan']?></td>
+                    <td><?php echo $history['sdt']?></td>
                     <td>
-                        Đang giao
+                    <?php echo $history['tinhtrang']?>
                     </td>
-                    <td>180 Cao Lỗ, Phường 4, Quận 8, HCM</td>
+                    <td><?php echo $history['diachigiao']?></td>
                     <td>
-                        SPPTELCO11
+                    <?php echo $history['makm']?>
                     </td>
                     <td>
-                        <a href="chitietdonhang.php" class="xem">Xem</a>
+                        <a href="./chitietdonhang.php?madon=<?php echo $history['madon']?>" class="xem">Xem</a>
                     </td>
                 </tr>
-                
+                <?php endforeach; ?>
             </tbody>
         </table>
         

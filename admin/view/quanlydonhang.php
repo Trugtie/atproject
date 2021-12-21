@@ -1,3 +1,7 @@
+<?php include "../../dao/OrderDAO.php" ?>
+<?php
+$orders = OrderDAO::getOrders($conn);
+?>
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
 <section>
@@ -26,31 +30,33 @@
                     <th scope="col" class="nguoinhan">Người nhận</th>
                     <th scope="col" class="sdt">SĐT</th>
                     <th scope="col" class="diachi">Địa chỉ</th>
-                    <th scope="col" class="sanpham">Sản phẩm</th>
-                    <th scope="col" class="soluong">Số lượng</th>
-                    <th scope="col" class="tonggia">Tổng giá</th>
+                    <th scope="col" class="tonggia">Tổng tiền</th>
                     <th scope="col" class="tinhtrang">Tình trạng</th>
                     <th scope="col" class="action">Hành động</th>
                 </tr>
             </thead>
             <tbody>
+                <?php foreach ($orders as $order):?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>19/5/2021</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>091234567</td>
-                    <td>19 Đồng khởi </td>
-                    <td>laptop1</td>
-                    <td>3</td>
-                    <td>20000 vnđ</td>
-                    <td>chưa giao</td>
-                    <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Xong</a>
-                        <a href="" class="xoa">Xóa</a>
+                    <th scope="row"><?php echo $order['madon']?></th>
+                    <td><?php echo $order['ngaytao']?></td>
+                    <td><?php echo $order['nguoinhan']?></td>
+                    <td><?php echo $order['sdt']?></td>
+                    <td><?php echo $order['diachigiao']?></td>
+                    <td><?php echo number_format( $order['tongtien'],0,",",".")." VND"?></td>
+                    <td><?php echo $order['tinhtrang']?></td>
+                    <td class="action d-flex justify-content-evenly align-items-center">
+                        <a href="./chitietdonhang.php?madon=<?php echo $order['madon']?>" class="sua">Xem</a>
+                        <a href="../controller/orderController.php?madon=<?php echo $order['madon']?>&action=xoa" class="xoa">Xóa</a>
+                        <?php if($order['tinhtrang']=="Chưa giao"): ?>
+                        <a href="../controller/orderController.php?madon=<?php echo $order['madon']?>&action=duyet" class="duyet">Duyệt</a>
+                        <?php endif; ?>
                     </td>
+                </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
 </section>
-<?php include './music.php'?>
+<?php include './music.php' ?>
 <?php include "./adminfooter.php" ?>

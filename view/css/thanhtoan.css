@@ -21,13 +21,15 @@ margin-top:1.5rem;
 }
 
 .makm{
-    text-decoration: none;
+    border: none;
     font-size: 2rem;
     margin-left: 1rem;
     transition: all 0.3s;
     position: absolute;
     top:50%;
     transform: translateY(-50%);
+    background:none;
+    color:#0073f7;
 }
 .makm:hover{
     color:blue;

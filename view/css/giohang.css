@@ -96,6 +96,30 @@
   animation: fade-down 2s;
 }
 
+.thanhtoan--button{
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  background-color: black;
+  padding: 2rem 5rem;
+  border-radius: 3rem;
+  margin-top: 2rem;
+  color: black;
+  min-width: 24.1rem;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: all 0.3s;
+  background-color: #a3e0ff;
+  border: none;
+  animation: fade-down 2s;
+}
+
+.thanhtoan--button:hover {
+  background-color: rgba(255, 0, 0, 0.658);
+  color: white;
+}
+
 .chontiep:hover,
 .thanhtoan:hover {
   background-color: rgba(255, 0, 0, 0.658);

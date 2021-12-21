@@ -1,10 +1,11 @@
-<?php include "./header.php" ?>
-<?php include "../dao/OrderDAO.php" ?>
-<?php include "../dao/SaleDAO.php" ?>
+<?php include "./adminheader.php" ?>
+<?php include "../../dao/OrderDAO.php" ?>
+<?php include "../../dao/SaleDAO.php" ?>
 <?php
 $history = OrderDAO::getOrder($_GET['madon'],$conn);
 $details = OrderDAO::getDetailsOrder($_GET['madon'],$conn);
 ?>
+<?php include("./adminnav.php") ?>
 <section>
     <div class="container d-flex flex-column justify-content-around">
         <div class="btnNav" id="btnNav">
@@ -16,22 +17,22 @@ $details = OrderDAO::getDetailsOrder($_GET['madon'],$conn);
         <div class="container rounded bg-white mt-5 mb-5">
             <form action="" method="post">
                 <table class="table .table-striped" style="border: 0;">
-                    <tr>
+                <tr>
                         <th>Mã đơn:</th>
                         <input class="form-control" id="editth" type="text" hidden name="madon" value="<?php echo $history['madon'];?>">
                         <th><input class="form-control" id="editth" type="text" disabled name="ma" value="<?php echo $history['madon'];?>"></th>
                     </tr>
                     <tr>
                         <th>Người nhận:</th>
-                        <th><input class="form-control" type="text" id="editth" name="nguoinhan" disabled value="<?php echo $history['nguoinhan'];?>"></th>
+                        <th><input class="form-control" type="text" id="editth" name="nguoinhan" value="<?php echo $history['nguoinhan'];?>"></th>
                     </tr>
                     <tr>
                         <th>SĐT:</th>
-                        <th><input class="form-control" type="text" id="editth" name="sdt" disabled value="<?php echo $history['sdt'];?>"></th>
+                        <th><input class="form-control" type="text" id="editth" name="sdt" value="<?php echo $history['sdt'];?>"></th>
                     </tr>
                     <tr>
                         <th>Địa chỉ giao:</th>
-                        <th><input class="form-control" type="text" id="editth" name="diachigiao" disabled value="<?php echo $history['diachigiao'];?>"></th>
+                        <th><input class="form-control" type="text" id="editth" name="diachigiao" value="<?php echo $history['diachigiao'];?>"></th>
                     </tr>
                     <tr>
                         <th>PT thanh toán</th>
@@ -44,6 +45,13 @@ $details = OrderDAO::getDetailsOrder($_GET['madon'],$conn);
                     <tr>
                         <th>Tình trạng:</th>
                         <th><input class="form-control" type="text" id="editth" disabled name="tinhtrang" value="<?php echo $history['tinhtrang'];?>"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <div class="mt-5 text-center" style="text-align: center;">
+                                <button name="action" value="update" class="btn btn-primary" id="btn-luu" type="submit">Lưu</button>
+                            </div>
+                        </th>
                     </tr>
                 </table>
             </form>
@@ -63,11 +71,11 @@ $details = OrderDAO::getDetailsOrder($_GET['madon'],$conn);
                 </tr>
             </thead>
             <tbody>
-                <?php $tong=0; ?>
+            <?php $tong=0; ?>
                 <?php foreach($details as $i=>$product):?>
                 <tr>
                     <th scope="row"><?php echo  $product['masp'] ?></th>
-                    <td><img src="../admin/view<?php echo $product['hinh']?>" alt=""></td>
+                    <td><img src=".<?php echo $product['hinh']?>" alt=""></td>
                     <td><?php echo $product['tensp']?></td>
                     <td><?php echo  number_format($product['gia'],0,",",".")." VND"?> </td>
                     <td>
@@ -99,9 +107,9 @@ $details = OrderDAO::getDetailsOrder($_GET['madon'],$conn);
                      echo number_format($history['tongtien'],0,",",".")." VND"?>
                      </th>
                 </tr>
-            </tbody>
         </table>
 
     </div>
 </section>
-<?php include "./footer.php" ?>
+<?php include './music.php' ?>
+<?php include "./adminfooter.php" ?>

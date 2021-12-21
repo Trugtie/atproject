@@ -1,6 +1,6 @@
 <?php include "./header.php" ?>
 <?php
-if(isset($_SESSION['error'])){
+if(!empty($_SESSION['error'])){
     $error = $_SESSION['error'];
     echo "
     <div class='modal' tabindex='-1'>
@@ -65,7 +65,10 @@ if(isset($_SESSION['error'])){
                 <?php } ?>
                 <tr class="tongtientitle">
                     <th scope="col" colspan="6">Tổng tiền:</th>
-                    <th scope="col" class="tongtien"><?php echo number_format($tong,0,",",".")." VND"?></th>
+                    <th scope="col" class="tongtien"><?php
+                    if(empty($tong)) echo 0;
+                    else
+                     echo number_format($tong,0,",",".")." VND"?></th>
                 </tr>
             </tbody>
         </table>

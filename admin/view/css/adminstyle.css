@@ -287,6 +287,12 @@ h2 {
   background-color: var(--third-color);
   margin-right: 1rem;
 }
+
+.duyet{
+  background-color: #8eff8a;
+  margin-left: 1rem;
+}
+
 .table a:hover {
   background-color: var(--first-color);
 }

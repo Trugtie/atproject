@@ -28,8 +28,8 @@ if (empty($_SESSION["user"])) {
     ";
 }
 
-$lapTopAll=ProductDAO::getAllLaptop($conn);
-$lapTopWorks=ProductDAO::getAllLaptopWithType($conn,1);
+$lapTopAll=ProductDAO::getAllLaptopShowcase($conn);
+$lapTopWorks=ProductDAO::getAllLaptopWithTypeShowcase($conn,1);
 ?>
 
 <!DOCTYPE html>

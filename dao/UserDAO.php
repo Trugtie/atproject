@@ -66,4 +66,11 @@ class UserDAO
         $statement = $conn->prepare("delete from khachhang where makh = $ma");
         $statement->execute();
     }
+
+    public static function getHistoryOrder($ma,$conn){
+        $statement = $conn->prepare("select madon,DATE_FORMAT(ngaytao, '%d/%m/%Y') as ngaytao,nguoinhan,tinhtrang,sdt,diachigiao,ptthanhtoan,tongtien,makh,makm from donhang where makh=$ma");
+        $statement->execute();
+        $histories = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $histories;
+    }
 }
