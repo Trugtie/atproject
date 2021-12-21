@@ -1,3 +1,8 @@
+<?php
+include "../../controller/autoload.php";
+include "../../dao/KhuyenMaiDAO.php";
+$khuyenmais = KhuyenMaiDAO::getAllKhuyenMai($conn);
+?>
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
 <section>
@@ -9,7 +14,7 @@
             <h1 class="title">QUẢN LÝ KHUYẾN MÃI</h1>
         </div>
         <div class="controller d-flex">
-            <input type="submit" value="Thêm" class="btnThem">
+            <a class="btnThem" href="./addKhuyenmai.php">Thêm</a>
             <select name="cboSanPham" id="" class="cboSanPham">
                 <option value="tangdan">Tăng dần</option>
                 <option value="giamdan">Giảm dần</option>
@@ -33,21 +38,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="../../view/images/schoolsale.PNG" alt=""></td>
-                    <td>Back to School</td>
-                    <td>Big sale for student</td>
-                    <td>20%</td>
-                    <td>19/4/2021</td>
-                    <td>19/5/2021</td>
-                    <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Sửa</a>
-                        <a href="" class="xoa">Xóa</a>
-                    </td>
+                <?php foreach ($khuyenmais as $khuyenmai) : ?>
+                    <tr>
+                        <th scope="row"><?php echo $khuyenmai['makm'] ?></th>
+                        <td><img src="<?php echo "./" . $khuyenmai["hinh"] ?>" alt=""></td>
+                        <td><?php echo $khuyenmai['tenkm'] ?></td>
+                        <td><?php echo $khuyenmai['mota'] ?></td>
+                        <td><?php echo $khuyenmai['giatrigiam'] ?></td>
+                        <td><?php echo $khuyenmai['ngaybd'] ?></td>
+                        <td><?php echo $khuyenmai['ngaykt'] ?></td>
+                        <td class="action d-flex justify-content-around align-items-center">
+                            <a href="./editkhuyenmai.php?makm=<?php echo $khuyenmai['makm'] ?>" class="sua">Sửa</a>
+                            <a href="../controller/productController.php?action=delete&makm=<?php echo $khuyenmai['makm'] ?>" class="xoa">Xóa</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
 </section>
-<?php include './music.php'?>
+<?php include './music.php' ?>
 <?php include "./adminfooter.php" ?>

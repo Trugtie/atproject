@@ -1,3 +1,9 @@
+<?php
+include "../../controller/autoload.php";
+include "../../dao/FeedBackDAO.php";
+$feedbacks = FeedBackDAO::getAllFeedBack($conn);
+// $tenkh = FeedBackDAO::getTenKhachHang($feedbacks['makh'], $conn);
+?>
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
 <section>
@@ -30,15 +36,21 @@
                 </tr>
             </thead>
             <tbody>
+            <?php foreach ($feedbacks as $feedback): ?>
+                <?php $makh = $feedback['makh'];
+                    $ten = FeedBackDAO::getTenKhachHang($makh, $conn); ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Nguyễn Văn A</td>
-                    <td>Laptop A</td>
-                    <td>Good product</td>
-                    <td>14/5/2021</td>
+                    <th scope="row"><?php echo $feedback['mafb'] ?></th>
+                    <td><?php echo $ten['ten'] ?></td>
+                    <td><?php echo $feedback['masp'] ?></td>
+                    <td><?php echo $feedback['mota'] ?></td>
+                    <td><?php echo $feedback['thoigian'] ?> </td>
                     <td class="action d-flex justify-content-around align-items-center">
-                        <a href="" class="xoa">Xóa</a>
+                        <a href="../controller/customerController.php?action=delete&makh=<?php echo $feedback['makh'] ?>" class="xoa">Xóa</a>
                     </td>
+                </tr>
+                <?php endforeach; ?>
+                
             </tbody>
         </table>
     </div>

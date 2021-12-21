@@ -1,3 +1,9 @@
+<?php
+include "../../controller/autoload.php";
+include "../../dao/DonHangDAO.php";
+$donhangs = DonHangDAO::getAlldonhang($conn);
+?>
+
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
 <section>
@@ -25,32 +31,36 @@
                     <th scope="col" class="ngaytao">Ngày tạo</th>
                     <th scope="col" class="nguoinhan">Người nhận</th>
                     <th scope="col" class="sdt">SĐT</th>
-                    <th scope="col" class="diachi">Địa chỉ</th>
-                    <th scope="col" class="sanpham">Sản phẩm</th>
-                    <th scope="col" class="soluong">Số lượng</th>
+                    <th scope="col" class="diachigiao">Địa chỉ</th>
+                    <th scope="col" class="giamgia">% Giảm giá</th>
                     <th scope="col" class="tonggia">Tổng giá</th>
                     <th scope="col" class="tinhtrang">Tình trạng</th>
                     <th scope="col" class="action">Hành động</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>19/5/2021</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>091234567</td>
-                    <td>19 Đồng khởi </td>
-                    <td>laptop1</td>
-                    <td>3</td>
-                    <td>20000 vnđ</td>
-                    <td>chưa giao</td>
-                    <td class="action d-flex justify-content-around align-items-center">
-                        <a href="#" class="sua">Xong</a>
-                        <a href="" class="xoa">Xóa</a>
-                    </td>
+                <?php foreach ($donhangs as $donhang) : ?>
+                    <?php $makm = $donhang['makm'];
+                    $km = DonHangDAO::getGiamGia($makm, $conn); ?>
+
+                    <tr>
+                        <th scope="row"><?php echo $donhang['madon'] ?></th>
+                        <td><?php echo $donhang['ngaytao'] ?></td>
+                        <td><?php echo $donhang['nguoinhan'] ?></td>
+                        <td><?php echo $donhang['sdt'] ?></td>
+                        <td><?php echo $donhang['diachigiao'] ?></td>
+                        <td><?php echo $km['giatrigiam'] ?></td>
+                        <td><?php echo $donhang['tonggia'] ?></td>
+                        <td><?php echo $donhang['tinhtrang'] ?></td>
+                        <td class="action d-flex justify-content-around align-items-center">
+                            <a href="#" class="sua">Xong</a>
+                            <a href="./chitietdonhang.php" class="sua" style="background-color: #41F2F2;">Xem</a>
+                            <a href="" class="xoa">Xóa</a>
+                        </td>
+                    <?php endforeach; ?>
             </tbody>
         </table>
     </div>
 </section>
-<?php include './music.php'?>
+<?php include './music.php' ?>
 <?php include "./adminfooter.php" ?>

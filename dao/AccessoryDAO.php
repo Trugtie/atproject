@@ -26,7 +26,7 @@ class AccessoryDAO{
 
     public static function updatePhuKien($phukien,$masp,$conn){
         $statement = $conn->prepare("update phukien
-        set tensp=:tensp,mota=:mota,soluong=:soluong,hinh=:hinh,gia=:gia,loaisp=:loaisp,tinhtrang=:tinhtrang,mahang=:mahang,maloaimay=:maloaimay where masp=:masp");
+        set tensp=:tensp,mota=:mota,soluong=:soluong,hinh=:hinh,gia=:gia,loaisp=:loaisp,tinhtrang=:tinhtrang,mahang=:mahang,maloaipk=:maloaipk where masp=:masp");
         $statement->bindValue(':tensp',$phukien->getTenSp());
         $statement->bindValue(':mota',$phukien->getMota());
         $statement->bindValue(':soluong',$phukien->getSoluong());
@@ -35,7 +35,7 @@ class AccessoryDAO{
         $statement->bindValue(':loaisp',$phukien->getLoaisp());
         $statement->bindValue(':tinhtrang',$phukien->getTinhtrang());
         $statement->bindValue(':mahang',$phukien->getMahang());
-        $statement->bindValue(':maloaimay',$phukien->getMaLoaiPk());
+        $statement->bindValue(':maloaipk',$phukien->getMaLoaiPk());
         $statement->bindValue(':masp',$masp);
         $statement->execute();
     }
