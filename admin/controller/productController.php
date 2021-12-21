@@ -1,6 +1,7 @@
 <?php
 include "../../controller/autoload.php";
 include "../../dao/ProductDAO.php";
+include "../../dao/AccessoryDAO.php";
 include "../../util/validate.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
