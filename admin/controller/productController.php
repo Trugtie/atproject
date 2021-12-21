@@ -13,6 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             ProductDAO::deleteLaptop($masp, $conn);
             header("Location: ../view/quanlysanpham.php");
             break;
+        case "Laptop":
+            $laptops =  ProductDAO::getAllLaptop($conn);
+            echo json_encode($laptops);
+            break;
+        case "Phukien":
+            $phukiens =  AccessoryDAO::getAllPhuKien($conn);
+            echo json_encode($phukiens);
+            break;
     }
 } else {
     $action = $_POST['action'];
@@ -50,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 move_uploaded_file($temp, dirname(__DIR__) . '/view/images/' . $name);
                 $imagePath = '/images/' . $name;
                 $laptop = new Laptop($masp, $tensp, $mota, $soluong, $imagePath, $gia, $loaisp, $tinhtrang, $mahang, $trongluong, $manhinh, $ocung, $vga, $ram, $cpu, $pin, $mausac, $maloaimay);
+                ProductDAO::resetAI($conn);
                 ProductDAO::insertLaptop($laptop, $conn);
                 header("Location: ../view/quanlysanpham.php");
             }

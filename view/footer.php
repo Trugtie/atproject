@@ -67,6 +67,7 @@
 <script src="./js/nav.js"></script>
 <script src="./js/scrollreveal.js"></script>
 <script src="./js/detailproduct.js"></script>
+<script src="./js/modal.js"></script>
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Initialize Swiper -->

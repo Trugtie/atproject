@@ -61,6 +61,7 @@ if (!empty($_SESSION['error'])) {
                                 <option value="1">Chuột</option>
                                 <option value="2">Tai nghe</option>
                                 <option value="3">Miếng lót chuột</option>
+                                <option value="4">Dây sạc</option>
                             </select>
                         </div>
                         <div class="col-sm-9 right-row" style="float:left">

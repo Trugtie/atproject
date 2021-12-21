@@ -73,4 +73,13 @@ class AccessoryDAO{
         $statement=$conn->prepare("delete from phukien where masp=$masp");
         $statement->execute();
     }
+
+    public static function resetAI($conn){
+        $statement=$conn->prepare("select max(masp) as max from sanpham");
+        $statement->execute();
+        $maxID = $statement->fetch(PDO::FETCH_ASSOC);
+        $max = $maxID['max']+1;
+        $statement2=$conn->prepare("alter table phukien AUTO_INCREMENT=$max");
+        $statement2->execute();
+    }
 }

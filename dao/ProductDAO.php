@@ -103,4 +103,21 @@ class ProductDAO{
         $statement=$conn->prepare("delete from laptop where masp=$masp");
         $statement->execute();
     }
+
+    public static function resetAI($conn){
+        $statement=$conn->prepare("select max(masp) as max from sanpham");
+        $statement->execute();
+        $maxID = $statement->fetch(PDO::FETCH_ASSOC);
+        $max = $maxID['max']+1;
+        $statement2=$conn->prepare("alter table laptop AUTO_INCREMENT=$max");
+        $statement2->execute();
+    }
+
+    public static function getProduct($masp,$conn){
+        $statement=$conn->prepare("select masp,hinh,tensp,gia from sanpham where masp=$masp");
+        $statement->execute();
+        $product=$statement->fetch(PDO::FETCH_ASSOC);
+        return $product;
+    }
+    
 }

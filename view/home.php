@@ -172,18 +172,18 @@
                 for ($i = 0; $i < $slides; $i++) :
                 ?>
                     <div class="swiper-slide">
-                        <?php if ($flag == 0){ ?>
+                        <?php if ($flag == 0) { ?>
                             <?php for ($j = 0; $j < count($lapTopWorks); $j++) : ?>
                                 <?php if ($count == 6) {
                                     $temp = $j;
                                     $flag = 1;
-                                    $count= 0;
+                                    $count = 0;
                                     break;
                                 } ?>
                                 <div class="item">
                                     <div class="item__image">
                                         <img src="<?php echo "../admin/view/" . $lapTopWorks[$j]['hinh'] ?>" alt="">
-                                        <a href="#" class="image__more">Xem thêm</a>
+                                        <a href="./detailproduct.php?masp=<?php echo $lapTopWorks[$j]['masp'] ?>" class="image__more">Xem thêm</a>
                                     </div>
                                     <h3 class="item__name"><?php echo $lapTopWorks[$j]['tensp'] ?></h3>
                                     <div class="item__detail">
@@ -211,25 +211,26 @@
                                         </table>
                                     </div>
                                     <div class="item__button">
-                                        <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        <form action="../controller/cart.php" method="post">
+                                            <input type="hidden" name="masp" value="<?php echo $lapTopWorks[$j]['masp'] ?>">
+                                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        </form>
                                         <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
                                     </div>
                                 </div>
-                                <?php $count +=1; ?>
+                                <?php $count += 1; ?>
                             <?php endfor; ?>
-                        <?php }
-                        else if($flag == 1){ ?>
+                        <?php } else if ($flag == 1) { ?>
                             <?php for ($j = $temp; $j < count($lapTopWorks); $j++) : ?>
                                 <?php if ($count == 6) {
                                     $temp = $j;
-                                    $flag = 1;
-                                    $count= 0;
+                                    $count = 0;
                                     break;
                                 } ?>
                                 <div class="item">
                                     <div class="item__image">
                                         <img src="<?php echo "../admin/view/" . $lapTopWorks[$j]['hinh'] ?>" alt="">
-                                        <a href="#" class="image__more">Xem thêm</a>
+                                        <a href="./detailproduct.php?masp=<?php echo $lapTopWorks[$j]['masp'] ?>" class="image__more">Xem thêm</a>
                                     </div>
                                     <h3 class="item__name"><?php echo $lapTopWorks[$j]['tensp'] ?></h3>
                                     <div class="item__detail">
@@ -257,10 +258,14 @@
                                         </table>
                                     </div>
                                     <div class="item__button">
-                                        <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        <form action="../controller/cart.php" method="post">
+                                            <input type="hidden" name="masp" value="<?php echo $lapTopWorks[$j]['masp'] ?>">
+                                            <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                                        </form>
                                         <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
                                     </div>
                                 </div>
+                                <?php $count += 1; ?>
                             <?php endfor; ?>
                         <?php } ?>
                     </div>
@@ -268,7 +273,7 @@
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <a href="#" class="btnAll">Xem tất cả</a>
+            <a href="./laptop.php" class="btnAll">Xem tất cả</a>
         </div>
     </div>
 </section>

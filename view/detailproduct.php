@@ -1,4 +1,9 @@
 <?php include "./header.php" ?>
+<?php
+if(isset($_GET['masp'])){
+    $laptop = ProductDAO::getLaptop($_GET['masp'],$conn);
+}
+?>
 <session class="dp_breadcrumb">
     <div data-spm="breadcrumb" id="J_breadcrumb_list" class="breadcrumb_list breadcrumb_custom_cls">
         <ul class="breadcrumb" id="J_breadcrumb">
@@ -13,7 +18,7 @@
             <li class="breadcrumb_item" style="width:400px">
                 <span class="breadcrumb_item_text" style="width:400px">
                     <span class="breadcrumb_item_anchor breadcrumb_item_anchor_last">
-                        &emsp;Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN
+                        &emsp;<?php echo $laptop['tensp']; ?>
                     </span>
                 </span>
             </li>
@@ -31,9 +36,9 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img id="img" src="./images/lap1.jpg" alt="">
+                                <img id="img" src="<?php echo "../admin/view/" . $laptop['hinh'] ?>" alt="">
                             </div>
-                            <div class="carousel-item">
+                            <!-- <div class="carousel-item">
                                 <a href="#">
                                     <img id="img2" src="./images/lap4.jpg" alt="">
                                 </a>
@@ -42,7 +47,7 @@
                                 <a href="#">
                                     <img id="img3" src="./images/lap2.jpg" alt="">
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -57,32 +62,26 @@
 
                 <div class="col-sm-6  text_dp">
                     <h2 class="pro-d-title " id="title-color">
-                    Laptop Lenovo Ideapad Gaming 3 15IMH05 81Y400X0VN
+                    <?php echo $laptop['tensp']; ?>
                     </h2>
                     <div style="font-size: 16px;">
                         <b>Mô tả :</b>
-                        Laptop Lenovo IdeaPad Gaming 3 15IMH05 81Y400X0VN hiển thị hình ảnh chân thực & sống động qua màn hình 15.6 inch Full HD (1920 x 1080),
-                        bộ CPU Intel Core i5-10300H "Comet Lake" cho tần số xử lý dao động 2.5 GHz ~ 4.5 GHz vận hành êm mượt, kèm theo chip Intel Core i5 thế hệ 10 là đồ họa NVIDIA GeForce GTX 1650 4GB. Đây là chiếc VGA được ưa chuộng trong giới game thủ lẫn nhà sáng tạo nội dung.
+                        <?php echo $laptop['mota']; ?>
 
                     </div>
                     <div class="product_meta ">
                         <span class="posted_in"> <strong>Hãng :</strong> <a rel="tag" href="#">Lenovo</a>
-                            <span class="tagged_as"><strong>CPU :</strong> Intel Core i5-10300H
-                                <span class="tagged_as"><strong>RAM :</strong> 8GB
-                                    <span class="tagged_as"><strong>VGA :</strong> NVIDIA GeForce GTX 1650 4GB GDDR6
-                                        <span class="tagged_as"><strong>Ổ cứng :</strong> 512GB SSD
-                                            <span class="tagged_as"><strong>Màn hình :</strong> 15.6 inches
-                                                <span class="tagged_as"><strong>Trọng lượng :</strong> Nặng 1.75 kg
-                                                    <span class="tagged_as"><strong>PIN :</strong> 3Cell 45WHrs
-                                                        <span class="tagged_as"><strong>Màu sắc :</strong> Đen
+                            <span class="tagged_as"><strong>CPU :</strong> <?php echo $laptop['cpu']; ?>
+                                <span class="tagged_as"><strong>RAM :</strong> <?php echo $laptop['ram']; ?>
+                                    <span class="tagged_as"><strong>VGA :</strong> <?php echo $laptop['vga']; ?>
+                                        <span class="tagged_as"><strong>Ổ cứng :</strong> <?php echo $laptop['ocung']; ?>
+                                            <span class="tagged_as"><strong>Màn hình :</strong> <?php echo $laptop['manhinh']; ?>
+                                                <span class="tagged_as"><strong>Trọng lượng :</strong> <?php echo $laptop['trongluong']; ?>
+                                                    <span class="tagged_as"><strong>PIN :</strong> <?php echo $laptop['pin']; ?>
+                                                        <span class="tagged_as"><strong>Màu sắc :</strong> <?php echo $laptop['mausac']; ?>
 
                     </div>
-                    <div class="m-bot15"> <strong>Giá : </strong> <span class="amount-old">22.000.000 VND</span> <span class="pro-price"> 20.000.000 VND</span></div>
-                    <div class="form-group">
-                        <b>Số lượng :</b>
-                        <input type="quantiy" placeholder="1" class="quantity inputqlt">
-                    </div>
-
+                    <div class="m-bot15"> <strong>Giá : </strong><span class="pro-price"><?php echo  number_format( $laptop['gia'], 0, ",", ".") . " VND" ?></span></div>
                     <div class="btnBuy">
                         <button class="btn btn-danger text_dp" id="btn-buy" type="button"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</button>
                         <button class="btn btn-warning text_dp" id="btn-buy" type="button"><i class="fa fa-shopping-cart"></i> Mua ngay</button>

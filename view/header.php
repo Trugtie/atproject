@@ -28,6 +28,7 @@ if (empty($_SESSION["user"])) {
     ";
 }
 
+$lapTopAll=ProductDAO::getAllLaptop($conn);
 $lapTopWorks=ProductDAO::getAllLaptopWithType($conn,1);
 ?>
 
@@ -92,7 +93,11 @@ $lapTopWorks=ProductDAO::getAllLaptopWithType($conn,1);
                 <div>
                     <a href="./giohang.php" class="giohangcount"><i class="fa-solid fa-cart-shopping fa-xl">
                     </i>
-                    <div class="count">0</div>
+                    <div class="count">
+                        <?php if(isset($_SESSION['cart'])) echo count($_SESSION['cart']);
+                        else echo "0";
+                        ?>
+                    </div>
                     </a>
                 </div>
                 <div> <a href=""><i class="fa-solid fa-bell fa-xl"></i></a></div>
