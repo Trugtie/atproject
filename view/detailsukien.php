@@ -1,4 +1,8 @@
 <?php include "./header.php" ?>
+<?php include "../dao/KhuyenMaiDAO.php" ?>
+<?php
+$event = KhuyenMaiDAO::getKhuyenMai($_GET['makm'],$conn);
+?>
 <session class="dp_breadcrumb">
         <div data-spm="breadcrumb" id="J_breadcrumb_list" class="breadcrumb_list breadcrumb_custom_cls">
             <ul class="breadcrumb" id="J_breadcrumb" style="height: 50px; background-color:aqua">
@@ -13,7 +17,7 @@
                 <li class="breadcrumb_item" style="width:400px;">
                     <span class="breadcrumb_item_text" style="width:400px; font-size: 20px;margin-top: -12px;">
                         <span class="breadcrumb_item_anchor breadcrumb_item_anchor_last">
-                        &emsp;BACK TO SCHOOL
+                        &emsp;<?php echo strtoupper($event['tenkm']) ?>
                         </span>
                     </span>
                 </li>
@@ -31,7 +35,7 @@
                 <div class="carousel-inner">
                     
                     <div class="carousel-item active">
-                        <img src="./images/schoolsale.PNG" class="d-block w-100" alt="schooclsale">
+                        <img src=".<?php echo $event['hinh'] ?>" class="d-block w-100" alt="schooclsale">
                     </div>
                    
                 </div>
@@ -41,13 +45,10 @@
         </div>
         <div class="event d-flex">
             <div class="event__content flex-grow-1  flex-column justify-content-between" style="background-color: black; color:white; ">
-                <p style="font-size:24px">Chào mừng mọi người đã đến với sự kiện BACK TO SCHOOL của ATLAPTOP!!!</p>
-                <p style="font-size:24px">Ngày tựu trường đã đến gần rồi, để giúp việc học online trở nên dễ dàng hơn bao giờ hết, hãy mau mau tham gia sự kiện để được trãi nghiệm những ưu đãi  của ATLAPTOP.</p>
-                <p class="content__sale">-  Giảm giá lên tới 30%  <i class="fa-solid fa-piggy-bank"></i> </p>
-                <p class="content__sale">- Tặng kèm phụ kiện đối với những khách hàng mua lần đầu  <i class="fa-solid fa-piggy-bank"></i> </p>
-                <p style="font-size:24px">Sự kiện bao gồm tất cả những sản phẩm laptop học sinh đang được bán trên cửa hàng.</p>
-
-                <p style="font-size:24px">Thời gian diễn ra sự kiện: 1/7/2021 - 1/8/2021.</p>
+                <p style="font-size:24px">Chào mừng mọi người đã đến với ATLAPTOP!!!</p>
+                <p style="font-size:24px"><?php echo $event['mota'] ?></p>
+                <p class="content__sale">-  Giảm giá lên tới <?php echo $event['giatrigiam'] ?>%  <i class="fa-solid fa-piggy-bank"></i> </p>
+                <p style="font-size:24px">Thời gian diễn ra sự kiện: <?php echo $event['ngaybd'] ?> - <?php echo $event['ngaykt'] ?>.</p>
 
                 <div class="content__extention d-flex justify-content-between">
                 

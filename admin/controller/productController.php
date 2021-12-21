@@ -1,6 +1,7 @@
 <?php
 include "../../controller/autoload.php";
 include "../../dao/ProductDAO.php";
+include "../../dao/OrderDAO.php";
 include "../../dao/AccessoryDAO.php";
 include "../../util/validate.php";
 
@@ -9,10 +10,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     switch ($action) {
         case "delete":
             $masp = $_GET['masp'];
-            $oldLaptop =  ProductDAO::getLaptop($masp, $conn);
-            unlink(dirname(__DIR__) . '/view' . $oldLaptop['hinh']);
-            ProductDAO::deleteLaptop($masp, $conn);
-            header("Location: ../view/quanlysanpham.php");
+            $check=OrderDAO::checkExistDonHangSanPham($masp,$conn);
+            if($check == true){
+                session_start();
+                $_SESSION["error"] = "Sản phẩm còn tồn tại trong đơn hàng không thể xóa!";
+                header("Location: ../view/quanlysanpham.php");
+            }
+            else{
+                $oldProduct =  ProductDAO::getProduct($masp, $conn);
+                unlink(dirname(__DIR__) . '/view' . $oldProduct['hinh']);
+                if($oldProduct['loaisp']=="laptop")
+                ProductDAO::deleteLaptop($masp, $conn);
+                else
+                ProductDAO::deletePhukien($masp, $conn);
+                header("Location: ../view/quanlysanpham.php");
+            }
             break;
         case "Laptop":
             $laptops =  ProductDAO::getAllLaptop($conn);

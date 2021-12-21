@@ -1,7 +1,7 @@
 <?php include "./header.php" ?>
 <?php
-if(isset($_GET['masp'])){
-    $laptop = ProductDAO::getLaptop($_GET['masp'],$conn);
+if (isset($_GET['masp'])) {
+    $laptop = ProductDAO::getLaptop($_GET['masp'], $conn);
 }
 ?>
 <session class="dp_breadcrumb">
@@ -62,7 +62,7 @@ if(isset($_GET['masp'])){
 
                 <div class="col-sm-6  text_dp">
                     <h2 class="pro-d-title " id="title-color">
-                    <?php echo $laptop['tensp']; ?>
+                        <?php echo $laptop['tensp']; ?>
                     </h2>
                     <div style="font-size: 16px;">
                         <b>Mô tả :</b>
@@ -81,10 +81,12 @@ if(isset($_GET['masp'])){
                                                         <span class="tagged_as"><strong>Màu sắc :</strong> <?php echo $laptop['mausac']; ?>
 
                     </div>
-                    <div class="m-bot15"> <strong>Giá : </strong><span class="pro-price"><?php echo  number_format( $laptop['gia'], 0, ",", ".") . " VND" ?></span></div>
+                    <div class="m-bot15"> <strong>Giá : </strong><span class="pro-price"><?php echo  number_format($laptop['gia'], 0, ",", ".") . " VND" ?></span></div>
                     <div class="btnBuy">
-                        <button class="btn btn-danger text_dp" id="btn-buy" type="button"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</button>
-                        <button class="btn btn-warning text_dp" id="btn-buy" type="button"><i class="fa fa-shopping-cart"></i> Mua ngay</button>
+                        <form action="../controller/cart.php" method="post">
+                            <input type="hidden" name="masp" value="<?php echo  $laptop['masp'] ?>">
+                            <button class="btn btn-danger text_dp" id="btn-buy" type="submit"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</button>
+                        </form>
                     </div>
                 </div>
             </div>

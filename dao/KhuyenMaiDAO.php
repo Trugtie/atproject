@@ -41,14 +41,14 @@ class KhuyenMaiDAO{
     }
 
     public static function getAllKhuyenMai($conn){
-        $statement = $conn->prepare("select * from dotkhuyenmai");
+        $statement = $conn->prepare("select makm,tenkm,mota,giatrigiam, DATE_FORMAT(ngaybd, '%d/%m/%Y') as ngaybd, DATE_FORMAT(ngaykt, '%d/%m/%Y') as ngaykt, hinh from dotkhuyenmai");
         $statement->execute();
         $khuyenmais=$statement->fetchAll(PDO::FETCH_ASSOC);
         return $khuyenmais;
     }
 
     public static function getKhuyenMai($makm,$conn){
-        $statement=$conn->prepare("select * from dotkhuyenmai where makm='$makm'");
+        $statement=$conn->prepare("select makm,tenkm,mota,giatrigiam, DATE_FORMAT(ngaybd, '%d/%m/%Y') as ngaybd, DATE_FORMAT(ngaykt, '%d/%m/%Y') as ngaykt, hinh from dotkhuyenmai where makm='$makm'");
         $statement->execute();
         $khuyenmai=$statement->fetch(PDO::FETCH_ASSOC);
         return $khuyenmai;
@@ -58,4 +58,29 @@ class KhuyenMaiDAO{
         $statement=$conn->prepare("delete from dotkhuyenmai where makm='$makm'");
         $statement->execute();
     }
+
+    public static function adminCreateEvent($makm,$maad,$conn){
+        $statement = $conn->prepare("insert into ad_dotkm(maad,makm) values(:maad,:makm)");
+        $statement->bindValue(":maad",$maad);
+        $statement->bindValue(":makm",$makm);
+        $statement->execute();
+    }
+
+    public static function getNewEvent($conn)
+    {
+        $statement = $conn->prepare("select makm from dotkhuyenmai order by makm desc limit 1");
+        $statement->execute();
+        $makm = $statement->fetch(PDO::FETCH_ASSOC);
+        return $makm;
+    }
+
+    public static function checkKhuyenMaiDonHang($id,$conn)
+    {
+        $statement = $conn->prepare("select * from donhang where makm='$id'");
+        $statement->execute();
+        $km = $statement->fetch(PDO::FETCH_ASSOC);
+        if(!empty($km))return true;
+        return false;
+    }
+
 }

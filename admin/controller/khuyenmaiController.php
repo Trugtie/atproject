@@ -2,14 +2,23 @@
 include "../../controller/autoload.php";
 include "../../dao/KhuyenmaiDAO.php";
 include "../../util/validate.php";
-
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $action = $_GET['action'];
     switch ($action) {
         case "delete":
             $ma = $_GET['makm'];
-            KhuyenmaiDAO::deleteKhuyenmai($ma, $conn);
-            header("Location: ../view/quanlyKhuyenmai.php");
+            $check = KhuyenmaiDAO::checkKhuyenMaiDonHang($ma,$conn);
+            if($check == true){
+                session_start();
+                $_SESSION["error"] = "Khuyến mãi này đang được sử dụng ở một số đơn hàng không thể xóa!";
+                header("Location: ../view/quanlykhuyenmai.php");
+            }
+            else{
+                KhuyenmaiDAO::deleteKhuyenmai($ma, $conn);
+                $oldKhuyenmai =  KhuyenmaiDAO::getKhuyenMai($ma, $conn);
+                unlink(dirname(__DIR__) . '/view' . $oldKhuyenmai['hinh']);
+                header("Location: ../view/quanlyKhuyenmai.php");
+            }
             break;
     }
 } else {
@@ -38,8 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 move_uploaded_file($temp, dirname(__DIR__) . '/view/images/' . $name);
                 $imagePath = '/images/' . $name;
                 $khuyenmai = new KhuyenMai($makm, $tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt, $imagePath);
-
+                session_start();
+                $maad=$_SESSION['admin']->get_maad();
                 KhuyenMaiDAO::insertKhuyenmai($khuyenmai, $conn);
+                $makm =  KhuyenMaiDAO::getNewEvent($conn);
+                KhuyenMaiDAO::adminCreateEvent($makm['makm'],$maad,$conn);
                 header("Location: ../view/quanlykhuyenmai.php");
             }
 
@@ -71,7 +83,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     move_uploaded_file($temp, dirname(__DIR__) . '/view/images/' . $name);
                     $imagePath = '/images/' . $name;
                     $khuyenmai = new KhuyenMai($makm, $tenkm, $mota, $giatrigiam, $ngaybd, $ngaykt, $imagePath);
-
                     KhuyenMaiDAO::updateKhuyenmai($khuyenmai, $makm, $conn);
                     header("Location: ../view/quanlykhuyenmai.php");
                 } else {

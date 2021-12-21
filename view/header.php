@@ -1,6 +1,7 @@
 <?php
 include "../controller/autoload.php";
 include "../dao/ProductDAO.php";
+include "../dao/AccessoryDAO.php";
 session_start();
 $user = "";
 $userDropdown = "";
@@ -30,6 +31,9 @@ if (empty($_SESSION["user"])) {
 
 $lapTopAll=ProductDAO::getAllLaptopShowcase($conn);
 $lapTopWorks=ProductDAO::getAllLaptopWithTypeShowcase($conn,1);
+$lapTopGamings=ProductDAO::getAllLaptopWithTypeShowcase($conn,2);
+$lapTopCaoCaps=ProductDAO::getAllLaptopWithTypeShowcase($conn,3);
+$phuKienALL=AccessoryDAO::getAllPhuKienShowcase($conn);
 ?>
 
 <!DOCTYPE html>

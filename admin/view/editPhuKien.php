@@ -65,6 +65,8 @@ if (!empty($_SESSION['error'])) {
                                 <option value="1" <?php if ($phukien['maloaipk'] == "1") echo "selected"; ?>>Chuột</option>
                                 <option value="2" <?php if ($phukien['maloaipk'] == "2") echo "selected"; ?>>Tai nghe</option>
                                 <option value="3" <?php if ($phukien['maloaipk'] == "3") echo "selected"; ?>>Miếng lót chuột</option>
+                                <option value="4" <?php if ($phukien['maloaipk'] == "4") echo "selected"; ?>>Dây sạc</option>
+                                <option value="5" <?php if ($phukien['maloaipk'] == "5") echo "selected"; ?>>Balo</option>
                             </select>
                         </div>
                         <div class="col-sm-9 right-row" style="float:left">

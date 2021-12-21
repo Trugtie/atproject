@@ -2,6 +2,7 @@
 include "../../controller/autoload.php";
 include "../../dao/AccessoryDAO.php";
 $hangs = AccessoryDAO::getAllHang($conn);
+$loaipks = AccessoryDAO::getAllLoaiPhuKien($conn);
 ?>
 
 
@@ -58,10 +59,9 @@ if (!empty($_SESSION['error'])) {
                             </select>
                             <label style="font-size:20px;margin-top: 7px">Loại phụ kiện</label><br>
                             <select name="maloaipk" id="" class="inputSp">
-                                <option value="1">Chuột</option>
-                                <option value="2">Tai nghe</option>
-                                <option value="3">Miếng lót chuột</option>
-                                <option value="4">Dây sạc</option>
+                                <?php foreach ($loaipks as $loaipk) : ?>
+                                    <option value="<?php echo $loaipk['maloaipk'] ?>"><?php echo $loaipk['tenloai'] ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                         <div class="col-sm-9 right-row" style="float:left">

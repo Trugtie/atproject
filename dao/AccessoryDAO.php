@@ -9,6 +9,13 @@ class AccessoryDAO{
         return $hang;
     }
 
+    public static function getAllLoaiPhuKien($conn){
+        $statement = $conn->prepare("select * from loaiphukien");
+        $statement->execute();
+        $loaipk = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $loaipk;
+    }
+
     public static function insertPhuKien($phukien,$conn){
         $statement = $conn->prepare("insert into phukien(tensp,mota,soluong,hinh,gia,loaisp,tinhtrang,mahang,maloaipk)
         values(:tensp,:mota,:soluong,:hinh,:gia,:loaisp,:tinhtrang,:mahang,:maloaipk)");
@@ -57,6 +64,13 @@ class AccessoryDAO{
 
     public static function getAllPhuKien($conn){
         $statement = $conn->prepare("select * from phukien");
+        $statement->execute();
+        $phukiens=$statement->fetchAll(PDO::FETCH_ASSOC);
+        return $phukiens;
+    }
+
+    public static function getAllPhuKienShowcase($conn){
+        $statement = $conn->prepare("select pk.gia, pk.hinh, pk.loaisp, pk.masp, h.tenhang, pk.maloaipk, pk.masp, pk.mota, pk.soluong, pk.tensp, pk.tinhtrang from phukien as pk join hang as h on pk.mahang=h.mahang where tinhtrang='Còn hàng';");
         $statement->execute();
         $phukiens=$statement->fetchAll(PDO::FETCH_ASSOC);
         return $phukiens;

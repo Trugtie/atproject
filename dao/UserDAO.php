@@ -73,4 +73,13 @@ class UserDAO
         $histories = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $histories;
     }
+
+    public static function checkKhachHangDonHang($id,$conn)
+    {
+        $statement = $conn->prepare("select * from donhang where makh='$id'");
+        $statement->execute();
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+        if(!empty($user))return true;
+        return false;
+    }
 }

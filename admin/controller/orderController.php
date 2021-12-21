@@ -1,4 +1,5 @@
 <?php
+include "../../controller/autoload.php";
 include '../../dao/OrderDAO.php';
 include '../../dao/ProductDAO.php';
 if (isset($_GET['action'])) {
@@ -9,8 +10,11 @@ if (isset($_GET['action'])) {
             header("Location: ../view/quanlydonhang.php");
             break;
         case "duyet":
+            session_start();
             $madon = $_GET['madon'];
+            $maad=$_SESSION['admin']->get_maad();
             $details = OrderDAO::getDetailsOrder($madon, $conn);
+            OrderDAO::adminBrowseOrder($madon,$maad, $conn);
             OrderDAO::browseOrder($madon, $conn);
             foreach ($details as $detail) {
                 $product = ProductDAO::getProduct($detail['masp'], $conn);

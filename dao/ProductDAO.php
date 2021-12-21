@@ -118,6 +118,11 @@ class ProductDAO{
         $statement->execute();
     }
 
+    public static function deletePhukien($masp,$conn){
+        $statement=$conn->prepare("delete from phukien where masp=$masp");
+        $statement->execute();
+    }
+
     public static function resetAI($conn){
         $statement=$conn->prepare("select max(masp) as max from sanpham");
         $statement->execute();
@@ -128,7 +133,7 @@ class ProductDAO{
     }
 
     public static function getProduct($masp,$conn){
-        $statement=$conn->prepare("select masp,hinh,tensp,gia,soluong from sanpham where masp=$masp");
+        $statement=$conn->prepare("select masp,hinh,tensp,gia,soluong,loaisp from sanpham where masp=$masp");
         $statement->execute();
         $product=$statement->fetch(PDO::FETCH_ASSOC);
         return $product;

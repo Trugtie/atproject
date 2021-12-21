@@ -7,8 +7,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     switch ($action) {
         case "delete":
             $ma = $_GET['makh'];
-            UserDao::deleteUser($ma,$conn);
-            header("Location: ../view/quanlykhachhang.php");
+            $check = UserDao::checkKhachHangDonHang($ma,$conn);
+            if($check==true){
+                session_start();
+                $_SESSION["error"] = "Khách hàng đang có đơn hàng không thể xóa!";
+                header("Location: ../view/quanlykhachhang.php");
+            }
+            else{
+                UserDao::deleteUser($ma,$conn);
+                header("Location: ../view/quanlykhachhang.php");
+            }
             break;
     }
 } else {

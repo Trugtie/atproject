@@ -4,6 +4,30 @@ include "../../dao/KhuyenMaiDAO.php";
 $khuyenmais = KhuyenMaiDAO::getAllKhuyenMai($conn);
 ?>
 <?php include "./adminheader.php" ?>
+<?php
+if(!empty($_SESSION['error'])){
+    $error = $_SESSION['error'];
+    echo "
+    <div class='modal' tabindex='-1'>
+    <div class='modal-dialog'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <h5 class='modal-title'>Lỗi xóa</h5>
+          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+        </div>
+        <div class='modal-body'>
+          <p>$error</p>
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    ";
+    unset($_SESSION['error']);
+  }
+?>
 <?php include("./adminnav.php") ?>
 <section>
     <div class="container d-flex flex-column justify-content-around">
@@ -44,12 +68,12 @@ $khuyenmais = KhuyenMaiDAO::getAllKhuyenMai($conn);
                         <td><img src="<?php echo "./" . $khuyenmai["hinh"] ?>" alt=""></td>
                         <td><?php echo $khuyenmai['tenkm'] ?></td>
                         <td><?php echo $khuyenmai['mota'] ?></td>
-                        <td><?php echo $khuyenmai['giatrigiam'] ?></td>
+                        <td><?php echo $khuyenmai['giatrigiam']."%" ?></td>
                         <td><?php echo $khuyenmai['ngaybd'] ?></td>
                         <td><?php echo $khuyenmai['ngaykt'] ?></td>
                         <td class="action d-flex justify-content-around align-items-center">
                             <a href="./editkhuyenmai.php?makm=<?php echo $khuyenmai['makm'] ?>" class="sua">Sửa</a>
-                            <a href="../controller/productController.php?action=delete&makm=<?php echo $khuyenmai['makm'] ?>" class="xoa">Xóa</a>
+                            <a href="../controller/khuyenmaiController.php?action=delete&makm=<?php echo $khuyenmai['makm'] ?>" class="xoa">Xóa</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

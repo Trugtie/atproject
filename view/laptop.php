@@ -28,15 +28,23 @@ if(isset($_SESSION['notify'])){
     <div class="container">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
+            <?php
+                include "../dao/KhuyenMaiDAO.php";
+                $sales = KhuyenMaiDAO::getAllKhuyenMai($conn);
+                ?>
+                <?php foreach ($sales as $i=>$sale):?>
+                <?php if($i==0){ ?>
                 <div class="carousel-item active">
-                    <img src="./images/newsale.PNG" class="d-block w-100" alt=".newsale">
+                    <img src=".<?php echo $sale['hinh'] ?>" class="d-block w-100" alt=".newsale">
                 </div>
-                <div class="carousel-item">
-                    <img src="./images/schoolsale.PNG" class="d-block w-100" alt="schooclsale">
+                <?php }
+                else{
+                ?>
+                <div class="carousel-item ">
+                    <img src=".<?php echo $sale['hinh'] ?>" class="d-block w-100" alt="schooclsale">
                 </div>
-                <div class="carousel-item">
-                    <img src="./images/christmassale.PNG" class="d-block w-100" alt="chrimassale">
-                </div>
+                <?php } ?>
+                <?php endforeach; ?>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -111,7 +119,7 @@ if(isset($_SESSION['notify'])){
         <!-- Swiper -->
         <div class="swiper swiper--long mySwiper animate-left">
             <div class="swiper-wrapper">
-                <?php $slides = ceil(count($lapTopWorks) / 9);
+                <?php $slides = ceil(count($lapTopAll) / 9);
                 $flag = 0;
                 $temp = 0;
                 $count = 0;
@@ -119,7 +127,7 @@ if(isset($_SESSION['notify'])){
                 ?>
                     <div class="swiper-slide">
                         <?php if ($flag == 0) { ?>
-                            <?php for ($j = 0; $j < count($lapTopWorks); $j++) : ?>
+                            <?php for ($j = 0; $j < count($lapTopAll); $j++) : ?>
                                 <?php if ($count == 9) {
                                     $temp = $j;
                                     $flag = 1;
@@ -128,46 +136,46 @@ if(isset($_SESSION['notify'])){
                                 } ?>
                                 <div class="item">
                                     <div class="item__image">
-                                        <img src="<?php echo "../admin/view/" . $lapTopWorks[$j]['hinh'] ?>" alt="">
-                                        <a href="./detailproduct.php?masp=<?php echo $lapTopWorks[$j]['masp'] ?>" class="image__more">Xem thêm</a>
+                                        <img src="<?php echo "../admin/view/" . $lapTopAll[$j]['hinh'] ?>" alt="">
+                                        <a href="./detailproduct.php?masp=<?php echo $lapTopAll[$j]['masp'] ?>" class="image__more">Xem thêm</a>
                                     </div>
-                                    <h3 class="item__name"><?php echo $lapTopWorks[$j]['tensp'] ?></h3>
+                                    <h3 class="item__name"><?php echo $lapTopAll[$j]['tensp'] ?></h3>
                                     <div class="item__detail">
                                         <table>
                                             <tr>
                                                 <th>CPU:</td>
-                                                <td><?php echo $lapTopWorks[$j]['cpu'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['cpu'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>RAM:</td>
-                                                <td><?php echo $lapTopWorks[$j]['ram'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['ram'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>VGA</td>
-                                                <td><?php echo $lapTopWorks[$j]['vga'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['vga'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>Ổ cứng:</td>
-                                                <td><?php echo $lapTopWorks[$j]['ocung'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['ocung'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>Màn hình:</td>
-                                                <td><?php echo $lapTopWorks[$j]['manhinh'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['manhinh'] ?></td>
                                             </tr>
                                         </table>
                                     </div>
                                     <div class="item__button">
                                         <form action="../controller/cart.php" method="post">
-                                            <input type="hidden" name="masp" value="<?php echo $lapTopWorks[$j]['masp'] ?>">
+                                            <input type="hidden" name="masp" value="<?php echo $lapTopAll[$j]['masp'] ?>">
                                             <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
                                         </form>
-                                        <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
+                                        <div class="price"><?php echo  number_format($lapTopAll[$j]['gia'], 0, ",", ".") . " VND" ?></div>
                                     </div>
                                 </div>
                                 <?php $count += 1; ?>
                             <?php endfor; ?>
                         <?php } else if ($flag == 1) { ?>
-                            <?php for ($j = $temp; $j < count($lapTopWorks); $j++) : ?>
+                            <?php for ($j = $temp; $j < count($lapTopAll); $j++) : ?>
                                 <?php if ($count == 9) {
                                     $temp = $j;
                                     $count = 0;
@@ -175,40 +183,40 @@ if(isset($_SESSION['notify'])){
                                 } ?>
                                 <div class="item">
                                     <div class="item__image">
-                                        <img src="<?php echo "../admin/view/" . $lapTopWorks[$j]['hinh'] ?>" alt="">
-                                        <a href="./detailproduct.php?masp=<?php echo $lapTopWorks[$j]['masp'] ?>" class="image__more">Xem thêm</a>
+                                        <img src="<?php echo "../admin/view/" . $lapTopAll[$j]['hinh'] ?>" alt="">
+                                        <a href="./detailproduct.php?masp=<?php echo $lapTopAll[$j]['masp'] ?>" class="image__more">Xem thêm</a>
                                     </div>
-                                    <h3 class="item__name"><?php echo $lapTopWorks[$j]['tensp'] ?></h3>
+                                    <h3 class="item__name"><?php echo $lapTopAll[$j]['tensp'] ?></h3>
                                     <div class="item__detail">
                                         <table>
                                             <tr>
                                                 <th>CPU:</td>
-                                                <td><?php echo $lapTopWorks[$j]['cpu'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['cpu'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>RAM:</td>
-                                                <td><?php echo $lapTopWorks[$j]['ram'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['ram'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>VGA</td>
-                                                <td><?php echo $lapTopWorks[$j]['vga'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['vga'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>Ổ cứng:</td>
-                                                <td><?php echo $lapTopWorks[$j]['ocung'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['ocung'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>Màn hình:</td>
-                                                <td><?php echo $lapTopWorks[$j]['manhinh'] ?></td>
+                                                <td><?php echo $lapTopAll[$j]['manhinh'] ?></td>
                                             </tr>
                                         </table>
                                     </div>
                                     <div class="item__button">
                                         <form action="../controller/cart.php" method="post">
-                                            <input type="hidden" name="masp" value="<?php echo $lapTopWorks[$j]['masp'] ?>">
+                                            <input type="hidden" name="masp" value="<?php echo $lapTopAll[$j]['masp'] ?>">
                                             <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
                                         </form>
-                                        <div class="price"><?php echo  number_format($lapTopWorks[$j]['gia'], 0, ",", ".") . " VND" ?></div>
+                                        <div class="price"><?php echo  number_format($lapTopAll[$j]['gia'], 0, ",", ".") . " VND" ?></div>
                                     </div>
                                 </div>
                                 <?php $count += 1; ?>

@@ -55,6 +55,14 @@ class OrderDAO
         return $order;
     }
 
+    public static function checkExistDonHangSanPham($masp,$conn){
+        $statement = $conn->prepare("select masp from donhang_sanpham where masp=$masp");
+        $statement->execute();
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        if(!empty($row)) return true;
+        return false;
+    }
+
     public static function getDetailsOrder($madon,$conn){
         $statement = $conn->prepare("select d.masp, sp.hinh, sp.tensp, sp.gia, d.soluong, d.thanhtien,sp.loaisp from donhang_sanpham as d join sanpham as sp on d.masp=sp.masp where d.madon=$madon");
         $statement->execute();
@@ -76,6 +84,13 @@ class OrderDAO
 
     public static function browseOrder($madon,$conn){
         $statement = $conn->prepare("update donhang set tinhtrang='Đã giao' where madon=$madon");
+        $statement->execute();
+    }
+
+    public static function adminBrowseOrder($madon,$maad,$conn){
+        $statement = $conn->prepare("insert into ad_donhang(maad,madon) values(:maad,:madon)");
+        $statement->bindValue(":maad",$maad);
+        $statement->bindValue(":madon",$madon);
         $statement->execute();
     }
 }
