@@ -69,14 +69,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     header("Location: ../view/resetpass.php");
                 } else {
                     $to      = $email;
-                    $subject = 'Reset pass code';
+                    $subject = 'ATLAPTOP: Reset password!';
                     $code = randomString(6);
                     $message = $code;
-                    $headers = 'From: atlaptop@gmail.com'       . "\r\n" .
-                        'Reply-To: atlaptop@gmail.com' . "\r\n" .
-                        'X-Mailer: PHP/' . phpversion();
-
-                    $check = mail($to, $subject, $message, $headers);
+                    sendmail( $subject,$message,$email);
                     session_start();
                     $_SESSION["email"] = $email;
                     $_SESSION["code"] = $code;
