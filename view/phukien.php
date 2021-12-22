@@ -91,7 +91,7 @@
                                 <div class="item">
                                     <div class="item__image">
                                         <img src="<?php echo "../admin/view/" . $phuKienALL[$j]['hinh'] ?>" alt="">
-                                        <a href="" class="image__more">Xem thêm</a>
+                                        <a href="./detailPhukien.php?masp=<?php echo $phuKienALL[$j]['masp'] ?>" class="image__more">Xem thêm</a>
                                     </div>
                                     <h3 class="item__name"><?php echo $phuKienALL[$j]['tensp'] ?></h3>
                                     <div class="item__detail">
@@ -126,7 +126,7 @@
                                 <div class="item">
                                     <div class="item__image">
                                         <img src="<?php echo "../admin/view/" . $phuKienALL[$j]['hinh'] ?>" alt="">
-                                        <a href="" class="image__more">Xem thêm</a>
+                                        <a href="./detailPhukien.php?masp=<?php echo $phuKienALL[$j]['masp'] ?>" class="image__more">Xem thêm</a>
                                     </div>
                                     <h3 class="item__name"><?php echo $phuKienALL[$j]['tensp'] ?></h3>
                                     <div class="item__detail">

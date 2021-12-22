@@ -83,6 +83,13 @@ class AccessoryDAO{
         return $phukien;
     }
 
+    public static function getPhuKienDetail($masp,$conn){
+        $statement=$conn->prepare("select pk.gia, pk.hinh, pk.loaisp, pk.masp, h.tenhang, pk.maloaipk, pk.masp, pk.mota, pk.soluong, pk.tensp, pk.tinhtrang from phukien as pk join hang as h on pk.mahang=h.mahang where masp=$masp");
+        $statement->execute();
+        $phukien=$statement->fetch(PDO::FETCH_ASSOC);
+        return $phukien;
+    }
+
     public static function deletePhuKien($masp,$conn){
         $statement=$conn->prepare("delete from phukien where masp=$masp");
         $statement->execute();
