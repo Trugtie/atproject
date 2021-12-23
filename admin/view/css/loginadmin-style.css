@@ -31,7 +31,7 @@ a {
 
 #content {
   height: 100%;
-  background-image: url("/atproject/view/images/adminlogin.jpg");
+  background-image: url("../../../view/images/adminlogin.jpg");
   background-size: cover;
   vertical-align: center;
 }
