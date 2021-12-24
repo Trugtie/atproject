@@ -1,8 +1,8 @@
 <?php include "./header.php" ?>
 <?php
-if(isset($_SESSION['notify'])){
+if (isset($_SESSION['notify'])) {
     $notify = $_SESSION['notify'];
-      echo "
+    echo "
     <div class='modal' tabindex='-1'>
     <div class='modal-dialog'>
       <div class='modal-content'>
@@ -21,29 +21,28 @@ if(isset($_SESSION['notify'])){
   </div>
     ";
     unset($_SESSION['notify']);
-  }
+}
 ?>
 <!-- Sale -->
 <section class="sale--nonebackground">
     <div class="container">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-            <?php
+                <?php
                 include "../dao/KhuyenMaiDAO.php";
                 $sales = KhuyenMaiDAO::getAllKhuyenMai($conn);
                 ?>
-                <?php foreach ($sales as $i=>$sale):?>
-                <?php if($i==0){ ?>
-                <div class="carousel-item active">
-                    <img src=".<?php echo $sale['hinh'] ?>" class="d-block w-100" alt=".newsale">
-                </div>
-                <?php }
-                else{
-                ?>
-                <div class="carousel-item ">
-                    <img src=".<?php echo $sale['hinh'] ?>" class="d-block w-100" alt="schooclsale">
-                </div>
-                <?php } ?>
+                <?php foreach ($sales as $i => $sale) : ?>
+                    <?php if ($i == 0) { ?>
+                        <div class="carousel-item active">
+                            <img src=".<?php echo $sale['hinh'] ?>" class="d-block w-100" alt=".newsale">
+                        </div>
+                    <?php } else {
+                    ?>
+                        <div class="carousel-item ">
+                            <img src=".<?php echo $sale['hinh'] ?>" class="d-block w-100" alt="schooclsale">
+                        </div>
+                    <?php } ?>
                 <?php endforeach; ?>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -62,10 +61,12 @@ if(isset($_SESSION['notify'])){
     <div class="container">
         <h1 class="cateHeader text-center animate-top" id="categories__work">LAPTOP</h1>
         <div class="tool">
-            <div class="search">
-                <input type="text" placeholder="Search...">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+            <form action="../controller/search.php" method="post">
+                <div class="search">
+                    <input type="text" name="words" placeholder="Search...">
+                    <button type="submit" name="action" value="searchLaptop"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
             <div class="text">
                 Bộ lọc:
             </div>
@@ -116,8 +117,26 @@ if(isset($_SESSION['notify'])){
                 </div>
             </div>
         </div>
+        <?php
+        if(isset($_SESSION['search'])){
+            if(!empty($_SESSION['search'])){
+                if(!empty($_SESSION['searchWords']))
+                $words = $_SESSION['searchWords'];
+                if($_SESSION['searchFlag'] = 1 && isset($words) )
+                echo "<h1>Bạn đã tìm kiếm từ khóa: $words </h1>";
+                $lapTopAll = $_SESSION['search'];
+            }
+            else{
+                $lapTopAll = "";
+                $words = $_SESSION['searchWords'];
+                echo "<h1>Không có kết quả cho từ khóa: $words </h1>";
+            }
+        }
+        ?>
+        
         <!-- Swiper -->
         <div class="swiper swiper--long mySwiper animate-left">
+            <?php if(!empty($lapTopAll)): ?>
             <div class="swiper-wrapper">
                 <?php $slides = ceil(count($lapTopAll) / 9);
                 $flag = 0;
@@ -227,8 +246,13 @@ if(isset($_SESSION['notify'])){
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-
+            <?php endif; ?>
         </div>
+        <?php
+        unset($_SESSION['search']);
+        unset($_SESSION['searchWords']);
+        unset($_SESSION['searchFlag']);
+        ?>
     </div>
 </section>
 <?php include "./footer.php" ?>

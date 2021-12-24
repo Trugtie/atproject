@@ -172,7 +172,7 @@ $event = KhuyenMaiDAO::getKhuyenMai($_GET['makm'],$conn);
             </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <a href="#" class="btnAll">Xem tất cả</a>
+                <a href="./laptop.php" class="btnAll">Xem tất cả</a>
             </div>
         </div>
     </section>
