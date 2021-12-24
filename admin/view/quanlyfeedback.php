@@ -46,7 +46,7 @@ $feedbacks = FeedBackDAO::getAllFeedBack($conn);
                     <td><?php echo $feedback['mota'] ?></td>
                     <td><?php echo $feedback['thoigian'] ?> </td>
                     <td class="action d-flex justify-content-around align-items-center">
-                        <a href="../controller/customerController.php?action=delete&makh=<?php echo $feedback['makh'] ?>" class="xoa">Xóa</a>
+                        <a href="../controller/feedbackController.php?action=delete&mafb=<?php echo $feedback['mafb'] ?>" class="xoa">Xóa</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

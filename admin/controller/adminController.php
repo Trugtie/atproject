@@ -23,15 +23,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $email = $_POST['email'];
             $diachi = $_POST['diachi'];
             $username = $_POST['username'];
-            $password = $_POST['password'];
+            $password = ($_POST['password']);
             
             $error = validate::validateAdmin($email, $username, $password);
             if (!empty($error)) {
                 session_start();
                 $_SESSION["error"] = $error;
-                header("Location: ../view/quanlynhanvien.php");
+                
+                header("Location: ../view/addAdmin.php");
             } else {                
-                $admin = new Admin($ma, $email, $username, $password, $ho, $ten, $sdt, $diachi);
+                $admin = new Admin($ma, $email, $username, sha1($password), $ho, $ten, $sdt, $diachi);
                 AdminDAO::insertAdmin($admin, $conn);
                 header("Location: ../view/quanlynhanvien.php");
             }
@@ -44,12 +45,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $diachi = $_POST['diachi'];
             $email = $_POST['email'];
             $username = $_POST['username'];
-            $password = $_POST['password'];  
-            $admin = new Admin($ma, $email, $username, $password, $ho, $ten, $sdt, $diachi);
-            // var_dump($admin);
-            // exit();
-            AdminDAO::updateAdmin($admin, $ma, $conn);
-            header("Location: ../view/quanlynhanvien.php");
+            $password = ($_POST['password']);  
+
+            $error = validate::validateAdmin($email, $username, $password);
+            if (!empty($error)) {
+                session_start();
+                $_SESSION["error"] = $error;
+                header("Location: ../view/editthongtinadmin.php?maad=$ma");
+            }else{
+                
+                $admin = new Admin($ma, $email, $username, sha1($password), $ho, $ten, $sdt, $diachi);
+                
+                // exit();
+                AdminDAO::updateAdmin($admin, $ma, $conn);
+                header("Location: ../view/quanlynhanvien.php");
+            }
+            
             break;
     }
 }

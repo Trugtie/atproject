@@ -4,6 +4,11 @@ if (isset($_GET['masp'])) {
     $phukien = AccessoryDAO::getPhuKienDetail($_GET['masp'], $conn);
 }
 ?>
+<?php
+if (isset($_GET['masp'])) {
+    $feedbacks = FeedBackDAO::getAllFeedBackSanPham($_GET['masp'], $conn);
+}
+?>
 <session class="dp_breadcrumb">
     <div data-spm="breadcrumb" id="J_breadcrumb_list" class="breadcrumb_list breadcrumb_custom_cls">
         <ul class="breadcrumb" id="J_breadcrumb">
@@ -82,6 +87,29 @@ if (isset($_GET['masp'])) {
                 </div>
             </div>
         </div>
+    </section>
+
+    <div class="fb">
+        <p class="p-style">Nhận xét về sản phẩm</p>
+    </div>
+    <section class="feedback">
+        <?php foreach ($feedbacks as $feedback) : ?>
+            <?php $makh = $feedback['makh'];
+                  $ten = FeedBackDAO::getTenKhachHang($makh, $conn);
+            ?>
+                <div class="fb-body">
+                    <div class="name-customer">
+                        <div class="fb-name">
+                            <?php echo $ten['ten']?>
+                        </div>
+                        <div class="fb-time">
+                        <?php echo $feedback['thoigian']?>
+                        </div>
+                    </div>
+                    <div class="fb-content"><?php echo $feedback['mota']?>
+                    </div>
+                </div>  
+        <?php endforeach; ?>
     </section>
 
 </div>

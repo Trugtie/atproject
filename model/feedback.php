@@ -1,17 +1,13 @@
 <?php
 class FeedBack{
     private $mafb;
-    private $tennguoigui;
-    private $sanpham;
-    private $noidung;
+    private $mota;
     private $thoigian;
 
-    public function __construct($ma, $ten, $sp, $nd, $tg)
+    public function __construct($ma, $mota, $tg)
     {
         $this->mafb = $ma;
-        $this->tennguoigui = $ten;
-        $this->sanpham = $sp;
-        $this->noidung = $nd;
+        $this->mota = $mota;
         $this->thoigian = $tg;
     }
 
@@ -23,28 +19,12 @@ class FeedBack{
         $this->mafb = $ma;
     }
 
-    public function getTenNguoiGui(){
-        return $this->tennguoigui;
+    public function getMota(){
+        return $this->mota;
     }
 
-    public function setTenNguoiGui($ten){
-        $this->tennguoigui = $ten;
-    }
-
-    public function getSanPham(){
-        return $this->sanpham;
-    }
-
-    public function setSanPham($sp){
-        $this->sanpham = $sp;
-    }
-
-    public function getNoiDung(){
-        return $this->noidung;
-    }
-
-    public function setNoiDung($nd){
-        $this->noidung = $nd;
+    public function setMota($mota){
+        $this->mota = $mota;
     }
 
     public function getThoiGian(){

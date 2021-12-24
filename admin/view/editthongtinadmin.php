@@ -9,6 +9,30 @@ $admin = AdminDAO::getAdminEdit($_GET["maad"], $conn);
 ?>
 <?php include "./adminheader.php" ?>
 <?php include("./adminnav.php") ?>
+<?php
+if(!empty($_SESSION['error'])){
+    $error = $_SESSION['error'];
+    echo "
+    <div class='modal' tabindex='-1'>
+    <div class='modal-dialog'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <h5 class='modal-title'>Lỗi thanh toán</h5>
+          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+        </div>
+        <div class='modal-body'>
+          <p>$error</p>
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    ";
+    unset($_SESSION['error']);
+  }
+?>
 <section>
     <div class="container d-flex flex-column justify-content-around">
         <div class="btnNav" id="btnNav">
@@ -52,7 +76,7 @@ $admin = AdminDAO::getAdminEdit($_GET["maad"], $conn);
                     </tr>
                     <tr>
                         <th>Password</th>
-                        <th><input class="form-control" type="text" id="editth"   name="password" value="<?php echo $admin["password"]; ?>"></th>
+                        <th><input class="form-control" type="text" id="editth"   name="password" value=""></th>
                     </tr>
                     <tr>
                         <th colspan="2">

@@ -2,6 +2,7 @@
 include "../controller/autoload.php";
 include "../dao/ProductDAO.php";
 include "../dao/AccessoryDAO.php";
+include "../dao/FeedBackDAO.php";
 session_start();
 $user = "";
 $userDropdown = "";
@@ -57,6 +58,7 @@ $phuKienALL=AccessoryDAO::getAllPhuKienShowcase($conn);
     <link rel="stylesheet" href="./css/thanhtoan.css">
     <link rel="stylesheet" href="./css/detailproduct-style.css">
     <link rel="stylesheet" href="./css/accountinfo.css">
+    <link rel="stylesheet" href="./css/addfb.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- FontAwesome -->

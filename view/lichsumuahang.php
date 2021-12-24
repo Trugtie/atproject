@@ -27,6 +27,7 @@ if(isset($_SESSION['notify'])){
     unset($_SESSION['notify']);
   }
 ?>
+
 <section class="giohang">
     <div class="container">
         <h1 class="cateHeader text-center event__header animate-top" id="categories__work">LỊCH SỬ MUA HÀNG</h1>
@@ -58,7 +59,8 @@ if(isset($_SESSION['notify'])){
                     <?php echo $history['makm']?>
                     </td>
                     <td>
-                        <a href="./chitietdonhang.php?madon=<?php echo $history['madon']?>" class="xem">Xem</a>
+                      <a href="./chitietdonhang.php?madon=<?php echo $history['madon']?>" class="xem">Xem</a>
+                      <a href="./addfeedback.php?madon=<?php echo $history['madon']?>" class="sua">Feedback</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

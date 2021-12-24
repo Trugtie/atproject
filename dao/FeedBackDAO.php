@@ -21,6 +21,23 @@ class FeedBackDAO{
         $statement = $conn->prepare("delete from feedback where mafb=$mafb");
         $statement->execute();        
     }
+
+    public static function getAllFeedBackSanPham($masp, $conn){
+        $statement = $conn->prepare("select * from feedback where masp=$masp");
+        $statement->execute();
+        $feedbacks=$statement->fetchAll(PDO::FETCH_ASSOC);
+        return $feedbacks;
+    }
+
+    public static function insertFeedback($mota, $makh, $masp, $conn)
+    {
+        $statement = $conn->prepare("insert into feedback(mota,makh,masp) 
+        values(:mota,:makh,:masp)");
+        $statement->bindValue(':mota', $mota);
+        $statement->bindValue(':makh', $makh);
+        $statement->bindValue(':masp', $masp);
+        $statement->execute();
+    }
 }
 
 ?>

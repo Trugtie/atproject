@@ -289,3 +289,54 @@
         font-size: 16px;
     }
 
+.fb{
+    padding-left: 4rem;
+    background-color: rgb(245, 215, 215);
+    height: 4rem;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    padding-top: .7rem;
+}
+
+.fb p{
+    font-size: 18px;
+}
+.feedback{
+    background-color:#c8f4fc;
+    padding-bottom: 0rem;
+    margin-bottom: 2rem;
+}
+
+.fb-body{
+    margin-top: -2rem;
+    padding-bottom: 8rem;
+    /* width: 99%; */
+    /* background-color: lightblue; */
+    height: 5rem;
+}
+
+.name-customer{
+    height: 2rem;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fb-content{
+    float: left;    
+    width: 94%;
+    font-size: 16px;
+}
+
+.fb-name{
+    float: left;
+}
+
+.fb-time{
+    height: 2rem;
+    margin-left: 2rem;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    float: left;
+}
