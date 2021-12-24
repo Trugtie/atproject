@@ -84,7 +84,7 @@ class UserDAO
     }
 
     public static function getSoLuongThanhVien($conn){
-        $statement = $conn->prepare("select sum(makh) as soluong from khachhang");
+        $statement = $conn->prepare("select count(makh) as soluong from khachhang");
         $statement->execute();
         $soluong = $statement->fetch(PDO::FETCH_ASSOC);
         return $soluong;
