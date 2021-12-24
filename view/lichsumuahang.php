@@ -60,7 +60,7 @@ if(isset($_SESSION['notify'])){
                     </td>
                     <td>
                       <a href="./chitietdonhang.php?madon=<?php echo $history['madon']?>" class="xem">Xem</a>
-                      <a href="./addfeedback.php?madon=<?php echo $history['madon']?>" class="sua">Feedback</a>
+                      <a href="./addfeedback.php?madon=<?php echo $history['madon']?>" class="sua">FBack</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
