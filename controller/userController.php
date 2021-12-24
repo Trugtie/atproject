@@ -62,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 $_SESSION["error"] = $error;
                 header("Location: ../view/resetpass.php");
             } else {
+                //kiem tra co ton tai email nay khong
                 $user = UserDAO::getUserWithEmail($email, $conn);
                 if ($user == false) {
                     session_start();

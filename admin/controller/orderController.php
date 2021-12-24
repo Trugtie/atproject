@@ -14,8 +14,11 @@ if (isset($_GET['action'])) {
             $madon = $_GET['madon'];
             $maad=$_SESSION['admin']->get_maad();
             $details = OrderDAO::getDetailsOrder($madon, $conn);
+            //dam bao rang buoc ad nao duyet don hang nao
             OrderDAO::adminBrowseOrder($madon,$maad, $conn);
+            //cap nhat tinh trang don hang
             OrderDAO::browseOrder($madon, $conn);
+            //duyet cac dong chi tiet don hang de cap nhat csdl
             foreach ($details as $detail) {
                 $product = ProductDAO::getProduct($detail['masp'], $conn);
                 $soLuongMoi = $product['soluong'] - $detail['soluong'];

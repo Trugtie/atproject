@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     switch ($action) {
         case "delete":
             $masp = $_GET['masp'];
+            //kiem tra rang buoc
             $check=OrderDAO::checkExistDonHangSanPham($masp,$conn);
             if($check == true){
                 session_start();
@@ -71,6 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 move_uploaded_file($temp, dirname(__DIR__) . '/view/images/' . $name);
                 $imagePath = '/images/' . $name;
                 $laptop = new Laptop($masp, $tensp, $mota, $soluong, $imagePath, $gia, $loaisp, $tinhtrang, $mahang, $trongluong, $manhinh, $ocung, $vga, $ram, $cpu, $pin, $mausac, $maloaimay);
+                //reset lai auto_increment bang laptop truoc khi insert
                 ProductDAO::resetAI($conn);
                 ProductDAO::insertLaptop($laptop, $conn);
                 header("Location: ../view/quanlysanpham.php");

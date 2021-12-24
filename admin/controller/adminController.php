@@ -55,8 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             }else{
                 
                 $admin = new Admin($ma, $email, $username, sha1($password), $ho, $ten, $sdt, $diachi);
-                
-                // exit();
                 AdminDAO::updateAdmin($admin, $ma, $conn);
                 header("Location: ../view/quanlynhanvien.php");
             }

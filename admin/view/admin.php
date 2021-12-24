@@ -23,7 +23,7 @@
                 <div class="soluong">XXXXX</div>
             </div>
             <div class="count__order col-4">
-                <h2 class="count__title">SL ĐƠN HÀNG CHƯA GIAO</h2>
+                <h2 class="count__title">SL ĐƠN CHƯA GIAO</h2>
                 <div class="soluong">XXXXX</div>
             </div>
         </div>

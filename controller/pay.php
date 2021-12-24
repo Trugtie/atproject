@@ -43,10 +43,12 @@ else{
                 $makm= $_POST['makm'];
                 $tongtien = $_POST['thanhtien'];
                 $makh = $_SESSION['user']->get_makh();
+                //insert theo 2 kieu co khuyen mai va khong co khuyen mai
                 if(!empty($makm))
                 OrderDAO::insertOrder($nguoinhan,$sdt,$diachi,$phuongthuc,$makh,$makm,$tongtien,$conn);
                 else
                 OrderDAO::insertOrderWithoutSale($nguoinhan,$sdt,$diachi,$phuongthuc,$makh,$tongtien,$conn);
+                //lay cai don hang vua insert vao csdl
                 $newOrder = OrderDAO::getNewOrder($conn);
                 $madon=$newOrder['madon'];
                 foreach($_SESSION['cart'] as $product){
@@ -103,6 +105,7 @@ else{
                   <b><br />Cám ơn Quý khách đã sử dụng Sản phẩm của Công ty chúng
                   Tôi!</b>
                   </p>';
+                  
                 sendmail("Bạn có 1 đơn hàng từ ATLAPTOP!",$contentEmail,$_SESSION['user']->get_email());
                 
                 unset($_SESSION['cart']);

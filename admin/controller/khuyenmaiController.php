@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     switch ($action) {
         case "delete":
             $ma = $_GET['makm'];
+            //kiem tra rang buoc
             $check = KhuyenmaiDAO::checkKhuyenMaiDonHang($ma,$conn);
             if($check == true){
                 session_start();
@@ -50,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 session_start();
                 $maad=$_SESSION['admin']->get_maad();
                 KhuyenMaiDAO::insertKhuyenmai($khuyenmai, $conn);
+                //dam bao rang buoc ad_khuyenmai
                 $makm =  KhuyenMaiDAO::getNewEvent($conn);
                 KhuyenMaiDAO::adminCreateEvent($makm['makm'],$maad,$conn);
                 header("Location: ../view/quanlykhuyenmai.php");

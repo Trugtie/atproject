@@ -20,8 +20,6 @@ include "../../dao/AdminDAO.php";
 //         case "login":
             $username = $_POST['username'];
             $password = $_POST['password'];
-            // var_dump($_POST);
-            // exit();
             $error = "";
             $adminDB = AdminDAO::getAdmin($username, sha1($password), $conn);
             if ($adminDB == false) {

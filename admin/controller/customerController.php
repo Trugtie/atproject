@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     switch ($action) {
         case "delete":
             $ma = $_GET['makh'];
+            //kiem tra rang buoc
             $check = UserDao::checkKhachHangDonHang($ma,$conn);
             if($check==true){
                 session_start();
