@@ -93,4 +93,25 @@ class OrderDAO
         $statement->bindValue(":madon",$madon);
         $statement->execute();
     }
+
+    public static function getSoLuongSanPhamDaBan($conn){
+        $statement = $conn->prepare("select sum(soluong) as soluong from donhang_sanpham");
+        $statement->execute();
+        $soluong = $statement->fetch(PDO::FETCH_ASSOC);
+        return $soluong;
+    }
+
+    public static function getSoLuongDonHangChuaGiao($conn){
+        $statement = $conn->prepare("select tinhtrang,count(tinhtrang) as soluong from donhang GROUP BY tinhtrang HAVING tinhtrang LIKE 'Chưa giao'");
+        $statement->execute();
+        $soluong = $statement->fetch(PDO::FETCH_ASSOC);
+        return $soluong;
+    }
+
+    public static function getDoanhThu($conn){
+        $statement = $conn->prepare("select sum(tongtien) as doanhthu from donhang");
+        $statement->execute();
+        $doanhThu = $statement->fetch(PDO::FETCH_ASSOC);
+        return $doanhThu;
+    }
 }

@@ -190,4 +190,11 @@ class ProductDAO
         $laptops = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $laptops;
     }
+
+    public static function getSoLuongSanPhamConLai($conn){
+        $statement = $conn->prepare("select sum(soluong) as soluong from sanpham");
+        $statement->execute();
+        $soluong = $statement->fetch(PDO::FETCH_ASSOC);
+        return $soluong;
+    }
 }

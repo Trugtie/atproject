@@ -82,4 +82,11 @@ class UserDAO
         if(!empty($user))return true;
         return false;
     }
+
+    public static function getSoLuongThanhVien($conn){
+        $statement = $conn->prepare("select sum(makh) as soluong from khachhang");
+        $statement->execute();
+        $soluong = $statement->fetch(PDO::FETCH_ASSOC);
+        return $soluong;
+    }
 }
