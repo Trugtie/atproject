@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 session_start();
                 $error = "Sai tài khoản hoặc mật khẩu";
                 $_SESSION["error"] = $error;
-                header("Location: ../view/login.php");
+                    
             } else {
                 session_start();
                 $_SESSION["error"] = "";

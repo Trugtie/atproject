@@ -1,5 +1,6 @@
 <?php include "./header.php" ?>
 <?php
+
 if (isset($_GET['masp'])) {
     $laptop = ProductDAO::getLaptop($_GET['masp'], $conn);
 }

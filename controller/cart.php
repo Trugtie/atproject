@@ -3,28 +3,35 @@ include "../controller/autoload.php";
 include '../dao/ProductDAO.php';
 session_start();
 //Cong tru so luong
-if(isset($_GET['action']))
-{
+if (isset($_GET['action'])) {
     $vitri = $_GET['vitri'];
-    switch ($_GET['action']){
+    switch ($_GET['action']) {
         case "plus":
-            $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong()+1);
-            header("Location: ../view/giohang.php");
+            $masp = $_SESSION['cart'][$vitri]->getMaSp();
+            $soLuongDat = $_SESSION['cart'][$vitri]->getSoluong();
+            $product = ProductDAO::getProduct($masp, $conn);
+            $soLuongCon = $product['soluong'];
+            if ($soLuongDat == $soLuongCon) {
+                $_SESSION['error'] = "Số lượng đặt hàng vượt quá kho hàng, mặt hàng này chỉ còn $soLuongCon sản phẩm!";
+                header("Location: ../view/giohang.php");
+            } else {
+                $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong() + 1);
+                header("Location: ../view/giohang.php");
+            }
             break;
         case "minus":
-            $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong()-1);
-            if($_SESSION['cart'][$vitri]->getSoluong()==0)
-            unset($_SESSION['cart'][$vitri]);
+            $_SESSION['cart'][$vitri]->setSoluong($_SESSION['cart'][$vitri]->getSoluong() - 1);
+            if ($_SESSION['cart'][$vitri]->getSoluong() == 0)
+                unset($_SESSION['cart'][$vitri]);
             header("Location: ../view/giohang.php");
             break;
     }
-}
-else //Xoa gio hang
-if(isset($_GET['vitri'])){
-    $vitri = $_GET['vitri'];
-    unset($_SESSION['cart'][$vitri]);
-    header('Location: ../view/giohang.php');
-}
+} else //Xoa gio hang
+    if (isset($_GET['vitri'])) {
+        $vitri = $_GET['vitri'];
+        unset($_SESSION['cart'][$vitri]);
+        header('Location: ../view/giohang.php');
+    }
 
 //Them gio hang
 if (isset($_SESSION['user'])) {
@@ -40,7 +47,7 @@ if (isset($_SESSION['user'])) {
             if ($masp == $product->getMaSp()) {
                 $soluong = $product->getSoluong() + 1;
                 $product->setSoluong($soluong);
-                $flag=1;
+                $flag = 1;
                 break;
             }
         }
@@ -48,7 +55,7 @@ if (isset($_SESSION['user'])) {
             array_push($_SESSION['cart'], $productObj);
         }
     }
-    $_SESSION['notify']="Đã thêm một sản phẩm vào giỏ hàng";
+    $_SESSION['notify'] = "Đã thêm một sản phẩm vào giỏ hàng";
     header("Location: ../view/laptop.php");
 } else {
     header("Location: ../view/login.php");
