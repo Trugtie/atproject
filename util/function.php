@@ -8,17 +8,20 @@ require '../PHPMailer/src/Exception.php';
 require '../PHPMailer/src/PHPMailer.php';
 require '../PHPMailer/src/SMTP.php';
 
+//hàm tạo một chuỗi n ký tự ngẫu nhiên dùng cho reset pass code
 function randomString($n)
 {
     $characters = '0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
     $str = '';
     for ($i = 0; $i < $n; $i++) {
+        //random ký tự trong dãy characters
         $index = rand(0, strlen($characters) - 1);
         $str .= $characters[$index];
     }
     return $str;
 }
 
+//hàm sendmail dùng cho resetpass và đặt hàng
 function sendmail($title, $content, $emailSend)
 {
     $mail = new PHPMailer(true);

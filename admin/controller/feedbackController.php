@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     switch ($action) {
         case "delete":
             $mafb = $_GET['mafb'];
-            FeedBackDAO::deleteFeedBack($mafb, $conn);
+            FeedBackDAO::deleteFeedBack($mafb, $conn); //xóa feedback
             header("Location: ../view/quanlyfeedback.php");
             break;
     }

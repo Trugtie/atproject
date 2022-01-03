@@ -298,19 +298,19 @@
         <!-- Swiper -->
         <div class="swiper mySwiper animate-right">
         <div class="swiper-wrapper">
-                <?php $slides = ceil(count($lapTopGamings) / 6);
-                $flag = 0;
-                $temp = 0;
-                $count = 0;
-                for ($i = 0; $i < $slides; $i++) :
+                <?php $slides = ceil(count($lapTopGamings) / 6); //tính số slide sẽ show
+                $flag = 0; //biến cờ để xác định 2 trường hợp show, 1 cái show từ 0 1 cái show từ vị trí kết thúc khi đặt đủ số lường qui định
+                $temp = 0; //biến tạm để lưu vị trí kết thúc
+                $count = 0; //đếm số lượng sản phẩm đã show
+                for ($i = 0; $i < $slides; $i++) : //vòng lặp cho từng slide
                 ?>
                     <div class="swiper-slide">
-                        <?php if ($flag == 0) { ?>
-                            <?php for ($j = 0; $j < count($lapTopGamings); $j++) : ?>
-                                <?php if ($count == 6) {
-                                    $temp = $j;
-                                    $flag = 1;
-                                    $count = 0;
+                        <?php if ($flag == 0) { //biến cờ = 0 show từ vị trí bắt đầu 0?>
+                            <?php for ($j = 0; $j < count($lapTopGamings); $j++) : //duyệt mảng laptop?>
+                                <?php if ($count == 6) { //show 6 sản phẩm thì dừng rồi chuyển slide khác
+                                    $temp = $j; //lấy vị trí sản phẩm đã show trong mảng
+                                    $flag = 1; //khi show xong 6 sản phẩm ban đầu bật biến cờ để chạy khúc dưới
+                                    $count = 0; //gán lại biến đếm = 0
                                     break;
                                 } ?>
                                 <div class="item">
@@ -348,14 +348,14 @@
                                             <input type="hidden" name="masp" value="<?php echo $lapTopGamings[$j]['masp'] ?>">
                                             <button class="cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
                                         </form>
-                                        <div class="price"><?php echo  number_format($lapTopGamings[$j]['gia'], 0, ",", ".") . " VND" ?></div>
+                                        <div class="price"><?php echo  number_format($lapTopGamings[$j]['gia'], 0, ",", ".") . " VND" //xuất giá tiền theo định dạng xxx.xxx VND, dấu , là phân cách số thập phân, dấu . là phân cách thành phần ngàn?></div>
                                     </div>
                                 </div>
                                 <?php $count += 1; ?>
                             <?php endfor; ?>
-                        <?php } else if ($flag == 1) { ?>
-                            <?php for ($j = $temp; $j < count($lapTopGamings); $j++) : ?>
-                                <?php if ($count == 6) {
+                        <?php } else if ($flag == 1) { // khúc này chạy từ show sản phẩm từ vị trí đã lưu ở trên, biến temp?>
+                            <?php for ($j = $temp; $j < count($lapTopGamings); $j++) : //duyệt từ temp?>
+                                <?php if ($count == 6) { //khúc dưới này tương tự
                                     $temp = $j;
                                     $count = 0;
                                     break;

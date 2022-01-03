@@ -107,20 +107,20 @@ if (isset($_GET['masp'])) {
     <section class="feedback">
         <?php foreach ($feedbacks as $feedback) : ?>
             <?php $makh = $feedback['makh'];
-                  $ten = FeedBackDAO::getTenKhachHang($makh, $conn);
+            $ten = FeedBackDAO::getTenKhachHang($makh, $conn);
             ?>
-                <div class="fb-body">
-                    <div class="name-customer">
-                        <div class="fb-name">
-                            <?php echo $ten['ten']?>
-                        </div>
-                        <div class="fb-time">
-                        <?php echo $feedback['thoigian']?>
-                        </div>
+            <div class="fb-body">
+                <div class="name-customer">
+                    <div class="fb-name">
+                        <?php echo $ten['ten'] ?>
                     </div>
-                    <div class="fb-content"><?php echo $feedback['mota']?>
+                    <div class="fb-time">
+                        <?php echo $feedback['thoigian'] ?>
                     </div>
-                </div>  
+                </div>
+                <div class="fb-content"><?php echo $feedback['mota'] ?>
+                </div>
+            </div>
         <?php endforeach; ?>
     </section>
 

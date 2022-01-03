@@ -7,8 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $action = $_GET['action'];
     switch ($action) {
         case "delete":
-            $ma = $_GET['maad'];
-            AdminDAO::deleteAdmin($ma,$conn);
+            $ma = $_GET['maad']; //lấy mã ad
+            AdminDAO::deleteAdmin($ma,$conn); //xóa ad ra khỏi database
             header("Location: ../view/quanlynhanvien.php");
             break;
     }
@@ -25,15 +25,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $username = $_POST['username'];
             $password = ($_POST['password']);
             
-            $error = validate::validateAdmin($email, $username, $password);
+            $error = validate::validateAdmin($email, $username, $password); //bắt lỗi các field có thiếu hay không
             if (!empty($error)) {
                 session_start();
-                $_SESSION["error"] = $error;
+                $_SESSION["error"] = $error; //thông báo lỗi
                 
                 header("Location: ../view/addAdmin.php");
             } else {                
-                $admin = new Admin($ma, $email, $username, sha1($password), $ho, $ten, $sdt, $diachi);
-                AdminDAO::insertAdmin($admin, $conn);
+                $admin = new Admin($ma, $email, $username, sha1($password), $ho, $ten, $sdt, $diachi); //tạo đối tượng admin
+                AdminDAO::insertAdmin($admin, $conn); //insert vào database
                 header("Location: ../view/quanlynhanvien.php");
             }
             break;
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             }else{
                 
                 $admin = new Admin($ma, $email, $username, sha1($password), $ho, $ten, $sdt, $diachi);
-                AdminDAO::updateAdmin($admin, $ma, $conn);
+                AdminDAO::updateAdmin($admin, $ma, $conn); //tương tự như trên nhưng chạy câu truy vấn update
                 header("Location: ../view/quanlynhanvien.php");
             }
             
