@@ -1,6 +1,6 @@
 <?php
 //tên server
-$servername="localhost";
+$servername="databases.000webhost.com";
 //tên database
 $database="id18165220_atlaptop";
 //tên đăng nhập database
