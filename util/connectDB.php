@@ -2,9 +2,9 @@
 //tên server
 $servername="localhost";
 //tên database
-$database="atproject";
+$database="id18165220_atlaptop";
 //tên đăng nhập database
-$username="root";
+$username="id18165220_trugtie";
 //password đăng nhập
 $password="";
 try{
