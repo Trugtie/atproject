@@ -1,12 +1,12 @@
 <?php
 //tên server
-$servername="databases.000webhost.com";
+$servername="localhost";
 //tên database
-$database="id18165220_atlaptop";
+$database="atproject";
 //tên đăng nhập database
-$username="id18165220_trugtie";
+$username="root";
 //password đăng nhập
-$password="Tien05062021#atlaptop";
+$password="";
 try{
     //tạo kết nối đến database
     $conn = new PDO("mysql:host=$servername;dbname=$database",$username,$password);
