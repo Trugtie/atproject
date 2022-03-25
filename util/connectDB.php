@@ -6,7 +6,7 @@ $database="id18165220_atlaptop";
 //tên đăng nhập database
 $username="id18165220_trugtie";
 //password đăng nhập
-$password="";
+$password="Tien05062021#atlaptop";
 try{
     //tạo kết nối đến database
     $conn = new PDO("mysql:host=$servername;dbname=$database",$username,$password);
